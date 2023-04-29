@@ -17,15 +17,20 @@ func _process(delta):
 
 func update_newsitem(n: NewsItem = null):
 	var oldNews = newsItem
+	var hadNews = false
 	if oldNews != null:
-		remove_child(oldNews)
-	add_child(n)
+		remove_child.call_deferred(oldNews)
+		hadNews = true
 	newsItem = n
 	if newsItem != null:
+		if newsItem.get_parent() != null:
+			newsItem.get_parent().remove_child(newsItem)
+		add_child.call_deferred(newsItem)
+		newsItem.position = Vector2.ZERO
 		$ColorRect.color = Color.GREEN
 	else:
 		$ColorRect.color = Color.RED
-	return oldNews
+	return [oldNews, hadNews]
 
 func get_news():
 	return newsItem

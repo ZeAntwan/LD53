@@ -32,8 +32,9 @@ func _on_area_2d_mouse_entered():
 func _on_area_2d_input_event(viewport, event, shape_idx):
 	if Input.is_action_just_pressed("select") && canPick:
 		selected = true
+		parent = get_parent()
 		mouseOffset = global_position - get_global_mouse_position()
-		z_index += 1
+		z_index = 2
 	
 	if Input.is_action_just_released("select") && selected:
 		selected = false
@@ -41,16 +42,17 @@ func _on_area_2d_input_event(viewport, event, shape_idx):
 		if (!overlap.is_empty()):
 			var zone = overlap[0].get_parent()
 			
-			if zone.is_in_group("drop_zone") && zone.canDrop:
-				parent.remove_child(self)
+			if zone.is_in_group("drop_zone") && zone.canDrop && zone.newsItem != self:
+				#parent.remove_child(self)
 				if zone.newsItem != null:
 					var swapped = zone.update_newsitem(self)
-					parent.update_newsitem(swapped)
+					parent.update_newsitem(swapped[0])
 				else:
 					zone.update_newsitem(self)
+					parent.update_newsitem()
 			parent = get_parent()
 		position = Vector2.ZERO
-		z_index -= 1
+		z_index = 1
 
 func update_timer(ratio: float):
 	hiding.scale.y = ratio

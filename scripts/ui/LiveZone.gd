@@ -25,4 +25,5 @@ func _on_timer_timeout():
 	# apply stats here or communicate to game manager
 	newsItem.queue_free()
 	update_newsitem()
+	Events.emit_signal("news_ended")
 	pass # Replace with function body.

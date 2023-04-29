@@ -36,7 +36,7 @@ albedo_color = Color(0.701961, 0.701961, 0.701961, 1)
 
 [sub_resource type="SphereMesh" id="SphereMesh_yij73"]
 
-[node name="Level" type="Node3D"]
+[node name="Level" type="Node"]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 
@@ -102,6 +102,7 @@ transform = Transform3D(2.20602, 0, -0.0324435, 0, 1.01146, 0, 0.591102, 0, 0.12
 mesh = SubResource("BoxMesh_o5soa")
 
 [node name="SubViewport" type="SubViewport" parent="."]
+handle_input_locally = false
 msaa_2d = 1
 size = Vector2i(600, 400)
 
@@ -118,6 +119,8 @@ surface_material_override/0 = SubResource("StandardMaterial3D_vx7k0")
 
 [node name="Camera3D" type="Camera3D" parent="SubViewport/CameraBody"]
 transform = Transform3D(-2.06669, 0, -1.99505e-07, 0, 2.47076, 0, 1.80676e-07, 0, -1.87163, 0, 0.224672, 0.389222)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="SubViewport"]
 
 [node name="Temp_CharacterMesh" type="MeshInstance3D" parent="."]
 transform = Transform3D(-0.959736, 2.12347e-07, 0, -8.39028e-08, -2.42897, 0, 0, 0, 0.627725, 1.18432e-08, 1.6082, 3.13349)

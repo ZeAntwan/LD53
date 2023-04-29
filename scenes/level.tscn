@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://ci36nuskade4y"]
+[gd_scene load_steps=15 format=3 uid="uid://ci36nuskade4y"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_so24c"]
 size = Vector3(60, 2, 60)
@@ -19,6 +19,9 @@ camera_feed_id = 1
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nldfh"]
 albedo_texture = SubResource("CameraTexture_hhfxa")
 
+[sub_resource type="ViewportTexture" id="ViewportTexture_x28j6"]
+viewport_path = NodePath("SubViewport")
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hfhmx"]
 albedo_color = Color(0.176471, 0.176471, 0.176471, 1)
 
@@ -28,6 +31,10 @@ albedo_color = Color(0.176471, 0.176471, 0.176471, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vx7k0"]
 albedo_color = Color(0.701961, 0.701961, 0.701961, 1)
+
+[sub_resource type="PrismMesh" id="PrismMesh_5gar1"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_yij73"]
 
 [node name="Level" type="Node3D"]
 
@@ -82,15 +89,20 @@ transform = Transform3D(2.502, 0, 0, 0, 1.104, 0, 0, 0, 0.129, 0, 3.177, 0.29)
 mesh = SubResource("BoxMesh_o5soa")
 surface_material_override/0 = SubResource("StandardMaterial3D_nldfh")
 
+[node name="Sprite3D" type="Sprite3D" parent="Temp_LiveFeedTV"]
+transform = Transform3D(0.150377, 0, 0, 0, 0.255173, 0, 0, 0, 1, 0, 0, 0.706968)
+texture = SubResource("ViewportTexture_x28j6")
+
 [node name="Temp_Stat_1_TV" type="MeshInstance3D" parent="."]
 transform = Transform3D(2.20602, 0, 0.0324435, 0, 1.01146, 0, -0.591102, 0, 0.121081, -3.023, 4.165, 0.05)
 mesh = SubResource("BoxMesh_o5soa")
 
 [node name="Temp_Stat_2_TV" type="MeshInstance3D" parent="."]
-transform = Transform3D(2.20602, 0, -0.0324435, 0, 1.01146, 0, 0.591102, 0, 0.121081, 3, 4.165, 0.05)
+transform = Transform3D(2.20602, 0, -0.0324435, 0, 1.01146, 0, 0.591102, 0, 0.121081, 2.97936, 4.165, 0.036413)
 mesh = SubResource("BoxMesh_o5soa")
 
 [node name="SubViewport" type="SubViewport" parent="."]
+msaa_2d = 1
 size = Vector2i(600, 400)
 
 [node name="CameraBody" type="MeshInstance3D" parent="SubViewport"]
@@ -106,3 +118,11 @@ surface_material_override/0 = SubResource("StandardMaterial3D_vx7k0")
 
 [node name="Camera3D" type="Camera3D" parent="SubViewport/CameraBody"]
 transform = Transform3D(-2.06669, 0, -1.99505e-07, 0, 2.47076, 0, 1.80676e-07, 0, -1.87163, 0, 0.224672, 0.389222)
+
+[node name="Temp_CharacterMesh" type="MeshInstance3D" parent="."]
+transform = Transform3D(-0.959736, 2.12347e-07, 0, -8.39028e-08, -2.42897, 0, 0, 0, 0.627725, 1.18432e-08, 1.6082, 3.13349)
+mesh = SubResource("PrismMesh_5gar1")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Temp_CharacterMesh"]
+transform = Transform3D(0.849191, 3.55271e-14, 0, 4.26326e-14, 0.364895, 0, 0, 0, 1, -1.27898e-13, -0.666641, -0.104017)
+mesh = SubResource("SphereMesh_yij73")

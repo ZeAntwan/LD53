@@ -1,3 +1,108 @@
-[gd_scene format=3 uid="uid://ci36nuskade4y"]
+[gd_scene load_steps=12 format=3 uid="uid://ci36nuskade4y"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_so24c"]
+size = Vector3(60, 2, 60)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rym4o"]
+size = Vector3(60, 2, 60)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0fv6n"]
+albedo_color = Color(0.360784, 0.360784, 0.360784, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_0lt75"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_o5soa"]
+
+[sub_resource type="CameraTexture" id="CameraTexture_hhfxa"]
+camera_feed_id = 1
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nldfh"]
+albedo_texture = SubResource("CameraTexture_hhfxa")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hfhmx"]
+albedo_color = Color(0.176471, 0.176471, 0.176471, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_wwmew"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_1vo8d"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vx7k0"]
+albedo_color = Color(0.701961, 0.701961, 0.701961, 1)
 
 [node name="Level" type="Node3D"]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
+mesh = SubResource("BoxMesh_so24c")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("BoxShape3D_rym4o")
+
+[node name="Temp_Desk" type="MeshInstance3D" parent="."]
+transform = Transform3D(3.67821, 0, 0, 0, 0.996582, 0, 0, 0, 1.06325, 0, 1.4, 1.52153)
+material_override = SubResource("StandardMaterial3D_0fv6n")
+mesh = SubResource("BoxMesh_0lt75")
+
+[node name="Camera3D2" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.708, 2.802)
+fov = 90.0
+
+[node name="Temp_Screen_1" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.760135, 0, 0, 0, 0.303012, 0.0133041, 0, -0.347394, 0.08997, -1.25835, 2.04044, 1.78801)
+material_override = SubResource("StandardMaterial3D_0fv6n")
+mesh = SubResource("BoxMesh_0lt75")
+skeleton = NodePath("../Temp_Desk")
+
+[node name="Temp_Screen_2" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.760135, 0, 0, 0, 0.303012, 0.0133041, 0, -0.347394, 0.08997, -0.454371, 2.04044, 1.78801)
+material_override = SubResource("StandardMaterial3D_0fv6n")
+mesh = SubResource("BoxMesh_0lt75")
+skeleton = NodePath("../Temp_Desk")
+
+[node name="Temp_Screen_3" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.760135, 0, 0, 0, 0.303012, 0.0133041, 0, -0.347394, 0.08997, 0.346411, 2.04044, 1.78801)
+material_override = SubResource("StandardMaterial3D_0fv6n")
+mesh = SubResource("BoxMesh_0lt75")
+skeleton = NodePath("../Temp_Desk")
+
+[node name="Temp_Screen_4" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.760135, 0, 0, 0, 0.303012, 0.0133041, 0, -0.347394, 0.08997, 1.15039, 2.04044, 1.78801)
+material_override = SubResource("StandardMaterial3D_0fv6n")
+mesh = SubResource("BoxMesh_0lt75")
+skeleton = NodePath("../Temp_Desk")
+
+[node name="Temp_Desk2" type="MeshInstance3D" parent="."]
+transform = Transform3D(3.69883, 0, 0, 0, 0.36407, 0, 0, 0, 0.480335, 0, 2.00178, 1.32866)
+material_override = SubResource("StandardMaterial3D_0fv6n")
+mesh = SubResource("BoxMesh_0lt75")
+
+[node name="Temp_LiveFeedTV" type="MeshInstance3D" parent="."]
+transform = Transform3D(2.502, 0, 0, 0, 1.104, 0, 0, 0, 0.129, 0, 3.177, 0.29)
+mesh = SubResource("BoxMesh_o5soa")
+surface_material_override/0 = SubResource("StandardMaterial3D_nldfh")
+
+[node name="Temp_Stat_1_TV" type="MeshInstance3D" parent="."]
+transform = Transform3D(2.20602, 0, 0.0324435, 0, 1.01146, 0, -0.591102, 0, 0.121081, -3.023, 4.165, 0.05)
+mesh = SubResource("BoxMesh_o5soa")
+
+[node name="Temp_Stat_2_TV" type="MeshInstance3D" parent="."]
+transform = Transform3D(2.20602, 0, -0.0324435, 0, 1.01146, 0, 0.591102, 0, 0.121081, 3, 4.165, 0.05)
+mesh = SubResource("BoxMesh_o5soa")
+
+[node name="SubViewport" type="SubViewport" parent="."]
+size = Vector2i(600, 400)
+
+[node name="CameraBody" type="MeshInstance3D" parent="SubViewport"]
+transform = Transform3D(0.483866, 0, 0, 0, 0.404734, 0, 0, 0, 0.534293, 0, 2.39146, 0)
+material_override = SubResource("StandardMaterial3D_hfhmx")
+mesh = SubResource("BoxMesh_wwmew")
+skeleton = NodePath("../..")
+
+[node name="CameraLens" type="MeshInstance3D" parent="SubViewport/CameraBody"]
+transform = Transform3D(0.75, 0, 0, 0, -1.80528e-08, -0.75, 0, 0.413, -3.27835e-08, 0, 0, 0.232297)
+mesh = SubResource("CylinderMesh_1vo8d")
+surface_material_override/0 = SubResource("StandardMaterial3D_vx7k0")
+
+[node name="Camera3D" type="Camera3D" parent="SubViewport/CameraBody"]
+transform = Transform3D(-2.06669, 0, -1.99505e-07, 0, 2.47076, 0, 1.80676e-07, 0, -1.87163, 0, 0.224672, 0.389222)

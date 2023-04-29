@@ -1,0 +1,7 @@
+[gd_scene load_steps=3 format=3 uid="uid://cj6qhtyh283tu"]
+
+[ext_resource type="PackedScene" uid="uid://h1um88c2nc4y" path="res://scenes/ui/drop_zone.tscn" id="1_i5qri"]
+[ext_resource type="Script" path="res://scripts/ui/LiveZone.gd" id="2_nq4fu"]
+
+[node name="LiveZone" instance=ExtResource("1_i5qri")]
+script = ExtResource("2_nq4fu")

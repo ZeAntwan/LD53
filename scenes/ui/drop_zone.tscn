@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=3 uid="uid://h1um88c2nc4y"]
+
+[ext_resource type="Script" path="res://scripts/ui/DropZone.gd" id="1_gf7qa"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xkdb8"]
+size = Vector2(160, 100)
+
+[node name="DropZone" type="Control"]
+custom_minimum_size = Vector2(160, 100)
+layout_mode = 3
+anchors_preset = 0
+mouse_filter = 1
+mouse_force_pass_scroll_events = false
+script = ExtResource("1_gf7qa")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 0.764706)
+
+[node name="Area2D" type="Area2D" parent="."]
+input_pickable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(80, 50)
+shape = SubResource("RectangleShape2D_xkdb8")

@@ -1,0 +1,50 @@
+[gd_scene load_steps=3 format=3 uid="uid://bhuiqgoiywupk"]
+
+[ext_resource type="Script" path="res://scripts/NewsItem.gd" id="1_efnsu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xkdb8"]
+size = Vector2(160, 100)
+
+[node name="NewsItem" type="Control"]
+z_index = 1
+custom_minimum_size = Vector2(150, 100)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 160.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+mouse_force_pass_scroll_events = false
+script = ExtResource("1_efnsu")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(80, 50)
+shape = SubResource("RectangleShape2D_xkdb8")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Test"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]

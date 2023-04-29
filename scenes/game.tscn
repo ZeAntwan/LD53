@@ -6,6 +6,9 @@
 
 [node name="Level" parent="." instance=ExtResource("1_rfo83")]
 
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Level"]
+transform = Transform3D(1, 0, 0, 0, -0.314307, 0.949321, 0, -0.949321, -0.314307, -0.0365233, 7.15446, 0)
+
 [node name="Camera3D2" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.708, 2.67043)
 current = true

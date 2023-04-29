@@ -31,12 +31,21 @@ theme_override_constants/margin_bottom = 20
 
 [node name="VBoxContainer" type="VBoxContainer" parent="LeftBar/MarginContainer"]
 layout_mode = 2
+mouse_filter = 2
 theme_override_constants/separation = 20
 
 [node name="DropZone" parent="LeftBar/MarginContainer/VBoxContainer" groups=["drop_zone"] instance=ExtResource("1_mi2bh")]
 layout_mode = 2
 
 [node name="NewsItem2" parent="LeftBar/MarginContainer/VBoxContainer/DropZone" instance=ExtResource("2_lpb1i")]
+layout_mode = 0
+grow_horizontal = 1
+grow_vertical = 1
+
+[node name="DropZone2" parent="LeftBar/MarginContainer/VBoxContainer" groups=["drop_zone"] instance=ExtResource("1_mi2bh")]
+layout_mode = 2
+
+[node name="NewsItem2" parent="LeftBar/MarginContainer/VBoxContainer/DropZone2" instance=ExtResource("2_lpb1i")]
 layout_mode = 0
 grow_horizontal = 1
 grow_vertical = 1
@@ -51,6 +60,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 0
 grow_vertical = 0
+mouse_filter = 2
 
 [node name="MarginContainer" type="MarginContainer" parent="BottomBar"]
 layout_mode = 1
@@ -70,6 +80,7 @@ theme_override_constants/margin_bottom = 20
 
 [node name="HBoxContainer" type="HBoxContainer" parent="BottomBar/MarginContainer"]
 layout_mode = 2
+mouse_filter = 2
 theme_override_constants/separation = 20
 
 [node name="DropZone" parent="BottomBar/MarginContainer/HBoxContainer" groups=["drop_zone"] instance=ExtResource("1_mi2bh")]
@@ -77,3 +88,7 @@ layout_mode = 2
 
 [node name="DropZone2" parent="BottomBar/MarginContainer/HBoxContainer" groups=["drop_zone"] instance=ExtResource("1_mi2bh")]
 layout_mode = 2
+
+[node name="NewsItem2" parent="BottomBar/MarginContainer/HBoxContainer/DropZone2" instance=ExtResource("2_lpb1i")]
+grow_horizontal = 1
+grow_vertical = 1

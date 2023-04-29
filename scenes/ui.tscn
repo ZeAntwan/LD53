@@ -1,7 +1,18 @@
-[gd_scene load_steps=3 format=3 uid="uid://bg51qag7wfse0"]
+[gd_scene load_steps=7 format=3 uid="uid://bg51qag7wfse0"]
 
 [ext_resource type="PackedScene" uid="uid://h1um88c2nc4y" path="res://scenes/ui/drop_zone.tscn" id="1_mi2bh"]
 [ext_resource type="PackedScene" uid="uid://bhuiqgoiywupk" path="res://scenes/ui/news_item.tscn" id="2_lpb1i"]
+[ext_resource type="PackedScene" uid="uid://cj6qhtyh283tu" path="res://scenes/ui/live_zone.tscn" id="3_ghk45"]
+[ext_resource type="Script" path="res://scripts/ressources/Headline.gd" id="3_kb88l"]
+[ext_resource type="Script" path="res://scripts/LiveBar.gd" id="4_01ttq"]
+
+[sub_resource type="Resource" id="Resource_5iduk"]
+script = ExtResource("3_kb88l")
+text = "Hello"
+stat_rating = 0
+stat_stock = 0
+stat_public = 0
+timer = 0.0
 
 [node name="MainUi" type="Control"]
 layout_mode = 3
@@ -34,23 +45,24 @@ layout_mode = 2
 mouse_filter = 2
 theme_override_constants/separation = 20
 
-[node name="DropZone" parent="LeftBar/MarginContainer/VBoxContainer" groups=["drop_zone"] instance=ExtResource("1_mi2bh")]
+[node name="DropZone_Top" parent="LeftBar/MarginContainer/VBoxContainer" groups=["drop_zone"] instance=ExtResource("1_mi2bh")]
 layout_mode = 2
 
-[node name="NewsItem2" parent="LeftBar/MarginContainer/VBoxContainer/DropZone" instance=ExtResource("2_lpb1i")]
+[node name="NewsItem_Top" parent="LeftBar/MarginContainer/VBoxContainer/DropZone_Top" instance=ExtResource("2_lpb1i")]
+layout_mode = 0
+grow_horizontal = 1
+grow_vertical = 1
+headline = SubResource("Resource_5iduk")
+
+[node name="DropZone2_Bot" parent="LeftBar/MarginContainer/VBoxContainer" groups=["drop_zone"] instance=ExtResource("1_mi2bh")]
+layout_mode = 2
+
+[node name="NewsItem_Bot" parent="LeftBar/MarginContainer/VBoxContainer/DropZone2_Bot" instance=ExtResource("2_lpb1i")]
 layout_mode = 0
 grow_horizontal = 1
 grow_vertical = 1
 
-[node name="DropZone2" parent="LeftBar/MarginContainer/VBoxContainer" groups=["drop_zone"] instance=ExtResource("1_mi2bh")]
-layout_mode = 2
-
-[node name="NewsItem2" parent="LeftBar/MarginContainer/VBoxContainer/DropZone2" instance=ExtResource("2_lpb1i")]
-layout_mode = 0
-grow_horizontal = 1
-grow_vertical = 1
-
-[node name="BottomBar" type="Control" parent="."]
+[node name="LiveBar" type="Control" parent="."]
 custom_minimum_size = Vector2(1000, 200)
 layout_mode = 1
 anchors_preset = 3
@@ -61,8 +73,9 @@ anchor_bottom = 1.0
 grow_horizontal = 0
 grow_vertical = 0
 mouse_filter = 2
+script = ExtResource("4_01ttq")
 
-[node name="MarginContainer" type="MarginContainer" parent="BottomBar"]
+[node name="MarginContainer" type="MarginContainer" parent="LiveBar"]
 layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
@@ -78,17 +91,24 @@ theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 20
 theme_override_constants/margin_bottom = 20
 
-[node name="HBoxContainer" type="HBoxContainer" parent="BottomBar/MarginContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="LiveBar/MarginContainer"]
+layout_direction = 3
 layout_mode = 2
 mouse_filter = 2
 theme_override_constants/separation = 20
 
-[node name="DropZone" parent="BottomBar/MarginContainer/HBoxContainer" groups=["drop_zone"] instance=ExtResource("1_mi2bh")]
+[node name="LiveZone" parent="LiveBar/MarginContainer/HBoxContainer" groups=["drop_zone"] instance=ExtResource("3_ghk45")]
 layout_mode = 2
 
-[node name="DropZone2" parent="BottomBar/MarginContainer/HBoxContainer" groups=["drop_zone"] instance=ExtResource("1_mi2bh")]
+[node name="DropZone_2" parent="LiveBar/MarginContainer/HBoxContainer" groups=["drop_zone"] instance=ExtResource("1_mi2bh")]
 layout_mode = 2
 
-[node name="NewsItem2" parent="BottomBar/MarginContainer/HBoxContainer/DropZone2" instance=ExtResource("2_lpb1i")]
+[node name="DropZone_3" parent="LiveBar/MarginContainer/HBoxContainer" groups=["drop_zone"] instance=ExtResource("1_mi2bh")]
+layout_mode = 2
+
+[node name="DropZone_4" parent="LiveBar/MarginContainer/HBoxContainer" groups=["drop_zone"] instance=ExtResource("1_mi2bh")]
+layout_mode = 2
+
+[node name="NewsItem_Test" parent="LiveBar/MarginContainer/HBoxContainer/DropZone_4" instance=ExtResource("2_lpb1i")]
 grow_horizontal = 1
 grow_vertical = 1

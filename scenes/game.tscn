@@ -1,43 +1,18 @@
-[gd_scene load_steps=5 format=3 uid="uid://cpogeahmvjydj"]
+[gd_scene load_steps=3 format=3 uid="uid://cpogeahmvjydj"]
 
-[sub_resource type="BoxMesh" id="BoxMesh_8h6a0"]
-size = Vector3(60, 2, 60)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_xwoi6"]
-size = Vector3(60, 2, 60)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u3ty5"]
-albedo_color = Color(0.360784, 0.360784, 0.360784, 1)
-
-[sub_resource type="BoxMesh" id="BoxMesh_6djge"]
+[ext_resource type="PackedScene" uid="uid://bg51qag7wfse0" path="res://scenes/ui.tscn" id="1_ihu4b"]
+[ext_resource type="PackedScene" uid="uid://ci36nuskade4y" path="res://scenes/level.tscn" id="1_rfo83"]
 
 [node name="Game" type="Node"]
 
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.00828, 18.3401)
-current = true
+[node name="MainUi" parent="." instance=ExtResource("1_ihu4b")]
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.461547, 0.887116, 0, -0.887116, 0.461547, 0, 20.2603, 0)
+[node name="Level" parent="." instance=ExtResource("1_rfo83")]
 
-[node name="StaticBody3D" type="StaticBody3D" parent="."]
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
-mesh = SubResource("BoxMesh_8h6a0")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
-shape = SubResource("BoxShape3D_xwoi6")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(3.69883, 0, 0, 0, 1.00217, 0, 0, 0, 2.79047, 0, 1.4, 0.808)
-material_override = SubResource("StandardMaterial3D_u3ty5")
-mesh = SubResource("BoxMesh_6djge")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="MeshInstance3D"]
-transform = Transform3D(0.205507, 0, 0, 0, 0.505965, 0, 0, 0, 0.0423567, -0.0585139, 0.86132, 0)
-material_override = SubResource("StandardMaterial3D_u3ty5")
-mesh = SubResource("BoxMesh_6djge")
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Level"]
+transform = Transform3D(1, 0, 0, 0, -0.314307, 0.949321, 0, -0.949321, -0.314307, -0.0365233, 7.15446, 0)
 
 [node name="Camera3D2" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 3)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.708, 2.67043)
+current = true
 fov = 90.0

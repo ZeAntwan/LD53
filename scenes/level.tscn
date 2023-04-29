@@ -39,7 +39,6 @@ albedo_color = Color(0.360784, 0.360784, 0.360784, 1)
 [node name="Level" type="Node3D"]
 
 [node name="SubViewport" type="SubViewport" parent="."]
-msaa_3d = 1
 mesh_lod_threshold = 0.0
 size = Vector2i(600, 400)
 

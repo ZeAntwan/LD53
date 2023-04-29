@@ -4,9 +4,12 @@ class_name NewsItem
 var selected = false
 var mouseOffset: Vector2 = Vector2.ZERO
 
+var canPick = true
+
 @onready var area = $Area2D
 @onready var parent = get_parent()
 @onready var label = $Label
+@onready var hiding = $Hiding
 
 @export var headline = Headline.new()
 
@@ -27,7 +30,7 @@ func _on_area_2d_mouse_entered():
 
 
 func _on_area_2d_input_event(viewport, event, shape_idx):
-	if Input.is_action_just_pressed("select"):
+	if Input.is_action_just_pressed("select") && canPick:
 		selected = true
 		mouseOffset = global_position - get_global_mouse_position()
 		z_index += 1
@@ -42,11 +45,12 @@ func _on_area_2d_input_event(viewport, event, shape_idx):
 				parent.remove_child(self)
 				if zone.newsItem != null:
 					var swapped = zone.update_newsitem(self)
-					print(parent)
-					print(swapped)
 					parent.update_newsitem(swapped)
 				else:
 					zone.update_newsitem(self)
 			parent = get_parent()
 		position = Vector2.ZERO
 		z_index -= 1
+
+func update_timer(ratio: float):
+	hiding.scale.y = ratio

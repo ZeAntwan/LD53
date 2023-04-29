@@ -1,18 +1,20 @@
-[gd_scene load_steps=7 format=3 uid="uid://bg51qag7wfse0"]
+[gd_scene load_steps=9 format=3 uid="uid://bg51qag7wfse0"]
 
 [ext_resource type="PackedScene" uid="uid://h1um88c2nc4y" path="res://scenes/ui/drop_zone.tscn" id="1_mi2bh"]
-[ext_resource type="PackedScene" uid="uid://bhuiqgoiywupk" path="res://scenes/ui/news_item.tscn" id="2_lpb1i"]
+[ext_resource type="Script" path="res://scripts/ui/NewsBar.gd" id="1_uop3o"]
+[ext_resource type="PackedScene" path="res://scenes/ui/news_item.tscn" id="2_lpb1i"]
 [ext_resource type="PackedScene" uid="uid://cj6qhtyh283tu" path="res://scenes/ui/live_zone.tscn" id="3_ghk45"]
 [ext_resource type="Script" path="res://scripts/ressources/Headline.gd" id="3_kb88l"]
 [ext_resource type="Script" path="res://scripts/LiveBar.gd" id="4_01ttq"]
+[ext_resource type="Script" path="res://scripts/debug/DebugUI.gd" id="6_kqe5e"]
 
-[sub_resource type="Resource" id="Resource_5iduk"]
+[sub_resource type="Resource" id="Resource_grr02"]
 script = ExtResource("3_kb88l")
 text = "Hello"
-stat_rating = 0
-stat_stock = 0
-stat_public = 0
-timer = 0.0
+stat_rating = 1
+stat_stock = 1
+stat_public = 1
+timer = 3.0
 
 [node name="MainUi" type="Control"]
 layout_mode = 3
@@ -23,15 +25,16 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 
-[node name="LeftBar" type="Control" parent="."]
+[node name="NewsBar" type="Control" parent="."]
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 1
 anchors_preset = 9
 anchor_bottom = 1.0
 grow_vertical = 2
 mouse_filter = 2
+script = ExtResource("1_uop3o")
 
-[node name="MarginContainer" type="MarginContainer" parent="LeftBar"]
+[node name="MarginContainer" type="MarginContainer" parent="NewsBar"]
 layout_mode = 2
 offset_right = 200.0
 offset_bottom = 140.0
@@ -40,27 +43,36 @@ theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 20
 theme_override_constants/margin_bottom = 20
 
-[node name="VBoxContainer" type="VBoxContainer" parent="LeftBar/MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="NewsBar/MarginContainer"]
 layout_mode = 2
 mouse_filter = 2
 theme_override_constants/separation = 20
 
-[node name="DropZone_Top" parent="LeftBar/MarginContainer/VBoxContainer" groups=["drop_zone"] instance=ExtResource("1_mi2bh")]
+[node name="DropZone_1" parent="NewsBar/MarginContainer/VBoxContainer" groups=["drop_zone"] instance=ExtResource("1_mi2bh")]
 layout_mode = 2
 
-[node name="NewsItem_Top" parent="LeftBar/MarginContainer/VBoxContainer/DropZone_Top" instance=ExtResource("2_lpb1i")]
+[node name="NewsItem_Top" parent="NewsBar/MarginContainer/VBoxContainer/DropZone_1" instance=ExtResource("2_lpb1i")]
 layout_mode = 0
 grow_horizontal = 1
 grow_vertical = 1
-headline = SubResource("Resource_5iduk")
+headline = SubResource("Resource_grr02")
 
-[node name="DropZone2_Bot" parent="LeftBar/MarginContainer/VBoxContainer" groups=["drop_zone"] instance=ExtResource("1_mi2bh")]
+[node name="DropZone_2" parent="NewsBar/MarginContainer/VBoxContainer" groups=["drop_zone"] instance=ExtResource("1_mi2bh")]
 layout_mode = 2
 
-[node name="NewsItem_Bot" parent="LeftBar/MarginContainer/VBoxContainer/DropZone2_Bot" instance=ExtResource("2_lpb1i")]
+[node name="NewsItem_Bot" parent="NewsBar/MarginContainer/VBoxContainer/DropZone_2" instance=ExtResource("2_lpb1i")]
 layout_mode = 0
 grow_horizontal = 1
 grow_vertical = 1
+
+[node name="DropZone_3" parent="NewsBar/MarginContainer/VBoxContainer" groups=["drop_zone"] instance=ExtResource("1_mi2bh")]
+layout_mode = 2
+
+[node name="DropZone_4" parent="NewsBar/MarginContainer/VBoxContainer" groups=["drop_zone"] instance=ExtResource("1_mi2bh")]
+layout_mode = 2
+
+[node name="DropZone_5" parent="NewsBar/MarginContainer/VBoxContainer" groups=["drop_zone"] instance=ExtResource("1_mi2bh")]
+layout_mode = 2
 
 [node name="LiveBar" type="Control" parent="."]
 custom_minimum_size = Vector2(1000, 200)
@@ -112,3 +124,67 @@ layout_mode = 2
 [node name="NewsItem_Test" parent="LiveBar/MarginContainer/HBoxContainer/DropZone_4" instance=ExtResource("2_lpb1i")]
 grow_horizontal = 1
 grow_vertical = 1
+
+[node name="DebugUI" type="Control" parent="."]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 40.0
+grow_horizontal = 0
+script = ExtResource("6_kqe5e")
+
+[node name="HBoxContainer" type="VBoxContainer" parent="DebugUI"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+grow_horizontal = 2
+
+[node name="Ratings" type="HBoxContainer" parent="DebugUI/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="DebugUI/HBoxContainer/Ratings"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Ratings"
+
+[node name="Score" type="Label" parent="DebugUI/HBoxContainer/Ratings"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "0
+"
+
+[node name="Stock" type="HBoxContainer" parent="DebugUI/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="DebugUI/HBoxContainer/Stock"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Stock
+"
+
+[node name="Score" type="Label" parent="DebugUI/HBoxContainer/Stock"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "0
+"
+
+[node name="Public" type="HBoxContainer" parent="DebugUI/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="DebugUI/HBoxContainer/Public"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Public
+"
+
+[node name="Score" type="Label" parent="DebugUI/HBoxContainer/Public"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "0
+"

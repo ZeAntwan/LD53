@@ -21,6 +21,12 @@ func update_line():
 			dropZones[i-1].update_newsitem(dropZones[i].newsItem)
 		if i == dropZones.size()-1:
 			dropZones[i].update_newsitem()
+	var count = 0
+	for node in dropZones:
+		if node.newsItem != null:
+			count += 1
+	if liveZone.newsItem == null && count != 0:
+		update_line()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):

@@ -11,6 +11,9 @@ func _ready():
 func _process(delta):
 	if newsItem != null:
 		newsItem.update_timer(1-timer.time_left/timer.wait_time)
+		Manager.score_rating += (newsItem.headline.stat_rating/timer.wait_time)*delta
+		Manager.score_stock += (newsItem.headline.stat_rating/timer.wait_time)*delta
+		Manager.score_public += (newsItem.headline.stat_rating/timer.wait_time)*delta
 	pass
 
 func update_newsitem(n: NewsItem = null):

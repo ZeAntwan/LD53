@@ -1,4 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://cpogeahmvjydj"]
+[gd_scene load_steps=4 format=3 uid="uid://cpogeahmvjydj"]
+
+[ext_resource type="PackedScene" uid="uid://bg51qag7wfse0" path="res://scenes/ui.tscn" id="1_qkw4r"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_8h6a0"]
 size = Vector3(60, 2, 60)
@@ -7,6 +9,8 @@ size = Vector3(60, 2, 60)
 size = Vector3(60, 2, 60)
 
 [node name="Game" type="Node"]
+
+[node name="MainUi" parent="." instance=ExtResource("1_qkw4r")]
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.00828, 18.3401)

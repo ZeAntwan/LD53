@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://h1um88c2nc4y"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xkdb8"]
+size = Vector2(160, 100)
+
+[node name="DropZone" type="Panel"]
+custom_minimum_size = Vector2(160, 100)
+mouse_force_pass_scroll_events = false
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(80, 50)
+shape = SubResource("RectangleShape2D_xkdb8")

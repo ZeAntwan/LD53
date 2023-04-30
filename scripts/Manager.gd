@@ -12,4 +12,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):		
+	score_rating = clampf(score_rating,0,100)
+	score_stock = clampf(score_rating,0,100)
+	score_public = clampf(score_rating,0,100)
 	pass

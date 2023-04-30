@@ -28,5 +28,5 @@ func add_news(h: Headline):
 			break
 	if targetNode != null:
 		var instance = item.instantiate()
-		targetNode.update_newsitem(instance)
+		targetNode.add_child(instance)
 	pass

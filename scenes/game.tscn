@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://cpogeahmvjydj"]
 
-[ext_resource type="PackedScene" uid="uid://bg51qag7wfse0" path="res://scenes/ui.tscn" id="1_ihu4b"]
+[ext_resource type="PackedScene" uid="uid://ilvnvx3a6bop" path="res://scenes/ui.tscn" id="1_ihu4b"]
 [ext_resource type="PackedScene" uid="uid://ci36nuskade4y" path="res://scenes/level.tscn" id="1_rfo83"]
 
 [node name="Game" type="Node"]
@@ -12,7 +12,7 @@
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="Level"]
 transform = Transform3D(1, 0, 0, 0, -0.314307, 0.949321, 0, -0.949321, -0.314307, -0.0365233, 7.15446, 0)
 
-[node name="Camera3D2" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.708, 2.67043)
+[node name="MainCamera" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.485754, 2.708, 3.01544)
 current = true
 fov = 90.0

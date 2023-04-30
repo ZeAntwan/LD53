@@ -1,18 +1,36 @@
-[gd_scene load_steps=3 format=3 uid="uid://cpogeahmvjydj"]
+[gd_scene load_steps=6 format=3 uid="uid://cpogeahmvjydj"]
 
 [ext_resource type="PackedScene" uid="uid://ilvnvx3a6bop" path="res://scenes/ui.tscn" id="1_ihu4b"]
+[ext_resource type="Script" path="res://scripts/game.gd" id="1_kbyar"]
 [ext_resource type="PackedScene" uid="uid://ci36nuskade4y" path="res://scenes/level.tscn" id="1_rfo83"]
+[ext_resource type="PackedScene" uid="uid://bfkuisbnwug2c" path="res://scenes/menu.tscn" id="2_eispj"]
+[ext_resource type="PackedScene" uid="uid://qtmpxangy4u" path="res://scenes/tutorial.tscn" id="3_cdsld"]
 
 [node name="Game" type="Node"]
+script = ExtResource("1_kbyar")
+
+[node name="Menu" parent="." instance=ExtResource("2_eispj")]
+
+[node name="Tutorial" parent="." instance=ExtResource("3_cdsld")]
+visible = false
 
 [node name="MainUi" parent="." instance=ExtResource("1_ihu4b")]
+visible = false
 
 [node name="Level" parent="." instance=ExtResource("1_rfo83")]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="Level"]
 transform = Transform3D(1, 0, 0, 0, -0.314307, 0.949321, 0, -0.949321, -0.314307, -0.0365233, 7.15446, 0)
 
+[node name="ActiveCamera" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.30284, 2.04119, 3.1913)
+current = true
+fov = 90.0
+
 [node name="MainCamera" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.485754, 2.708, 3.01544)
-current = true
+fov = 90.0
+
+[node name="MenuCamera" type="Camera3D" parent="."]
+transform = Transform3D(0.755854, -0.322688, 0.5697, 0, 0.870115, 0.492849, -0.654741, -0.372522, 0.657679, 2.87243, 5.28153, 4.90535)
 fov = 90.0

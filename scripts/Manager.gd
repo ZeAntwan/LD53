@@ -19,10 +19,21 @@ var state = GameState.MENU
 func _ready():
 	pass # Replace with function body.
 
+func reset_score():
+	score_rating = 50
+	score_stock = 50
+	score_public = 50
+	progression = 0
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):		
 	score_rating = clampf(score_rating,0,100)
 	score_stock = clampf(score_stock,0,100)
 	score_public = clampf(score_public,0,100)
+	
+	if score_rating <= 0 \
+		or score_stock <= 0 \
+		or score_public <= 0:
+			state = GameState.GAMEOVER
+	
 	pass

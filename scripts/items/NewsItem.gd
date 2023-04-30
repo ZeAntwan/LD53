@@ -56,7 +56,6 @@ func _on_area_2d_input_event(viewport, event, shape_idx):
 			var targetZone = ownZone
 			for node in overlap:
 				if node.get_parent().is_in_group("drop_zone"):
-					print(node)
 					if (area.global_position.distance_to(node.global_position)) < (area.global_position.distance_to(targetZone.global_position)):
 						targetZone = node
 						pass

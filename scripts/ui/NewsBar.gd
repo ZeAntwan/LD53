@@ -14,6 +14,8 @@ var headlineArray: Array
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	parse_headlines()
+	Events.news_ended.connect(fill_news)
+	Events.gameready.connect(fill_news)
 	pass # Replace with function body.
 
 func parse_headlines():
@@ -49,6 +51,7 @@ func add_news(h: Headline):
 			h = headlineArray.pick_random()
 		instance.set_headline(h)
 		targetNode.add_child(instance)
+		instance.position.x = -100
 		return true
 	else:
 		return false

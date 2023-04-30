@@ -49,17 +49,20 @@ viewport_path = NodePath("RatingsViewport")
 
 [node name="RatingsViewport" type="SubViewport" parent="."]
 size = Vector2i(1152, 648)
+render_target_update_mode = 4
 
 [node name="DisplayRatings" parent="RatingsViewport" instance=ExtResource("1_baesr")]
 
 [node name="StockViewport" type="SubViewport" parent="."]
 size = Vector2i(1152, 648)
+render_target_update_mode = 4
 
 [node name="DisplayRatings" parent="StockViewport" instance=ExtResource("2_shk20")]
 
 [node name="LiveViewport" type="SubViewport" parent="."]
 mesh_lod_threshold = 0.0
 size = Vector2i(600, 400)
+render_target_update_mode = 4
 
 [node name="CameraBody" type="MeshInstance3D" parent="LiveViewport"]
 transform = Transform3D(0.483866, 0, 0, 0, 0.404734, 0, 0, 0, 0.534293, 0, 2.39146, 0)

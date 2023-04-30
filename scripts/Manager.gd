@@ -1,8 +1,8 @@
 extends Node
 
-var score_rating: float = 0
-var score_stock: float = 2
-var score_public: float = 3
+var score_rating: float = 50
+var score_stock: float = 50
+var score_public: float = 50
 var progression: float = 0
 
 # Called when the node enters the scene tree for the first time.
@@ -12,4 +12,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):		
+	score_rating = clampf(score_rating,0,100)
+	score_stock = clampf(score_stock,0,100)
+	score_public = clampf(score_public,0,100)
 	pass

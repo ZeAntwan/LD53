@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3]
+[gd_scene load_steps=3 format=3 uid="uid://b5ktcs0j2auak"]
 
 [ext_resource type="Script" path="res://scripts/items/NewsItem.gd" id="1_efnsu"]
 
@@ -29,9 +29,9 @@ mouse_filter = 2
 color = Color(0, 0, 0, 1)
 
 [node name="Area2D" type="Area2D" parent="."]
+position = Vector2(80, 50)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(80, 50)
 shape = SubResource("RectangleShape2D_xkdb8")
 
 [node name="Label" type="Label" parent="."]
@@ -40,7 +40,10 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "Test"
+text = "Test
+sefesf
+sefsef
+"
 horizontal_alignment = 1
 vertical_alignment = 1
 

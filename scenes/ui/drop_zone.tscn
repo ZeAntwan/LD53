@@ -24,8 +24,8 @@ mouse_filter = 2
 color = Color(0, 0, 0, 0.764706)
 
 [node name="Area2D" type="Area2D" parent="."]
+position = Vector2(80, 50)
 input_pickable = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(80, 50)
 shape = SubResource("RectangleShape2D_xkdb8")

@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://h1um88c2nc4y" path="res://scenes/ui/drop_zone.tscn" id="1_mi2bh"]
 [ext_resource type="Script" path="res://scripts/ui/NewsBar.gd" id="1_uop3o"]
-[ext_resource type="PackedScene" path="res://scenes/ui/news_item.tscn" id="2_lpb1i"]
+[ext_resource type="PackedScene" uid="uid://b5ktcs0j2auak" path="res://scenes/ui/news_item.tscn" id="2_lpb1i"]
 [ext_resource type="PackedScene" uid="uid://cj6qhtyh283tu" path="res://scenes/ui/live_zone.tscn" id="3_ghk45"]
 [ext_resource type="Script" path="res://scripts/ressources/Headline.gd" id="3_kb88l"]
 [ext_resource type="Script" path="res://scripts/LiveBar.gd" id="4_01ttq"]
@@ -11,9 +11,9 @@
 [sub_resource type="Resource" id="Resource_grr02"]
 script = ExtResource("3_kb88l")
 text = "Hello"
-stat_rating = 1
-stat_stock = 1
-stat_public = 1
+stat_rating = 20
+stat_stock = 20
+stat_public = 20
 timer = 3.0
 
 [node name="MainUi" type="Control"]
@@ -188,3 +188,13 @@ layout_mode = 2
 size_flags_horizontal = 3
 text = "0
 "
+
+[node name="GameOver" type="HBoxContainer" parent="DebugUI/HBoxContainer"]
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="DebugUI/HBoxContainer/GameOver"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Game Over"

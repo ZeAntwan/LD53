@@ -12,7 +12,13 @@ func _process(delta):
 	$HBoxContainer/Stock/Score.text = str(Manager.score_stock)
 	$HBoxContainer/Public/Score.text = str(Manager.score_public)
 	
-	
+	if Manager.score_rating >= 100 \
+		or Manager.score_stock >= 100 \
+		or Manager.score_public >= 100 \
+		or Manager.score_rating <= 0 \
+		or Manager.score_stock <= 0 \
+		or Manager.score_public <= 0:
+			$HBoxContainer/GameOver.visible = true
 	
 	
 	pass

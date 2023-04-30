@@ -9,7 +9,7 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	update_viewcount()
+	#update_viewcount()
 	pass # Replace with function body.
 
 
@@ -23,7 +23,7 @@ func update_viewcount():
 	countText.text = str(baseViewcount)
 	pass
 
-
 func _on_timer_timeout():
-	update_viewcount()
+	if Manager.state == Manager.GameState.PLAY:
+		update_viewcount()
 	pass # Replace with function body.

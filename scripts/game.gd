@@ -35,6 +35,7 @@ func start_game(restart: bool = false):
 		pass
 	
 func ready_game():
+		Manager.state = Manager.GameState.READY
 		gameUI.visible = true
 		Manager.reset_score()
 

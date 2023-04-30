@@ -17,4 +17,4 @@ func _init(p_text = text, p_stat_rating = stat_rating, p_stat_stock = stat_stock
 	stat_public = p_stat_public * randf_range(-1,1)
 	timer = p_timer
 	
-	text = "%s %s %s" % [stat_rating, stat_stock, p_stat_public]
+	text = "%s %s %s" % [stat_rating, stat_stock, stat_public]

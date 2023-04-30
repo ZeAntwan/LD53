@@ -14,7 +14,10 @@ func _process(delta):
 	
 	if Manager.score_rating >= 100 \
 		or Manager.score_stock >= 100 \
-		or Manager.score_public >= 100:
+		or Manager.score_public >= 100 \
+		or Manager.score_rating <= 0 \
+		or Manager.score_stock <= 0 \
+		or Manager.score_public <= 0:
 			$HBoxContainer/GameOver.visible = true
 	
 	

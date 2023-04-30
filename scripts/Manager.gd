@@ -1,9 +1,19 @@
 extends Node
 
+enum GameState {
+	MENU,
+	TUTORIAL,
+	READY,
+	PLAY,
+	GAMEOVER
+}
+
 var score_rating: float = 50
 var score_stock: float = 50
 var score_public: float = 50
 var progression: float = 0
+
+var state = GameState.MENU
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

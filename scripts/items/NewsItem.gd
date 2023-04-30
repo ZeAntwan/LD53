@@ -17,10 +17,16 @@ var canPick = true
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	label.text = headline.text
+	set_headline(headline)
 	get_parent().update_newsitem(self)
 	target_position = global_position
 	pass # Replace with function body.
+
+func set_headline(h: Headline):
+	if !label:
+		label = $Label
+	headline = h
+	label.text = headline.text
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):

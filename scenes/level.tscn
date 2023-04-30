@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://ci36nuskade4y"]
+[gd_scene load_steps=27 format=3 uid="uid://ci36nuskade4y"]
 
 [ext_resource type="PackedScene" uid="uid://dbl8lpo4eapxr" path="res://scenes/display_ratings.tscn" id="1_baesr"]
 [ext_resource type="PackedScene" uid="uid://b26hcx2tttep7" path="res://scenes/display_stock.tscn" id="2_shk20"]
@@ -44,6 +44,40 @@ viewport_path = NodePath("RatingsViewport")
 [sub_resource type="PrismMesh" id="PrismMesh_5gar1"]
 
 [sub_resource type="SphereMesh" id="SphereMesh_yij73"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_3uls6"]
+animation = &"low"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_lchhf"]
+animation = &"mid"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_us75p"]
+animation = &"high"
+
+[sub_resource type="AnimationNodeBlendSpace1D" id="AnimationNodeBlendSpace1D_ltptv"]
+blend_point_0/node = SubResource("AnimationNodeAnimation_3uls6")
+blend_point_0/pos = 0.0
+blend_point_1/node = SubResource("AnimationNodeAnimation_lchhf")
+blend_point_1/pos = 0.5
+blend_point_2/node = SubResource("AnimationNodeAnimation_us75p")
+blend_point_2/pos = 1.0
+min_space = 0.0
+
+[sub_resource type="Animation" id="Animation_h48p1"]
+resource_name = "low"
+
+[sub_resource type="Animation" id="Animation_250yp"]
+resource_name = "mid"
+
+[sub_resource type="Animation" id="Animation_f8xu3"]
+resource_name = "high"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_h4ymv"]
+_data = {
+"high": SubResource("Animation_f8xu3"),
+"low": SubResource("Animation_h48p1"),
+"mid": SubResource("Animation_250yp")
+}
 
 [node name="Level" type="Node3D"]
 
@@ -167,3 +201,14 @@ mesh = SubResource("SphereMesh_yij73")
 
 [node name="SpotLight3D" type="SpotLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -0.445901, 0.895082, 0, -0.895082, -0.445901, 0, 4.87207, 1.58077)
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+tree_root = SubResource("AnimationNodeBlendSpace1D_ltptv")
+anim_player = NodePath("AnimationPlayer")
+active = true
+parameters/blend_position = 0.0581879
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimationTree"]
+libraries = {
+"": SubResource("AnimationLibrary_h4ymv")
+}

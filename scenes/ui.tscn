@@ -1,10 +1,20 @@
-[gd_scene load_steps=6 format=3 uid="uid://ilvnvx3a6bop"]
+[gd_scene load_steps=9 format=3 uid="uid://ilvnvx3a6bop"]
 
 [ext_resource type="PackedScene" uid="uid://h1um88c2nc4y" path="res://scenes/ui/drop_zone.tscn" id="1_mi2bh"]
 [ext_resource type="Script" path="res://scripts/ui/NewsBar.gd" id="1_uop3o"]
+[ext_resource type="PackedScene" uid="uid://b5ktcs0j2auak" path="res://scenes/ui/news_item.tscn" id="2_lpb1i"]
 [ext_resource type="PackedScene" uid="uid://cj6qhtyh283tu" path="res://scenes/ui/live_zone.tscn" id="3_ghk45"]
+[ext_resource type="Script" path="res://scripts/ressources/Headline.gd" id="3_kb88l"]
 [ext_resource type="Script" path="res://scripts/ui/LiveBar.gd" id="5_3qfj8"]
 [ext_resource type="Script" path="res://scripts/debug/DebugUI.gd" id="6_kqe5e"]
+
+[sub_resource type="Resource" id="Resource_ay8bk"]
+script = ExtResource("3_kb88l")
+text = "Killer"
+stat_rating = -50.0
+stat_stock = 0.0
+stat_public = 0.0
+timer = 3.0
 
 [node name="MainUi" type="Control"]
 layout_mode = 3
@@ -40,6 +50,10 @@ theme_override_constants/separation = 20
 
 [node name="DropZone_1" parent="NewsBar/MarginContainer/VBoxContainer" groups=["drop_zone"] instance=ExtResource("1_mi2bh")]
 layout_mode = 2
+
+[node name="NewsItem" parent="NewsBar/MarginContainer/VBoxContainer/DropZone_1" instance=ExtResource("2_lpb1i")]
+layout_mode = 2
+headline = SubResource("Resource_ay8bk")
 
 [node name="DropZone_2" parent="NewsBar/MarginContainer/VBoxContainer" groups=["drop_zone"] instance=ExtResource("1_mi2bh")]
 layout_mode = 2

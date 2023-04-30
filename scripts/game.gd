@@ -3,6 +3,7 @@ extends Node
 @onready var mainMenu = $Menu
 @onready var tutoMenu = $Tutorial
 @onready var gameUI = $MainUi
+@onready var gameOverUI = $GameOver
 
 @onready var mainCamera: Node3D = $MainCamera
 @onready var menuCamera: Node3D = $MenuCamera
@@ -14,7 +15,9 @@ var targetCamera: Node3D = null
 func _ready():
 	gameCamera.global_transform = menuCamera.global_transform
 	Events.pressed_play.connect(start_game)
+	Events.pressed_restart.connect(restart_game)
 	Events.gameready.connect(ready_game)
+	Events.gameover.connect(game_over)
 	pass # Replace with function body.
 
 
@@ -26,16 +29,26 @@ func _process(delta):
 
 func start_game(restart: bool = false):
 	mainMenu.visible = false
+	Manager.reset_score()
 	if restart:
-		Manager.state = Manager.GameState.READY
+		ready_game()
 	else:
 		Manager.state = Manager.GameState.TUTORIAL
 		targetCamera = mainCamera
 		tutoMenu.visible = true
 		pass
+
+func restart_game():
+	start_game(true)
+	gameUI.get_node("NewsBar").fill_news(true)
 	
 func ready_game():
+		gameOverUI.visible = false
 		Manager.state = Manager.GameState.READY
 		gameUI.visible = true
-		Manager.reset_score()
+		
+func game_over():
+		gameUI.visible = false
+		Manager.state = Manager.GameState.GAMEOVER
+		gameOverUI.visible = true
 

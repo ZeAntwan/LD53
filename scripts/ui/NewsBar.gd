@@ -57,7 +57,13 @@ func add_news(h: Headline):
 		return false
 	pass
 
-func fill_news():
+func fill_news(clear: bool = false):
+	if clear:
+		for node in containers:
+			if node.newsItem != null:
+				node.newsItem.queue_free()
+				node.newsItem = null
+	
 	while add_news(headlineArray.pick_random()):
 		pass
 

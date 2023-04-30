@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://cpogeahmvjydj"]
+[gd_scene load_steps=7 format=3 uid="uid://cpogeahmvjydj"]
 
 [ext_resource type="PackedScene" uid="uid://ilvnvx3a6bop" path="res://scenes/ui.tscn" id="1_ihu4b"]
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_kbyar"]
 [ext_resource type="PackedScene" uid="uid://ci36nuskade4y" path="res://scenes/level.tscn" id="1_rfo83"]
 [ext_resource type="PackedScene" uid="uid://bfkuisbnwug2c" path="res://scenes/menu.tscn" id="2_eispj"]
+[ext_resource type="PackedScene" uid="uid://cpbkljjgg8dyt" path="res://scenes/game_over.tscn" id="3_3yo7q"]
 [ext_resource type="PackedScene" uid="uid://qtmpxangy4u" path="res://scenes/tutorial.tscn" id="3_cdsld"]
 
 [node name="Game" type="Node"]
@@ -15,6 +16,9 @@ script = ExtResource("1_kbyar")
 visible = false
 
 [node name="MainUi" parent="." instance=ExtResource("1_ihu4b")]
+visible = false
+
+[node name="GameOver" parent="." instance=ExtResource("3_3yo7q")]
 visible = false
 
 [node name="Level" parent="." instance=ExtResource("1_rfo83")]

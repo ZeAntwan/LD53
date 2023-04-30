@@ -72,3 +72,4 @@ func _on_area_2d_input_event(viewport, event, shape_idx):
 
 func update_timer(ratio: float):
 	hiding.scale.y = ratio
+

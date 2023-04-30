@@ -31,9 +31,9 @@ func _process(delta):
 	score_stock = clampf(score_stock,0,100)
 	score_public = clampf(score_public,0,100)
 	
-	if score_rating <= 0 \
-		or score_stock <= 0 \
-		or score_public <= 0:
-			state = GameState.GAMEOVER
+	if score_rating < 1 \
+		or score_stock < 1 \
+		or score_public < 1:
+			Events.gameover.emit()
 	
 	pass

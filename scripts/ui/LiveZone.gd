@@ -26,6 +26,7 @@ func update_newsitem(n: NewsItem = null):
 		
 	if Manager.state == Manager.GameState.READY:
 		Manager.state = Manager.GameState.PLAY
+		Events.gamestarted.emit()
 
 
 func _on_timer_timeout():

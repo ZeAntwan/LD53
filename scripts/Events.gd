@@ -11,3 +11,4 @@ signal pressed_restart
 signal pressed_credits
 
 signal gameready
+signal gamestarted

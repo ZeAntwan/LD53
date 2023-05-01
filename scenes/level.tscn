@@ -1,7 +1,17 @@
-[gd_scene load_steps=27 format=3 uid="uid://ci36nuskade4y"]
+[gd_scene load_steps=36 format=3 uid="uid://ci36nuskade4y"]
 
 [ext_resource type="PackedScene" uid="uid://dbl8lpo4eapxr" path="res://scenes/display_ratings.tscn" id="1_baesr"]
 [ext_resource type="PackedScene" uid="uid://b26hcx2tttep7" path="res://scenes/display_stock.tscn" id="2_shk20"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_o5soa"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_7m76l"]
+viewport_path = NodePath("RatingsViewport")
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_hyohl"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_whu6y"]
+viewport_path = NodePath("StockViewport")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hfhmx"]
 albedo_color = Color(0.176471, 0.176471, 0.176471, 1)
@@ -13,16 +23,17 @@ albedo_color = Color(0.176471, 0.176471, 0.176471, 1)
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vx7k0"]
 albedo_color = Color(0.701961, 0.701961, 0.701961, 1)
 
-[sub_resource type="BoxMesh" id="BoxMesh_o5soa"]
+[sub_resource type="CylinderMesh" id="CylinderMesh_ts4jm"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_yh4aj"]
+viewport_path = NodePath("LiveViewport")
 
 [sub_resource type="CameraTexture" id="CameraTexture_hhfxa"]
 camera_feed_id = 1
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nldfh"]
+albedo_color = Color(0.321569, 0.321569, 0.321569, 1)
 albedo_texture = SubResource("CameraTexture_hhfxa")
-
-[sub_resource type="ViewportTexture" id="ViewportTexture_yh4aj"]
-viewport_path = NodePath("LiveViewport")
 
 [sub_resource type="BoxMesh" id="BoxMesh_so24c"]
 size = Vector3(60, 2, 60)
@@ -34,12 +45,6 @@ size = Vector3(60, 2, 60)
 albedo_color = Color(0.360784, 0.360784, 0.360784, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_0lt75"]
-
-[sub_resource type="ViewportTexture" id="ViewportTexture_whu6y"]
-viewport_path = NodePath("StockViewport")
-
-[sub_resource type="ViewportTexture" id="ViewportTexture_7m76l"]
-viewport_path = NodePath("RatingsViewport")
 
 [sub_resource type="PrismMesh" id="PrismMesh_5gar1"]
 
@@ -63,14 +68,14 @@ blend_point_2/node = SubResource("AnimationNodeAnimation_us75p")
 blend_point_2/pos = 1.0
 min_space = 0.0
 
+[sub_resource type="Animation" id="Animation_f8xu3"]
+resource_name = "high"
+
 [sub_resource type="Animation" id="Animation_h48p1"]
 resource_name = "low"
 
 [sub_resource type="Animation" id="Animation_250yp"]
 resource_name = "mid"
-
-[sub_resource type="Animation" id="Animation_f8xu3"]
-resource_name = "high"
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_h4ymv"]
 _data = {
@@ -78,6 +83,28 @@ _data = {
 "low": SubResource("Animation_h48p1"),
 "mid": SubResource("Animation_250yp")
 }
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_og3df"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_cdrb5"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_o5luh"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_n7w1n"]
+noise = SubResource("FastNoiseLite_o5luh")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vlkmj"]
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 2
+alpha_antialiasing_edge = 0.62
+cull_mode = 2
+albedo_color = Color(0, 0.517647, 0.509804, 1)
+albedo_texture = SubResource("NoiseTexture2D_n7w1n")
+
+[sub_resource type="BoxMesh" id="BoxMesh_5chyq"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_eolfc"]
 
 [node name="Level" type="Node3D"]
 
@@ -87,11 +114,53 @@ render_target_update_mode = 4
 
 [node name="DisplayRatings" parent="RatingsViewport" instance=ExtResource("1_baesr")]
 
+[node name="Ratings_Stat_TV" type="MeshInstance3D" parent="RatingsViewport"]
+transform = Transform3D(2.20602, 0, -0.0324435, 0, 1.01146, 0, 0.591102, 0, 0.121081, 2.57413, 4.165, 0.036413)
+mesh = SubResource("BoxMesh_o5soa")
+skeleton = NodePath("../..")
+
+[node name="RatingSprite" type="Sprite3D" parent="RatingsViewport/Ratings_Stat_TV"]
+transform = Transform3D(0.079, 0, 0, 0, 0.133, 0, 0, 0, 0.524, 0.000811881, 0.00374937, 0.697357)
+no_depth_test = true
+texture_filter = 1
+texture = SubResource("ViewportTexture_7m76l")
+
+[node name="TV_Support_1" type="MeshInstance3D" parent="RatingsViewport"]
+transform = Transform3D(0.1, 0, -4.93926e-08, 0, 2, 0, 4.93926e-08, 0, 0.1, 1.54153, 6.65274, -0.256819)
+mesh = SubResource("CylinderMesh_hyohl")
+skeleton = NodePath("../..")
+
+[node name="TV_Support_2" type="MeshInstance3D" parent="RatingsViewport"]
+transform = Transform3D(0.1, 0, -4.93926e-08, 0, 2, 0, 4.93926e-08, 0, 0.1, 3.60279, 6.65274, 0.315639)
+mesh = SubResource("CylinderMesh_hyohl")
+skeleton = NodePath("../..")
+
 [node name="StockViewport" type="SubViewport" parent="."]
 size = Vector2i(1152, 648)
 render_target_update_mode = 4
 
 [node name="DisplayRatings" parent="StockViewport" instance=ExtResource("2_shk20")]
+
+[node name="Stock_Stat_TV" type="MeshInstance3D" parent="StockViewport"]
+transform = Transform3D(2.20602, 0, 0.0324435, 0, 1.01146, 0, -0.591102, 0, 0.121081, -2.39869, 4.165, 0.05)
+mesh = SubResource("BoxMesh_o5soa")
+skeleton = NodePath("../..")
+
+[node name="StockSprite" type="Sprite3D" parent="StockViewport/Stock_Stat_TV"]
+transform = Transform3D(0.081, 0, 0, 0, 0.137, 0, 0, 0, 0.538, 0.000811881, 0.00374937, 0.697357)
+no_depth_test = true
+texture_filter = 1
+texture = SubResource("ViewportTexture_whu6y")
+
+[node name="TV_Support_1" type="MeshInstance3D" parent="StockViewport"]
+transform = Transform3D(0.1, 0, -4.93926e-08, 0, 2, 0, 4.93926e-08, 0, 0.1, -3.46011, 6.65274, 0.328332)
+mesh = SubResource("CylinderMesh_hyohl")
+skeleton = NodePath("../..")
+
+[node name="TV_Support_2" type="MeshInstance3D" parent="StockViewport"]
+transform = Transform3D(0.1, 0, -4.93926e-08, 0, 2, 0, 4.93926e-08, 0, 0.1, -1.35945, 6.65274, -0.234955)
+mesh = SubResource("CylinderMesh_hyohl")
+skeleton = NodePath("../..")
 
 [node name="LiveViewport" type="SubViewport" parent="."]
 mesh_lod_threshold = 0.0
@@ -113,16 +182,31 @@ surface_material_override/0 = SubResource("StandardMaterial3D_vx7k0")
 transform = Transform3D(-2.06669, 0, -1.99505e-07, 0, 2.47076, 0, 1.80676e-07, 0, -1.87163, 0, 0.224672, 0.765952)
 current = true
 
-[node name="Temp_LiveFeedTV" type="MeshInstance3D" parent="."]
-transform = Transform3D(2.502, 0, 0, 0, 1.104, 0, 0, 0, 0.129, 0, 3.177, 0.29)
-mesh = SubResource("BoxMesh_o5soa")
-surface_material_override/0 = SubResource("StandardMaterial3D_nldfh")
+[node name="CameraTripod_Leg_1" type="MeshInstance3D" parent="LiveViewport/CameraBody"]
+transform = Transform3D(0.20076, 0.490509, 0.00122533, -0.0586594, 2.39937, 0.00599383, 4.33965e-11, -0.0467404, 0.187105, -0.454446, -2.24483, 0)
+mesh = SubResource("CylinderMesh_ts4jm")
+skeleton = NodePath("../../..")
 
-[node name="LiveSprite" type="Sprite3D" parent="Temp_LiveFeedTV"]
-transform = Transform3D(0.150377, 0, 0, 0, 0.255173, 0, 0, 0, 1, 0.000811881, 0.00374937, 0.697357)
+[node name="CameraTripod_Leg_2" type="MeshInstance3D" parent="LiveViewport/CameraBody"]
+transform = Transform3D(-0.200789, -0.48947, -3.11968e-08, -0.0584995, 2.39975, 0.0060366, -0.00108299, 0.0444271, -0.187107, 0.574986, -2.24483, 0)
+mesh = SubResource("CylinderMesh_ts4jm")
+skeleton = NodePath("../../..")
+
+[node name="CameraTripod_Leg_3" type="MeshInstance3D" parent="LiveViewport/CameraBody"]
+transform = Transform3D(-0.00119589, 0.0490571, -0.206607, -0.0584995, 2.39975, 0.0060366, 0.181838, 0.443274, -8.17872e-09, 0.0565066, -2.23873, -0.680588)
+mesh = SubResource("CylinderMesh_ts4jm")
+skeleton = NodePath("../../..")
+
+[node name="LiveSprite" type="Sprite3D" parent="."]
+transform = Transform3D(0.376243, 0, 0, 0, 0.281711, 0, 0, 0, 0.129, 0.00203133, 3.18114, 0.379959)
 no_depth_test = true
 texture_filter = 1
 texture = SubResource("ViewportTexture_yh4aj")
+
+[node name="Temp_LiveFeedTV" type="MeshInstance3D" parent="."]
+transform = Transform3D(2.00317, 0, 0, 0, 1.104, 0, 0, 0, 0.129, 0, 3.177, 0.29)
+mesh = SubResource("BoxMesh_o5soa")
+surface_material_override/0 = SubResource("StandardMaterial3D_nldfh")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 
@@ -137,59 +221,36 @@ transform = Transform3D(3.67821, 0, 0, 0, 0.996582, 0, 0, 0, 1.06325, 0, 1.4, 1.
 material_override = SubResource("StandardMaterial3D_0fv6n")
 mesh = SubResource("BoxMesh_0lt75")
 
+[node name="Temp_Screen_1" type="MeshInstance3D" parent="Temp_Desk"]
+transform = Transform3D(0.206659, 0, 0, 0, 0.304051, 0.0133497, 0, -0.326728, 0.0846179, -0.342109, 0.642637, 0.250628)
+material_override = SubResource("StandardMaterial3D_0fv6n")
+mesh = SubResource("BoxMesh_0lt75")
+
+[node name="Temp_Screen_2" type="MeshInstance3D" parent="Temp_Desk"]
+transform = Transform3D(0.206659, 0, 0, 0, 0.304051, 0.0133497, 0, -0.326728, 0.0846179, -0.12353, 0.642637, 0.250628)
+material_override = SubResource("StandardMaterial3D_0fv6n")
+mesh = SubResource("BoxMesh_0lt75")
+
+[node name="Temp_Screen_3" type="MeshInstance3D" parent="Temp_Desk"]
+transform = Transform3D(0.206659, 0, 0, 0, 0.304051, 0.0133497, 0, -0.326728, 0.0846179, 0.0941792, 0.642637, 0.250628)
+material_override = SubResource("StandardMaterial3D_0fv6n")
+mesh = SubResource("BoxMesh_0lt75")
+
+[node name="Temp_Screen_4" type="MeshInstance3D" parent="Temp_Desk"]
+transform = Transform3D(0.206659, 0, 0, 0, 0.304051, 0.0133497, 0, -0.326728, 0.0846179, 0.312758, 0.642637, 0.250628)
+material_override = SubResource("StandardMaterial3D_0fv6n")
+mesh = SubResource("BoxMesh_0lt75")
+
+[node name="Temp_Desk2" type="MeshInstance3D" parent="Temp_Desk"]
+transform = Transform3D(1.00561, 0, 0, 0, 0.365319, 0, 0, 0, 0.451761, 0, 0.603844, -0.181397)
+material_override = SubResource("StandardMaterial3D_0fv6n")
+mesh = SubResource("BoxMesh_0lt75")
+skeleton = NodePath("../..")
+
 [node name="Camera3D2" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.708, 2.802)
 visible = false
 fov = 90.0
-
-[node name="Temp_Screen_1" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.760135, 0, 0, 0, 0.303012, 0.0133041, 0, -0.347394, 0.08997, -1.25835, 2.04044, 1.78801)
-material_override = SubResource("StandardMaterial3D_0fv6n")
-mesh = SubResource("BoxMesh_0lt75")
-skeleton = NodePath("../Temp_Desk")
-
-[node name="Temp_Screen_2" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.760135, 0, 0, 0, 0.303012, 0.0133041, 0, -0.347394, 0.08997, -0.454371, 2.04044, 1.78801)
-material_override = SubResource("StandardMaterial3D_0fv6n")
-mesh = SubResource("BoxMesh_0lt75")
-skeleton = NodePath("../Temp_Desk")
-
-[node name="Temp_Screen_3" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.760135, 0, 0, 0, 0.303012, 0.0133041, 0, -0.347394, 0.08997, 0.346411, 2.04044, 1.78801)
-material_override = SubResource("StandardMaterial3D_0fv6n")
-mesh = SubResource("BoxMesh_0lt75")
-skeleton = NodePath("../Temp_Desk")
-
-[node name="Temp_Screen_4" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.760135, 0, 0, 0, 0.303012, 0.0133041, 0, -0.347394, 0.08997, 1.15039, 2.04044, 1.78801)
-material_override = SubResource("StandardMaterial3D_0fv6n")
-mesh = SubResource("BoxMesh_0lt75")
-skeleton = NodePath("../Temp_Desk")
-
-[node name="Temp_Desk2" type="MeshInstance3D" parent="."]
-transform = Transform3D(3.69883, 0, 0, 0, 0.36407, 0, 0, 0, 0.480335, 0, 2.00178, 1.32866)
-material_override = SubResource("StandardMaterial3D_0fv6n")
-mesh = SubResource("BoxMesh_0lt75")
-
-[node name="Temp_Stat_1_TV" type="MeshInstance3D" parent="."]
-transform = Transform3D(2.20602, 0, 0.0324435, 0, 1.01146, 0, -0.591102, 0, 0.121081, -3.023, 4.165, 0.05)
-mesh = SubResource("BoxMesh_o5soa")
-
-[node name="StockSprite" type="Sprite3D" parent="Temp_Stat_1_TV"]
-transform = Transform3D(0.081, 0, 0, 0, 0.137, 0, 0, 0, 0.538, 0.000811881, 0.00374937, 0.697357)
-no_depth_test = true
-texture_filter = 1
-texture = SubResource("ViewportTexture_whu6y")
-
-[node name="Temp_Stat_2_TV" type="MeshInstance3D" parent="."]
-transform = Transform3D(2.20602, 0, -0.0324435, 0, 1.01146, 0, 0.591102, 0, 0.121081, 2.97936, 4.165, 0.036413)
-mesh = SubResource("BoxMesh_o5soa")
-
-[node name="RatingSprite" type="Sprite3D" parent="Temp_Stat_2_TV"]
-transform = Transform3D(0.079, 0, 0, 0, 0.133, 0, 0, 0, 0.524, 0.000811881, 0.00374937, 0.697357)
-no_depth_test = true
-texture_filter = 1
-texture = SubResource("ViewportTexture_7m76l")
 
 [node name="Temp_CharacterMesh" type="MeshInstance3D" parent="."]
 transform = Transform3D(-0.959736, 2.12347e-07, 0, -8.39028e-08, -2.42897, 0, 0, 0, 0.627725, 1.18432e-08, 1.6082, 3.69214)
@@ -198,9 +259,6 @@ mesh = SubResource("PrismMesh_5gar1")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Temp_CharacterMesh"]
 transform = Transform3D(0.849191, 3.55271e-14, 0, 4.44089e-14, 0.364895, 0, 0, 0, 1, -9.9476e-14, -0.666641, -0.104017)
 mesh = SubResource("SphereMesh_yij73")
-
-[node name="SpotLight3D" type="SpotLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -0.445901, 0.895082, 0, -0.895082, -0.445901, 0, 4.87207, 1.58077)
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
 tree_root = SubResource("AnimationNodeBlendSpace1D_ltptv")
@@ -212,3 +270,139 @@ parameters/blend_position = 0.0581879
 libraries = {
 "": SubResource("AnimationLibrary_h4ymv")
 }
+
+[node name="WindowFrame_1" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.75, 0, 0, 0, 5, 0, 0, 0, 0.75, 3, 5.128, 8.80008)
+mesh = SubResource("CylinderMesh_og3df")
+
+[node name="WindowFrame_2" type="MeshInstance3D" parent="WindowFrame_1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, 0)
+mesh = SubResource("CylinderMesh_og3df")
+skeleton = NodePath("../..")
+
+[node name="WindowFrame_3" type="MeshInstance3D" parent="WindowFrame_1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -3.63611)
+mesh = SubResource("CylinderMesh_og3df")
+skeleton = NodePath("../..")
+
+[node name="WindowFrame_4" type="MeshInstance3D" parent="WindowFrame_1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0, -3.63611)
+mesh = SubResource("CylinderMesh_og3df")
+skeleton = NodePath("../..")
+
+[node name="StudioWall_1" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.75, 0, 0, 0, 15.4167, 0, 0, 0, 17.4586, -6.5, 7.066, -2.44)
+mesh = SubResource("BoxMesh_cdrb5")
+skeleton = NodePath("../WindowFrame_1")
+
+[node name="StudioWall_2" type="MeshInstance3D" parent="StudioWall_1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.3333, 0, 0)
+mesh = SubResource("BoxMesh_cdrb5")
+skeleton = NodePath("../../WindowFrame_1")
+
+[node name="StudioWall_3_Roof" type="MeshInstance3D" parent="StudioWall_1"]
+transform = Transform3D(-4.37114e-08, -35.3007, 0, 0.0486486, -7.50668e-08, 0, 0, 0, 1, 8.86596, 0.076979, 0.14118)
+mesh = SubResource("BoxMesh_cdrb5")
+skeleton = NodePath("../../WindowFrame_1")
+
+[node name="StudioWall_4" type="MeshInstance3D" parent="StudioWall_1"]
+transform = Transform3D(-4.37114e-08, 0, 23.2781, 0, 1, 0, -0.0429589, 0, -4.37114e-08, 9.44288, 0.00067544, -0.303241)
+mesh = SubResource("BoxMesh_cdrb5")
+skeleton = NodePath("../../WindowFrame_1")
+
+[node name="StudioWindow_1" type="MeshInstance3D" parent="."]
+transform = Transform3D(-8.52372e-09, 0, 6, 0, 9.62742, 0, -0.195, 0, -2.62268e-07, -0.021266, 5.31318, 8.99799)
+mesh = SubResource("BoxMesh_cdrb5")
+skeleton = NodePath("../WindowFrame_1")
+surface_material_override/0 = SubResource("StandardMaterial3D_vlkmj")
+
+[node name="StudioWindow_2" type="MeshInstance3D" parent="StudioWindow_1"]
+transform = Transform3D(0.737277, 0, -20.7874, 0, 1, 0, 0.0219567, 0, 0.737277, 10.6075, 0, -0.862049)
+mesh = SubResource("BoxMesh_cdrb5")
+skeleton = NodePath("../../WindowFrame_1")
+surface_material_override/0 = SubResource("StandardMaterial3D_vlkmj")
+
+[node name="StudioWindow_3" type="MeshInstance3D" parent="StudioWindow_1"]
+transform = Transform3D(-0.737277, 0, -20.7874, 0, 1, 0, 0.0219567, 0, -0.737277, 10.7503, 0, 0.851489)
+mesh = SubResource("BoxMesh_cdrb5")
+skeleton = NodePath("../../WindowFrame_1")
+surface_material_override/0 = SubResource("StandardMaterial3D_vlkmj")
+
+[node name="OutsideDirectionalLight" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.788354, 0.149592, -0.596758, 0.44145, 0.538063, 0.71806, 0.428509, -0.829524, 0.358147, -21.8403, 5.128, 7.99641)
+
+[node name="StudioLight_1" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.594481, 0, 0, 0, 0.0551062, 0, 0, 0, 1.82649, -2.01192, 7.17099, -2.2245)
+mesh = SubResource("BoxMesh_5chyq")
+
+[node name="StudioLight_Support_1" type="MeshInstance3D" parent="StudioLight_1"]
+transform = Transform3D(0.252321, 0, 0, 0, 18.1468, 0, 0, 0, 0.0821248, 0, 18.1268, 0.407869)
+mesh = SubResource("CylinderMesh_eolfc")
+skeleton = NodePath("../..")
+
+[node name="StudioLight_Support_2" type="MeshInstance3D" parent="StudioLight_1"]
+transform = Transform3D(0.252321, 0, 0, 0, 18.1468, 0, 0, 0, 0.0821248, 0, 18.1268, -0.38881)
+mesh = SubResource("CylinderMesh_eolfc")
+skeleton = NodePath("../..")
+
+[node name="StudioLights_1" type="SpotLight3D" parent="StudioLight_1"]
+transform = Transform3D(1.68214, 0, 0, 0, -7.93221e-07, 18.1468, 0, -0.547499, -2.39319e-08, 0.020045, -3.10284, 2.25761)
+spot_range = 30.085
+spot_attenuation = 0.37893
+
+[node name="StudioLights_4" type="SpotLight3D" parent="StudioLight_1/StudioLights_1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.11962, 0)
+spot_range = 30.085
+spot_attenuation = 0.37893
+
+[node name="StudioLight_2" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.594481, 0, 0, 0, 0.0551062, 0, 0, 0, 1.82649, 1.9618, 7.17099, -2.2245)
+mesh = SubResource("BoxMesh_5chyq")
+
+[node name="StudioLight_Support_1" type="MeshInstance3D" parent="StudioLight_2"]
+transform = Transform3D(0.252321, 0, 0, 0, 18.1468, 0, 0, 0, 0.0821248, 0, 18.1268, 0.407869)
+mesh = SubResource("CylinderMesh_eolfc")
+skeleton = NodePath("../..")
+
+[node name="StudioLight_Support_2" type="MeshInstance3D" parent="StudioLight_2"]
+transform = Transform3D(0.252321, 0, 0, 0, 18.1468, 0, 0, 0, 0.0821248, 0, 18.1268, -0.38881)
+mesh = SubResource("CylinderMesh_eolfc")
+skeleton = NodePath("../..")
+
+[node name="StudioLights_2" type="SpotLight3D" parent="StudioLight_2"]
+transform = Transform3D(1.68214, 0, 0, 0, -7.93221e-07, 18.1468, 0, -0.547499, -2.39319e-08, 0.0642526, -3.10284, 2.25761)
+spot_range = 30.085
+spot_attenuation = 0.37893
+
+[node name="StudioLight_3" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.594481, 0, 0, 0, 0.0551062, 0, 0, 0, 1.82649, -2.01192, 7.17099, 1.89652)
+mesh = SubResource("BoxMesh_5chyq")
+
+[node name="StudioLight_Support_1" type="MeshInstance3D" parent="StudioLight_3"]
+transform = Transform3D(0.252321, 0, 0, 0, 18.1468, 0, 0, 0, 0.0821248, 0, 18.1268, 0.407869)
+mesh = SubResource("CylinderMesh_eolfc")
+skeleton = NodePath("../..")
+
+[node name="StudioLight_Support_2" type="MeshInstance3D" parent="StudioLight_3"]
+transform = Transform3D(0.252321, 0, 0, 0, 18.1468, 0, 0, 0, 0.0821248, 0, 18.1268, -0.38881)
+mesh = SubResource("CylinderMesh_eolfc")
+skeleton = NodePath("../..")
+
+[node name="StudioLights_3" type="SpotLight3D" parent="StudioLight_3"]
+transform = Transform3D(1.68214, 0, 0, 0, -7.93221e-07, 18.1468, 0, -0.547499, -2.39319e-08, 6.7486, -3.10284, -2.25413)
+spot_range = 30.085
+spot_attenuation = 0.37893
+
+[node name="StudioLight_4" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.594481, 0, 0, 0, 0.0551062, 0, 0, 0, 1.82649, 1.9618, 7.17099, 1.89652)
+mesh = SubResource("BoxMesh_5chyq")
+
+[node name="StudioLight_Support_1" type="MeshInstance3D" parent="StudioLight_4"]
+transform = Transform3D(0.252321, 0, 0, 0, 18.1468, 0, 0, 0, 0.0821248, 0, 18.1268, 0.407869)
+mesh = SubResource("CylinderMesh_eolfc")
+skeleton = NodePath("../..")
+
+[node name="StudioLight_Support_2" type="MeshInstance3D" parent="StudioLight_4"]
+transform = Transform3D(0.252321, 0, 0, 0, 18.1468, 0, 0, 0, 0.0821248, 0, 18.1268, -0.38881)
+mesh = SubResource("CylinderMesh_eolfc")
+skeleton = NodePath("../..")

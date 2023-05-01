@@ -36,4 +36,6 @@ func _process(delta):
 		or score_public < 1:
 			Events.gameover.emit()
 	
+	if state == GameState.PLAY:
+		progression += delta
 	pass

@@ -1,21 +1,11 @@
-[gd_scene load_steps=10 format=3 uid="uid://ilvnvx3a6bop"]
+[gd_scene load_steps=7 format=3 uid="uid://ilvnvx3a6bop"]
 
 [ext_resource type="PackedScene" uid="uid://h1um88c2nc4y" path="res://scenes/ui/drop_zone.tscn" id="1_mi2bh"]
 [ext_resource type="Script" path="res://scripts/ui/NewsBar.gd" id="1_uop3o"]
 [ext_resource type="PackedScene" uid="uid://cj6qhtyh283tu" path="res://scenes/ui/live_zone.tscn" id="3_ghk45"]
-[ext_resource type="PackedScene" uid="uid://b5ktcs0j2auak" path="res://scenes/ui/news_item.tscn" id="3_sx5u6"]
-[ext_resource type="Script" path="res://scripts/ressources/Headline.gd" id="4_tthir"]
 [ext_resource type="Script" path="res://scripts/ui/LiveBar.gd" id="5_3qfj8"]
 [ext_resource type="Texture2D" uid="uid://b5j2gjmynal5j" path="res://resources/ui/DeskArrow.png" id="6_8ik5n"]
 [ext_resource type="Script" path="res://scripts/debug/DebugUI.gd" id="6_kqe5e"]
-
-[sub_resource type="Resource" id="Resource_ibshu"]
-script = ExtResource("4_tthir")
-text = "Test"
-stat_rating = 0.0
-stat_stock = 0.0
-stat_public = -50.0
-timer = 3.0
 
 [node name="MainUi" type="Control"]
 layout_mode = 3
@@ -51,9 +41,6 @@ theme_override_constants/separation = 25
 
 [node name="DropZone_1" parent="NewsBar/MarginContainer/VBoxContainer" groups=["drop_zone"] instance=ExtResource("1_mi2bh")]
 layout_mode = 2
-
-[node name="NewsItem" parent="NewsBar/MarginContainer/VBoxContainer/DropZone_1" instance=ExtResource("3_sx5u6")]
-headline = SubResource("Resource_ibshu")
 
 [node name="DropZone_2" parent="NewsBar/MarginContainer/VBoxContainer" groups=["drop_zone"] instance=ExtResource("1_mi2bh")]
 layout_mode = 2

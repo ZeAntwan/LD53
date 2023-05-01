@@ -26,7 +26,7 @@ func update_newsitem(n: NewsItem = null):
 	if newsItem != null:
 		canDrop = false
 		newsItem.canPick = false
-		timer.wait_time = newsItem.headline.timer
+		timer.wait_time = newsItem.headline.timer - clamp(Manager.progression/60,0,3)*0.5
 		timer.start()
 	else:
 		canDrop = true

@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="Bad News Netword (LD53)"
+config/name="Bad News Network (LD53)"
 run/main_scene="res://scenes/game.tscn"
 config/features=PackedStringArray("4.0", "Mobile")
 config/icon="res://resources/ui/menu_logo.png"

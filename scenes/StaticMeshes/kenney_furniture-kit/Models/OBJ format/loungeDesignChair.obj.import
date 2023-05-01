@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://b0heis1l1ijk1"
+path="res://.godot/imported/loungeDesignChair.obj-10acc02686fe0dca5ab84a60ed437cfe.mesh"
+
+[deps]
+
+files=["res://.godot/imported/loungeDesignChair.obj-10acc02686fe0dca5ab84a60ed437cfe.mesh"]
+
+source_file="res://scenes/StaticMeshes/kenney_furniture-kit/Models/OBJ format/loungeDesignChair.obj"
+dest_files=["res://.godot/imported/loungeDesignChair.obj-10acc02686fe0dca5ab84a60ed437cfe.mesh", "res://.godot/imported/loungeDesignChair.obj-10acc02686fe0dca5ab84a60ed437cfe.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

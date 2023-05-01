@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bxaweeqhc3xb1"
+path="res://.godot/imported/tableCrossCloth.obj-a0e5e5a29f33dc702c87cb91a1ec614c.mesh"
+
+[deps]
+
+files=["res://.godot/imported/tableCrossCloth.obj-a0e5e5a29f33dc702c87cb91a1ec614c.mesh"]
+
+source_file="res://scenes/StaticMeshes/kenney_furniture-kit/Models/OBJ format/tableCrossCloth.obj"
+dest_files=["res://.godot/imported/tableCrossCloth.obj-a0e5e5a29f33dc702c87cb91a1ec614c.mesh", "res://.godot/imported/tableCrossCloth.obj-a0e5e5a29f33dc702c87cb91a1ec614c.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

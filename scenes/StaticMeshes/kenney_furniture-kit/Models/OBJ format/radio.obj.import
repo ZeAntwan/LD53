@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://b1i2pxmtjfcb5"
+path="res://.godot/imported/radio.obj-87f8df853ad351ad308833adb6d7072c.mesh"
+
+[deps]
+
+files=["res://.godot/imported/radio.obj-87f8df853ad351ad308833adb6d7072c.mesh"]
+
+source_file="res://scenes/StaticMeshes/kenney_furniture-kit/Models/OBJ format/radio.obj"
+dest_files=["res://.godot/imported/radio.obj-87f8df853ad351ad308833adb6d7072c.mesh", "res://.godot/imported/radio.obj-87f8df853ad351ad308833adb6d7072c.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

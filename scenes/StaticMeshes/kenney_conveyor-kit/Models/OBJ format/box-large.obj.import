@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bvn47pre5aqek"
+path="res://.godot/imported/box-large.obj-8aeb45fed53f379e38fd2df6c90ff1c0.mesh"
+
+[deps]
+
+files=["res://.godot/imported/box-large.obj-8aeb45fed53f379e38fd2df6c90ff1c0.mesh"]
+
+source_file="res://scenes/StaticMeshes/kenney_conveyor-kit/Models/OBJ format/box-large.obj"
+dest_files=["res://.godot/imported/box-large.obj-8aeb45fed53f379e38fd2df6c90ff1c0.mesh", "res://.godot/imported/box-large.obj-8aeb45fed53f379e38fd2df6c90ff1c0.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

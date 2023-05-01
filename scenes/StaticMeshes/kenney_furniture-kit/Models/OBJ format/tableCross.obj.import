@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dtor2a7yb5mrt"
+path="res://.godot/imported/tableCross.obj-a2c5fbe7f45d4eb947a79677d3b59dbd.mesh"
+
+[deps]
+
+files=["res://.godot/imported/tableCross.obj-a2c5fbe7f45d4eb947a79677d3b59dbd.mesh"]
+
+source_file="res://scenes/StaticMeshes/kenney_furniture-kit/Models/OBJ format/tableCross.obj"
+dest_files=["res://.godot/imported/tableCross.obj-a2c5fbe7f45d4eb947a79677d3b59dbd.mesh", "res://.godot/imported/tableCross.obj-a2c5fbe7f45d4eb947a79677d3b59dbd.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

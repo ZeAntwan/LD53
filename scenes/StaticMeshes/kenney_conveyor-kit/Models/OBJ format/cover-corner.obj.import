@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bv8s26mjaxugv"
+path="res://.godot/imported/cover-corner.obj-0788e660ac8435b65169e7e3f8d533a1.mesh"
+
+[deps]
+
+files=["res://.godot/imported/cover-corner.obj-0788e660ac8435b65169e7e3f8d533a1.mesh"]
+
+source_file="res://scenes/StaticMeshes/kenney_conveyor-kit/Models/OBJ format/cover-corner.obj"
+dest_files=["res://.godot/imported/cover-corner.obj-0788e660ac8435b65169e7e3f8d533a1.mesh", "res://.godot/imported/cover-corner.obj-0788e660ac8435b65169e7e3f8d533a1.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

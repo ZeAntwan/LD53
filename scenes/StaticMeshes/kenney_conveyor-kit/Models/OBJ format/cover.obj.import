@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://t8i4s1cf6i1c"
+path="res://.godot/imported/cover.obj-49d0f872b9b694b202027553cd458020.mesh"
+
+[deps]
+
+files=["res://.godot/imported/cover.obj-49d0f872b9b694b202027553cd458020.mesh"]
+
+source_file="res://scenes/StaticMeshes/kenney_conveyor-kit/Models/OBJ format/cover.obj"
+dest_files=["res://.godot/imported/cover.obj-49d0f872b9b694b202027553cd458020.mesh", "res://.godot/imported/cover.obj-49d0f872b9b694b202027553cd458020.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

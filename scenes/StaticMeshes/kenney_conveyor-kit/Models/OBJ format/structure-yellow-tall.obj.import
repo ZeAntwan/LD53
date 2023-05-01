@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://iskbv03ncuqa"
+path="res://.godot/imported/structure-yellow-tall.obj-849175df477f6856f1278e0173c59ada.mesh"
+
+[deps]
+
+files=["res://.godot/imported/structure-yellow-tall.obj-849175df477f6856f1278e0173c59ada.mesh"]
+
+source_file="res://scenes/StaticMeshes/kenney_conveyor-kit/Models/OBJ format/structure-yellow-tall.obj"
+dest_files=["res://.godot/imported/structure-yellow-tall.obj-849175df477f6856f1278e0173c59ada.mesh", "res://.godot/imported/structure-yellow-tall.obj-849175df477f6856f1278e0173c59ada.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

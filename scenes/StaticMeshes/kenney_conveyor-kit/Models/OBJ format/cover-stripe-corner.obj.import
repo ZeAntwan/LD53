@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://d18bclrpe86h4"
+path="res://.godot/imported/cover-stripe-corner.obj-e005080860c7eb222ab38b5d40c1deb0.mesh"
+
+[deps]
+
+files=["res://.godot/imported/cover-stripe-corner.obj-e005080860c7eb222ab38b5d40c1deb0.mesh"]
+
+source_file="res://scenes/StaticMeshes/kenney_conveyor-kit/Models/OBJ format/cover-stripe-corner.obj"
+dest_files=["res://.godot/imported/cover-stripe-corner.obj-e005080860c7eb222ab38b5d40c1deb0.mesh", "res://.godot/imported/cover-stripe-corner.obj-e005080860c7eb222ab38b5d40c1deb0.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

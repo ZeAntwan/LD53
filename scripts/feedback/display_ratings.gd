@@ -1,7 +1,7 @@
 extends Node2D
 
 @onready var colorBG: ColorRect = $Control/Background
-@onready var countText: Label = $Control/HBoxContainer/MarginContainer2/Label
+@onready var countText: Label = %Label
 
 @export_range(2,200) var viewVariance 
 

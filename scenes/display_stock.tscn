@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://b26hcx2tttep7"]
 
 [ext_resource type="Script" path="res://scripts/feedback/display_stock.gd" id="1_gjp64"]
-[ext_resource type="Texture2D" uid="uid://fexvrhlf05si" path="res://icon.svg" id="1_qnsif"]
+[ext_resource type="Texture2D" uid="uid://c8lys8l2ljkes" path="res://resources/ui/stock_bg.png" id="2_xutlr"]
 
 [sub_resource type="Gradient" id="Gradient_rq5gl"]
 offsets = PackedFloat32Array(0, 0.516432, 1)
@@ -21,54 +21,26 @@ offset_bottom = 648.0
 size_flags_horizontal = 4
 size_flags_vertical = 3
 
-[node name="ColorRect" type="ColorRect" parent="Control"]
+[node name="TextureRect" type="TextureRect" parent="Control"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.082216, 0.227522, 0.60329, 1)
-
-[node name="HBoxContainer" type="HBoxContainer" parent="Control"]
-visible = false
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="PanelContainer" type="PanelContainer" parent="Control/HBoxContainer"]
-custom_minimum_size = Vector2(400, 0)
-layout_mode = 2
-
-[node name="ColorRect" type="ColorRect" parent="Control/HBoxContainer/PanelContainer"]
-layout_mode = 2
-color = Color(100, 0, 0.03, 1)
-
-[node name="MarginContainer" type="MarginContainer" parent="Control/HBoxContainer/PanelContainer"]
-layout_mode = 2
-theme_override_constants/margin_left = 20
-theme_override_constants/margin_right = 20
-
-[node name="TextureRect" type="TextureRect" parent="Control/HBoxContainer/PanelContainer/MarginContainer"]
-layout_mode = 2
-texture = ExtResource("1_qnsif")
+texture = ExtResource("2_xutlr")
+expand_mode = 2
 stretch_mode = 5
 
-[node name="MarginContainer2" type="MarginContainer" parent="Control/HBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_constants/margin_left = 50
-theme_override_constants/margin_right = 20
-
-[node name="Label" type="Label" parent="Control/HBoxContainer/MarginContainer2"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 200
-text = "10000"
+[node name="ColorRect" type="ColorRect" parent="Control"]
+modulate = Color(1, 1, 1, 0.509804)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0823529, 0.227451, 0.603922, 1)
 
 [node name="DisplayLine" type="Line2D" parent="Control"]
 points = PackedVector2Array(-14, 500, 112, 434, 182, 501, 294, 317, 362, 371, 477, 110, 543, 363, 608, 281, 732, 329, 784, 191, 894, 206, 1033, 49, 1108, 64, 1162, 10)
@@ -84,3 +56,6 @@ points = PackedVector2Array(-16, 315, 104, 279, 172, 339, 287, 294, 360, 330, 46
 [node name="Low" type="Line2D" parent="Control"]
 visible = false
 points = PackedVector2Array(-14, 161, 115, 251, 195, 383, 284, 315, 362, 371, 447, 287, 548, 471, 621, 330, 688, 467, 775, 377, 871, 456, 945, 470, 1048, 539, 1223, 684)
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true

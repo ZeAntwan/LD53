@@ -9,7 +9,7 @@
 size = Vector2(170, 100)
 
 [node name="NewsItem" type="Control"]
-z_index = 1
+z_index = 5
 custom_minimum_size = Vector2(170, 100)
 layout_mode = 3
 anchors_preset = 0
@@ -39,6 +39,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 texture = ExtResource("2_lu50e")
 expand_mode = 2
 
@@ -50,30 +51,36 @@ position = Vector2(5, 0)
 shape = SubResource("RectangleShape2D_xkdb8")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
+clip_contents = true
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/margin_left = 6
+theme_override_constants/margin_left = 10
 theme_override_constants/margin_top = 6
-theme_override_constants/margin_right = 6
+theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 6
 
-[node name="Label" type="Label" parent="MarginContainer"]
+[node name="Label" type="RichTextLabel" parent="MarginContainer"]
 unique_name_in_owner = true
 layout_mode = 2
-size_flags_vertical = 1
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+size_flags_vertical = 4
+mouse_filter = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_constants/outline_size = 5
-text = "This is a very long headline, hopefully it still fits
+theme_override_font_sizes/normal_font_size = 12
+theme_override_font_sizes/bold_font_size = 12
+theme_override_font_sizes/italics_font_size = 12
+theme_override_font_sizes/bold_italics_font_size = 12
+theme_override_font_sizes/mono_font_size = 12
+bbcode_enabled = true
+text = "[center]You can [b]bold[/b] or [wave]wave[/wave] [/center]
 "
-horizontal_alignment = 1
-vertical_alignment = 1
+fit_content = true
 autowrap_mode = 2
-clip_text = true
 
 [node name="Hiding" type="ColorRect" parent="."]
 layout_mode = 1
@@ -84,7 +91,7 @@ grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(1, 1e-05)
 mouse_filter = 2
-color = Color(1, 1, 0, 1)
+color = Color(0, 0, 0, 0.784314)
 
 [connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]
 [connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]

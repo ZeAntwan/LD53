@@ -9,7 +9,7 @@ var canPick = true
 
 @onready var area = $Area2D
 @onready var parent = get_parent()
-@onready var label = %Label
+@onready var label: RichTextLabel = %Label
 @onready var hiding = $Hiding
 @onready var background: TextureRect = $TextureRect
 
@@ -28,7 +28,7 @@ func set_headline(h: Headline):
 	if !label:
 		label = %Label
 	headline = h
-	label.text = headline.text
+	label.text = "[center]" + headline.text + "[/center]"
 	
 	var maxstat = max(headline.stat_rating,headline.stat_stock,headline.stat_public)
 	
@@ -63,7 +63,7 @@ func _on_area_2d_input_event(viewport, event, shape_idx):
 	if Input.is_action_just_pressed("select") && canPick:
 		selected = true
 		mouseOffset = global_position - get_global_mouse_position()
-		z_index = 2
+		z_index = 6
 	
 	if Input.is_action_just_released("select") && selected:
 		selected = false

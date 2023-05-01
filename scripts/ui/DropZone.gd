@@ -6,6 +6,7 @@ var canDrop: bool = true
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	Events.gameover.connect(clearzone)
 	if newsItem == null:
 		update_newsitem()
 	pass # Replace with function body.
@@ -30,5 +31,7 @@ func update_newsitem(n: NewsItem = null):
 		$ColorRect.color = Color.RED
 	return [oldNews, hadNews]
 
-func get_news():
-	return newsItem
+func clearzone():
+	if newsItem:
+		newsItem.queue_free()
+		newsItem = null

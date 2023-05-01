@@ -9,15 +9,31 @@ extends Node2D
 
 @export var colorShift: Gradient
 
+var randomA: Vector2 = Vector2(0,randf_range(-30,30))
+var randomB: Vector2 = Vector2(0,randf_range(-30,30))
+var randomOffset: Array[Vector2]
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	update_random()
+	$Timer.timeout.connect(update_random)
 	pass # Replace with function body.
 
+func update_random():
+	randomOffset.clear()
+	for i in range(displayLine.points.size()):
+		var off = Vector2(0,randf_range(-30,30))
+		if i == 0 or i == displayLine.points.size()-1:
+			off = Vector2.ZERO
+			pass
+		randomOffset.append(off)
+		pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	for i in displayLine.points.size():
-		displayLine.points[i] = lerp(lowLine.points[i],highLine.points[i],Manager.score_stock/100)
+		var target = lerp(lowLine.points[i]+randomOffset[i],highLine.points[i]+randomOffset[i],Manager.score_stock/100)
+		displayLine.points[i] = displayLine.points[i].lerp(target,0.4)
 		pass
 	pass
 	

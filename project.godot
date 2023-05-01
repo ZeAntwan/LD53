@@ -24,6 +24,10 @@ Manager="*res://scripts/Manager.gd"
 
 window/stretch/mode="canvas_items"
 
+[filesystem]
+
+import/fbx/enabled=false
+
 [input]
 
 select={

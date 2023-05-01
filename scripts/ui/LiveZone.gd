@@ -20,12 +20,15 @@ func _process(delta):
 func update_newsitem(n: NewsItem = null):
 	super.update_newsitem(n)
 	if newsItem != null:
+		canDrop = false
 		newsItem.canPick = false
 		timer.wait_time = newsItem.headline.timer
 		timer.start()
-		
+	else:
+		canDrop = true
 	if Manager.state == Manager.GameState.READY:
 		Manager.state = Manager.GameState.PLAY
+		Events.gamestarted.emit()
 
 
 func _on_timer_timeout():

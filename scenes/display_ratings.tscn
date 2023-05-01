@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://dbl8lpo4eapxr"]
 
 [ext_resource type="Script" path="res://scripts/feedback/display_ratings.gd" id="1_one30"]
-[ext_resource type="Texture2D" uid="uid://fexvrhlf05si" path="res://icon.svg" id="1_qnsif"]
+[ext_resource type="Texture2D" uid="uid://d2ix7dvrshnly" path="res://resources/ui/public icon.png" id="2_25giu"]
 
 [sub_resource type="Gradient" id="Gradient_j8mij"]
 offsets = PackedFloat32Array(0, 0.211268, 0.492958, 0.652582, 0.859155, 1)
@@ -48,11 +48,15 @@ color = Color(0.290196, 0.290196, 0.290196, 1)
 [node name="MarginContainer" type="MarginContainer" parent="Control/HBoxContainer/PanelContainer"]
 layout_mode = 2
 theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 200
 theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 200
 
 [node name="TextureRect" type="TextureRect" parent="Control/HBoxContainer/PanelContainer/MarginContainer"]
+modulate = Color(1, 0, 0, 1)
 layout_mode = 2
-texture = ExtResource("1_qnsif")
+texture = ExtResource("2_25giu")
+expand_mode = 4
 stretch_mode = 5
 
 [node name="MarginContainer2" type="MarginContainer" parent="Control/HBoxContainer"]
@@ -61,7 +65,20 @@ size_flags_horizontal = 3
 theme_override_constants/margin_left = 50
 theme_override_constants/margin_right = 20
 
-[node name="Label" type="Label" parent="Control/HBoxContainer/MarginContainer2"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/HBoxContainer/MarginContainer2"]
+layout_mode = 2
+alignment = 1
+
+[node name="Text" type="Label" parent="Control/HBoxContainer/MarginContainer2/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+text = "Currently Watching"
+clip_text = true
+
+[node name="Label" type="Label" parent="Control/HBoxContainer/MarginContainer2/VBoxContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)

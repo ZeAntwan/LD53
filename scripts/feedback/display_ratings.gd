@@ -1,7 +1,7 @@
 extends Node2D
 
 @onready var colorBG: ColorRect = $Control/Background
-@onready var countText: Label = $Control/HBoxContainer/MarginContainer2/Label
+@onready var countText: Label = %Label
 
 @export_range(2,200) var viewVariance 
 
@@ -9,6 +9,7 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	Events.gameover.connect(reset_stat)
 	#update_viewcount()
 	pass # Replace with function body.
 
@@ -27,3 +28,6 @@ func _on_timer_timeout():
 	if Manager.state == Manager.GameState.PLAY:
 		update_viewcount()
 	pass # Replace with function body.
+
+func reset_stat():
+	countText.text = "OFF"

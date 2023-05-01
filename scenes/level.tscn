@@ -1,7 +1,8 @@
-[gd_scene load_steps=36 format=3 uid="uid://ci36nuskade4y"]
+[gd_scene load_steps=37 format=3 uid="uid://ci36nuskade4y"]
 
 [ext_resource type="PackedScene" uid="uid://dbl8lpo4eapxr" path="res://scenes/display_ratings.tscn" id="1_baesr"]
 [ext_resource type="PackedScene" uid="uid://b26hcx2tttep7" path="res://scenes/display_stock.tscn" id="2_shk20"]
+[ext_resource type="PackedScene" uid="uid://b4emw7y2vblop" path="res://scenes/duke.tscn" id="3_8weh5"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_o5soa"]
 
@@ -181,6 +182,7 @@ surface_material_override/0 = SubResource("StandardMaterial3D_vx7k0")
 [node name="Camera3D" type="Camera3D" parent="LiveViewport/CameraBody"]
 transform = Transform3D(-2.06669, 0, -1.99505e-07, 0, 2.47076, 0, 1.80676e-07, 0, -1.87163, 0, 0.224672, 0.765952)
 current = true
+fov = 49.7
 
 [node name="CameraTripod_Leg_1" type="MeshInstance3D" parent="LiveViewport/CameraBody"]
 transform = Transform3D(0.20076, 0.490509, 0.00122533, -0.0586594, 2.39937, 0.00599383, 4.33965e-11, -0.0467404, 0.187105, -0.454446, -2.24483, 0)
@@ -252,8 +254,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.708, 2.802)
 visible = false
 fov = 90.0
 
+[node name="Duke De Liver Model" parent="." instance=ExtResource("3_8weh5")]
+transform = Transform3D(-0.99898, 0, 0.0451537, 0, 1, 0, -0.0451537, 0, -0.99898, -0.0111408, -0.138113, 3.93862)
+
 [node name="Temp_CharacterMesh" type="MeshInstance3D" parent="."]
 transform = Transform3D(-0.959736, 2.12347e-07, 0, -8.39028e-08, -2.42897, 0, 0, 0, 0.627725, 1.18432e-08, 1.6082, 3.69214)
+visible = false
 mesh = SubResource("PrismMesh_5gar1")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Temp_CharacterMesh"]

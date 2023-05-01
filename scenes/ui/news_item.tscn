@@ -1,23 +1,26 @@
-[gd_scene load_steps=4 format=3 uid="uid://b5ktcs0j2auak"]
+[gd_scene load_steps=6 format=3 uid="uid://b5ktcs0j2auak"]
 
 [ext_resource type="Script" path="res://scripts/items/NewsItem.gd" id="1_efnsu"]
-[ext_resource type="Texture2D" uid="uid://ibhswn58n5ws" path="res://scenes/StaticMeshes/Textures/BreakingNewsCard_1.png" id="2_3vjxo"]
+[ext_resource type="Texture2D" uid="uid://b4iduyd5dck3j" path="res://resources/ui/newscard_rate.png" id="2_0xfcn"]
+[ext_resource type="Texture2D" uid="uid://c5pqqanv3sb15" path="res://resources/ui/newscard_stock.png" id="2_lu50e"]
+[ext_resource type="Texture2D" uid="uid://2vc8mucfekyp" path="res://resources/ui/newscard_public.png" id="4_guvmh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xkdb8"]
-size = Vector2(160, 100)
+size = Vector2(170, 100)
 
 [node name="NewsItem" type="Control"]
-z_index = 1
-custom_minimum_size = Vector2(160, 100)
+z_index = 5
+custom_minimum_size = Vector2(170, 100)
 layout_mode = 3
 anchors_preset = 0
-offset_right = 160.0
+offset_right = 170.0
 offset_bottom = 100.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 mouse_force_pass_scroll_events = false
 script = ExtResource("1_efnsu")
+icons = Array[Texture]([ExtResource("2_0xfcn"), ExtResource("2_lu50e"), ExtResource("4_guvmh")])
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1
@@ -36,26 +39,48 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_3vjxo")
+mouse_filter = 2
+texture = ExtResource("2_lu50e")
+expand_mode = 2
 
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2(80, 50)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(5, 0)
 shape = SubResource("RectangleShape2D_xkdb8")
 
-[node name="Label" type="Label" parent="."]
-layout_mode = 2
+[node name="MarginContainer" type="MarginContainer" parent="."]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "This is a very long headline, hopefully it still fits
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 6
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 6
+
+[node name="Label" type="RichTextLabel" parent="MarginContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 4
+mouse_filter = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/normal_font_size = 12
+theme_override_font_sizes/bold_font_size = 12
+theme_override_font_sizes/italics_font_size = 12
+theme_override_font_sizes/bold_italics_font_size = 12
+theme_override_font_sizes/mono_font_size = 12
+bbcode_enabled = true
+text = "[center]You can [b]bold[/b] or [wave]wave[/wave] [/center]
 "
-horizontal_alignment = 1
-vertical_alignment = 1
+fit_content = true
 autowrap_mode = 2
-clip_text = true
 
 [node name="Hiding" type="ColorRect" parent="."]
 layout_mode = 1
@@ -66,7 +91,7 @@ grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(1, 1e-05)
 mouse_filter = 2
-color = Color(1, 1, 0, 1)
+color = Color(0, 0, 0, 0.784314)
 
 [connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]
 [connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]

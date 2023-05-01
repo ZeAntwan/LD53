@@ -1,0 +1,7 @@
+[gd_scene load_steps=3 format=3 uid="uid://b4emw7y2vblop"]
+
+[ext_resource type="PackedScene" uid="uid://ceexcgllu6p4f" path="res://resources/Duke/Duke De Liver Model.gltf" id="1_j7con"]
+[ext_resource type="Script" path="res://scripts/duke.gd" id="2_vko4c"]
+
+[node name="Duke De Liver Model" instance=ExtResource("1_j7con")]
+script = ExtResource("2_vko4c")

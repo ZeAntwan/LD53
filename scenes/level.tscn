@@ -1,4 +1,4 @@
-[gd_scene load_steps=87 format=3 uid="uid://ci36nuskade4y"]
+[gd_scene load_steps=89 format=3 uid="uid://ci36nuskade4y"]
 
 [ext_resource type="PackedScene" uid="uid://dbl8lpo4eapxr" path="res://scenes/display_ratings.tscn" id="1_baesr"]
 [ext_resource type="Script" path="res://scripts/mobfeedback.gd" id="1_dlm8f"]
@@ -48,6 +48,7 @@
 [ext_resource type="ArrayMesh" uid="uid://dpus8y53ggosr" path="res://scenes/StaticMeshes/kenney_food-kit/Models/OBJ format/cartonSmall.obj" id="46_sxhe8"]
 [ext_resource type="ArrayMesh" uid="uid://cj857pb7k31nh" path="res://scenes/StaticMeshes/kenney_furniture-kit/Models/OBJ format/kitchenMicrowave.obj" id="47_anrfb"]
 [ext_resource type="PackedScene" uid="uid://ceexcgllu6p4f" path="res://resources/Duke/Duke De Liver Model.gltf" id="48_2705m"]
+[ext_resource type="ArrayMesh" uid="uid://cssnw1ldpqldv" path="res://scenes/StaticMeshes/kenney_city-kit-commercial/Models/OBJ format/sign_hospital.obj" id="49_lc2g4"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lr2e5"]
 
@@ -355,6 +356,102 @@ tracks/19/keys = {
 "update": 0,
 "values": [Vector3(4.23124, 1.04242, 10.1146), Vector3(4.23124, 1.64763, 10.1146), Vector3(4.23124, 1.04242, 10.1146), Vector3(4.23124, 1.04242, 10.1146), Vector3(4.23124, 1.64763, 10.1146), Vector3(4.23124, 1.04242, 10.1146), Vector3(4.23124, 1.04242, 10.1146), Vector3(4.23124, 1.64763, 10.1146), Vector3(4.23124, 1.04242, 10.1146), Vector3(4.23124, 1.04242, 10.1146), Vector3(4.23124, 1.64763, 10.1146), Vector3(4.23124, 1.04242, 10.1146)]
 }
+tracks/20/type = "value"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("../Signs/SignHospital:position")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"times": PackedFloat32Array(0.3, 0.5, 0.7, 1.6, 1.8, 2, 3.3, 3.5, 3.7, 5, 5.2, 5.4, 7.3, 7.5, 7.7, 8.7, 8.9, 9.1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(1.02765, 3.61602, 10.6095), Vector3(1.02765, 3.9655, 10.6095), Vector3(1.02765, 3.61602, 10.6095), Vector3(1.02765, 3.61602, 10.6095), Vector3(1.02765, 3.9655, 10.6095), Vector3(1.02765, 3.61602, 10.6095), Vector3(1.02765, 3.61602, 10.6095), Vector3(1.02765, 3.9655, 10.6095), Vector3(1.02765, 3.61602, 10.6095), Vector3(1.02765, 3.61602, 10.6095), Vector3(1.02765, 3.9655, 10.6095), Vector3(1.02765, 3.61602, 10.6095), Vector3(1.02765, 3.61602, 10.6095), Vector3(1.02765, 3.9655, 10.6095), Vector3(1.02765, 3.61602, 10.6095), Vector3(1.02765, 3.61602, 10.6095), Vector3(1.02765, 3.9655, 10.6095), Vector3(1.02765, 3.61602, 10.6095)]
+}
+tracks/21/type = "value"
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/path = NodePath("../Signs/SignHospital2:position")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = {
+"times": PackedFloat32Array(0.4, 0.6, 0.8, 1.76979, 1.96979, 2.16979, 2.8, 3, 3.2, 4.6, 4.8, 5, 6.3, 6.5, 6.7, 7.9, 8.1, 8.3, 9.3, 9.5, 9.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-1.88136, 3.61602, 10.7265), Vector3(-1.88136, 3.9655, 10.7265), Vector3(-1.88136, 3.61602, 10.7265), Vector3(-1.88136, 3.61602, 10.7265), Vector3(-1.88136, 3.9655, 10.7265), Vector3(-1.88136, 3.61602, 10.7265), Vector3(-1.88136, 3.61602, 10.7265), Vector3(-1.88136, 3.9655, 10.7265), Vector3(-1.88136, 3.61602, 10.7265), Vector3(-1.88136, 3.61602, 10.7265), Vector3(-1.88136, 3.9655, 10.7265), Vector3(-1.88136, 3.61602, 10.7265), Vector3(-1.88136, 3.61602, 10.7265), Vector3(-1.88136, 3.9655, 10.7265), Vector3(-1.88136, 3.61602, 10.7265), Vector3(-1.88136, 3.61602, 10.7265), Vector3(-1.88136, 3.9655, 10.7265), Vector3(-1.88136, 3.61602, 10.7265), Vector3(-1.88136, 3.61602, 10.7265), Vector3(-1.88136, 3.9655, 10.7265), Vector3(-1.88136, 3.61602, 10.7265)]
+}
+tracks/22/type = "value"
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/path = NodePath("../Signs/SignHospital3:position")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/keys = {
+"times": PackedFloat32Array(0.1, 0.3, 0.5, 1.1, 1.3, 1.5, 2.3, 2.5, 2.7, 3.9, 4.1, 4.3, 5, 5.2, 5.4, 6, 6.2, 6.4, 7.3, 7.5, 7.7, 8.5, 8.7, 8.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-0.882536, 3.8311, 11.2921), Vector3(-0.882536, 4.18059, 11.2921), Vector3(-0.882536, 3.8311, 11.2921), Vector3(-0.882536, 3.8311, 11.2921), Vector3(-0.882536, 4.18059, 11.2921), Vector3(-0.882536, 3.8311, 11.2921), Vector3(-0.882536, 3.8311, 11.2921), Vector3(-0.882536, 4.18059, 11.2921), Vector3(-0.882536, 3.8311, 11.2921), Vector3(-0.882536, 3.8311, 11.2921), Vector3(-0.882536, 4.18059, 11.2921), Vector3(-0.882536, 3.8311, 11.2921), Vector3(-0.882536, 3.8311, 11.2921), Vector3(-0.882536, 4.18059, 11.2921), Vector3(-0.882536, 3.8311, 11.2921), Vector3(-0.882536, 3.8311, 11.2921), Vector3(-0.882536, 4.18059, 11.2921), Vector3(-0.882536, 3.8311, 11.2921), Vector3(-0.882536, 3.8311, 11.2921), Vector3(-0.882536, 4.18059, 11.2921), Vector3(-0.882536, 3.8311, 11.2921), Vector3(-0.882536, 3.8311, 11.2921), Vector3(-0.882536, 4.18059, 11.2921), Vector3(-0.882536, 3.8311, 11.2921)]
+}
+tracks/23/type = "value"
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/path = NodePath("../Signs/SignHospital4:position")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/keys = {
+"times": PackedFloat32Array(0.6, 0.8, 1, 1.7, 1.9, 2.1, 3.1, 3.3, 3.5, 4.5, 4.7, 4.9, 6.8, 7, 7.2, 9, 9.2, 9.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(5.2732, 3.61602, 9.32761), Vector3(5.2732, 3.9655, 9.32762), Vector3(5.2732, 3.61602, 9.32761), Vector3(5.2732, 3.61602, 9.32761), Vector3(5.2732, 3.9655, 9.32762), Vector3(5.2732, 3.61602, 9.32761), Vector3(5.2732, 3.61602, 9.32761), Vector3(5.2732, 3.9655, 9.32762), Vector3(5.2732, 3.61602, 9.32761), Vector3(5.2732, 3.61602, 9.32761), Vector3(5.2732, 3.9655, 9.32762), Vector3(5.2732, 3.61602, 9.32761), Vector3(5.2732, 3.61602, 9.32761), Vector3(5.2732, 3.9655, 9.32762), Vector3(5.2732, 3.61602, 9.32761), Vector3(5.2732, 3.61602, 9.32761), Vector3(5.2732, 3.9655, 9.32762), Vector3(5.2732, 3.61602, 9.32761)]
+}
+tracks/24/type = "value"
+tracks/24/imported = false
+tracks/24/enabled = true
+tracks/24/path = NodePath("../Signs/SignHospital5:position")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/keys = {
+"times": PackedFloat32Array(0.1, 0.3, 0.5, 1.9, 2.1, 2.3, 3.5, 3.7, 3.9, 5.4, 5.6, 5.8, 7, 7.2, 7.4, 8.2, 8.4, 8.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(2.29557, 3.61602, 11.5837), Vector3(2.29557, 3.9655, 11.5837), Vector3(2.29557, 3.61602, 11.5837), Vector3(2.29557, 3.61602, 11.5837), Vector3(2.29557, 3.9655, 11.5837), Vector3(2.29557, 3.61602, 11.5837), Vector3(2.29557, 3.61602, 11.5837), Vector3(2.29557, 3.9655, 11.5837), Vector3(2.29557, 3.61602, 11.5837), Vector3(2.29557, 3.61602, 11.5837), Vector3(2.29557, 3.9655, 11.5837), Vector3(2.29557, 3.61602, 11.5837), Vector3(2.29557, 3.61602, 11.5837), Vector3(2.29557, 3.9655, 11.5837), Vector3(2.29557, 3.61602, 11.5837), Vector3(2.29557, 3.61602, 11.5837), Vector3(2.29557, 3.9655, 11.5837), Vector3(2.29557, 3.61602, 11.5837)]
+}
+tracks/25/type = "value"
+tracks/25/imported = false
+tracks/25/enabled = true
+tracks/25/path = NodePath("../Signs/SignHospital6:position")
+tracks/25/interp = 1
+tracks/25/loop_wrap = true
+tracks/25/keys = {
+"times": PackedFloat32Array(0.7, 0.9, 1.1, 2.6, 2.8, 3, 4.1, 4.3, 4.5, 5.7, 5.9, 6.1, 7.4, 7.6, 7.8, 9.3, 9.5, 9.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-5.3219, 3.61602, 9.33221), Vector3(-5.3219, 3.9655, 9.33221), Vector3(-5.3219, 3.61602, 9.33221), Vector3(-5.3219, 3.61602, 9.33221), Vector3(-5.3219, 3.9655, 9.33221), Vector3(-5.3219, 3.61602, 9.33221), Vector3(-5.3219, 3.61602, 9.33221), Vector3(-5.3219, 3.9655, 9.33221), Vector3(-5.3219, 3.61602, 9.33221), Vector3(-5.3219, 3.61602, 9.33221), Vector3(-5.3219, 3.9655, 9.33221), Vector3(-5.3219, 3.61602, 9.33221), Vector3(-5.3219, 3.61602, 9.33221), Vector3(-5.3219, 3.9655, 9.33221), Vector3(-5.3219, 3.61602, 9.33221), Vector3(-5.3219, 3.61602, 9.33221), Vector3(-5.3219, 3.9655, 9.33221), Vector3(-5.3219, 3.61602, 9.33221)]
+}
+tracks/26/type = "value"
+tracks/26/imported = false
+tracks/26/enabled = true
+tracks/26/path = NodePath("../Signs/SignHospital7:position")
+tracks/26/interp = 1
+tracks/26/loop_wrap = true
+tracks/26/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 1.3, 1.5, 1.7, 2.9, 3.1, 3.3, 4.8, 5, 5.2, 6.4, 6.6, 6.8, 8.4, 8.6, 8.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-4.16987, 3.61602, 9.7422), Vector3(-4.16987, 3.96551, 9.74221), Vector3(-4.16987, 3.61602, 9.7422), Vector3(-4.16987, 3.61602, 9.7422), Vector3(-4.16987, 3.96551, 9.74221), Vector3(-4.16987, 3.61602, 9.7422), Vector3(-4.16987, 3.61602, 9.7422), Vector3(-4.16987, 3.96551, 9.74221), Vector3(-4.16987, 3.61602, 9.7422), Vector3(-4.16987, 3.61602, 9.7422), Vector3(-4.16987, 3.96551, 9.74221), Vector3(-4.16987, 3.61602, 9.7422), Vector3(-4.16987, 3.61602, 9.7422), Vector3(-4.16987, 3.96551, 9.74221), Vector3(-4.16987, 3.61602, 9.7422), Vector3(-4.16987, 3.61602, 9.7422), Vector3(-4.16987, 3.96551, 9.74221), Vector3(-4.16987, 3.61602, 9.7422)]
+}
+tracks/27/type = "value"
+tracks/27/imported = false
+tracks/27/enabled = true
+tracks/27/path = NodePath("../Signs/SignHospital8:position")
+tracks/27/interp = 1
+tracks/27/loop_wrap = true
+tracks/27/keys = {
+"times": PackedFloat32Array(0.2, 0.4, 0.6, 1.7, 1.9, 2.1, 4, 4.2, 4.4, 5.3, 5.5, 5.7, 6.9, 7.1, 7.3, 8.9, 9.1, 9.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(4.34626, 3.61602, 10.2732), Vector3(4.34626, 3.9655, 10.2732), Vector3(4.34626, 3.61602, 10.2732), Vector3(4.34626, 3.61602, 10.2732), Vector3(4.34626, 3.9655, 10.2732), Vector3(4.34626, 3.61602, 10.2732), Vector3(4.34626, 3.61602, 10.2732), Vector3(4.34626, 3.9655, 10.2732), Vector3(4.34626, 3.61602, 10.2732), Vector3(4.34626, 3.61602, 10.2732), Vector3(4.34626, 3.9655, 10.2732), Vector3(4.34626, 3.61602, 10.2732), Vector3(4.34626, 3.61602, 10.2732), Vector3(4.34626, 3.9655, 10.2732), Vector3(4.34626, 3.61602, 10.2732), Vector3(4.34626, 3.61602, 10.2732), Vector3(4.34626, 3.9655, 10.2732), Vector3(4.34626, 3.61602, 10.2732)]
+}
 
 [sub_resource type="Animation" id="Animation_xhm12"]
 length = 0.001
@@ -586,12 +683,110 @@ tracks/18/keys = {
 "update": 0,
 "values": [Vector3(4.23124, 1.04242, 10.1146)]
 }
+tracks/19/type = "value"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("../Signs/SignHospital:position")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(1.02765, 3.61602, 10.6095)]
+}
+tracks/20/type = "value"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("../Signs/SignHospital2:position")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-1.88136, 3.61602, 10.7265)]
+}
+tracks/21/type = "value"
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/path = NodePath("../Signs/SignHospital3:position")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.882536, 3.8311, 11.2921)]
+}
+tracks/22/type = "value"
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/path = NodePath("../Signs/SignHospital4:position")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(5.2732, 3.61602, 9.32761)]
+}
+tracks/23/type = "value"
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/path = NodePath("../Signs/SignHospital5:position")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(2.29557, 3.61602, 11.5837)]
+}
+tracks/24/type = "value"
+tracks/24/imported = false
+tracks/24/enabled = true
+tracks/24/path = NodePath("../Signs/SignHospital6:position")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-5.3219, 3.61602, 9.33221)]
+}
+tracks/25/type = "value"
+tracks/25/imported = false
+tracks/25/enabled = true
+tracks/25/path = NodePath("../Signs/SignHospital7:position")
+tracks/25/interp = 1
+tracks/25/loop_wrap = true
+tracks/25/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-4.16987, 3.61602, 9.7422)]
+}
+tracks/26/type = "value"
+tracks/26/imported = false
+tracks/26/enabled = true
+tracks/26/path = NodePath("../Signs/SignHospital8:position")
+tracks/26/interp = 1
+tracks/26/loop_wrap = true
+tracks/26/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(4.34626, 3.61602, 10.2732)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_78l2h"]
 _data = {
 "Anim_Crowd_Low": SubResource("Animation_g14w3"),
 "RESET": SubResource("Animation_xhm12")
 }
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_h0rdy"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_0qlv0"]
 
@@ -876,6 +1071,80 @@ skeleton = NodePath("../..")
 transform = Transform3D(-0.00579747, 0, -0.00161356, 0, 0.00601782, 0, 0.00161356, 0, -0.00579747, 4.23124, 1.04242, 10.1146)
 mesh = ExtResource("24_joaxs")
 skeleton = NodePath("../..")
+
+[node name="Signs" type="Node" parent="AnimationPlayer_Protesters"]
+
+[node name="SignHospital" type="MeshInstance3D" parent="AnimationPlayer_Protesters/Signs"]
+transform = Transform3D(-0.0815537, 0, 1.95625, 0, 1.22526, 0, -0.999649, 0, -0.159596, 1.02765, 3.61602, 10.6095)
+mesh = ExtResource("49_lc2g4")
+skeleton = NodePath("../../..")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="AnimationPlayer_Protesters/Signs/SignHospital"]
+transform = Transform3D(0.063, 0, 0, 0, 0.342, 0, 0, 0, 0.0321931, 0, -0.286434, -4.76837e-07)
+mesh = SubResource("CylinderMesh_h0rdy")
+
+[node name="SignHospital2" type="MeshInstance3D" parent="AnimationPlayer_Protesters/Signs"]
+transform = Transform3D(0.319525, 0.354773, 1.77156, -0.0966588, 1.17277, -0.535912, -0.945785, 0, 0.653275, -1.88136, 3.61602, 10.7265)
+mesh = ExtResource("49_lc2g4")
+skeleton = NodePath("../../..")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="AnimationPlayer_Protesters/Signs/SignHospital2"]
+transform = Transform3D(0.063, 0, 0, 0, 0.342, 0, 0, 0, 0.0321931, 0, -0.286434, -4.76837e-07)
+mesh = SubResource("CylinderMesh_h0rdy")
+
+[node name="SignHospital3" type="MeshInstance3D" parent="AnimationPlayer_Protesters/Signs"]
+transform = Transform3D(-0.248564, 0, 1.90152, 0, 1.22526, 0, -0.971682, 0, -0.486425, -0.882536, 3.8311, 11.2921)
+mesh = ExtResource("49_lc2g4")
+skeleton = NodePath("../../..")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="AnimationPlayer_Protesters/Signs/SignHospital3"]
+transform = Transform3D(0.063, 0, 0, 0, 0.342, 0, 0, 0, 0.0321931, 0, -0.286434, -4.76837e-07)
+mesh = SubResource("CylinderMesh_h0rdy")
+
+[node name="SignHospital4" type="MeshInstance3D" parent="AnimationPlayer_Protesters/Signs"]
+transform = Transform3D(-0.739319, -0.370868, 1.18584, -0.270452, 1.1659, 0.289964, -0.621461, -0.0661844, -1.53692, 5.2732, 3.61602, 9.32761)
+mesh = ExtResource("49_lc2g4")
+skeleton = NodePath("../../..")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="AnimationPlayer_Protesters/Signs/SignHospital4"]
+transform = Transform3D(0.063, 0, 0, 0, 0.342, 0, 0, 0, 0.0321931, 0, -0.286434, -4.76837e-07)
+mesh = SubResource("CylinderMesh_h0rdy")
+
+[node name="SignHospital5" type="MeshInstance3D" parent="AnimationPlayer_Protesters/Signs"]
+transform = Transform3D(-0.179428, -0.296877, 1.87162, 0.251855, 1.13441, 0.554218, -0.954109, 0.355279, -0.205677, 2.29557, 3.61602, 11.5837)
+mesh = ExtResource("49_lc2g4")
+skeleton = NodePath("../../..")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="AnimationPlayer_Protesters/Signs/SignHospital5"]
+transform = Transform3D(0.063, 0, 0, 0, 0.342, 0, 0, 0, 0.0321931, 0, -0.286434, -4.76837e-07)
+mesh = SubResource("CylinderMesh_h0rdy")
+
+[node name="SignHospital6" type="MeshInstance3D" parent="AnimationPlayer_Protesters/Signs"]
+transform = Transform3D(0.602306, 0.15087, 1.55071, -0.074733, 1.21593, -0.19241, -0.798494, 0, 1.18772, -5.3219, 3.61602, 9.33221)
+mesh = ExtResource("49_lc2g4")
+skeleton = NodePath("../../..")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="AnimationPlayer_Protesters/Signs/SignHospital6"]
+transform = Transform3D(0.063, 0, 0, 0, 0.342, 0, 0, 0, 0.0321931, 0, -0.286434, -4.76837e-07)
+mesh = SubResource("CylinderMesh_h0rdy")
+
+[node name="SignHospital7" type="MeshInstance3D" parent="AnimationPlayer_Protesters/Signs"]
+transform = Transform3D(0.457199, -0.31065, 1.67459, -0.0814283, 1.15509, 0.635002, -0.888981, -0.265569, 0.80307, -4.16987, 3.61602, 9.7422)
+mesh = ExtResource("49_lc2g4")
+skeleton = NodePath("../../..")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="AnimationPlayer_Protesters/Signs/SignHospital7"]
+transform = Transform3D(0.063, 0, 0, 0, 0.342, 0, 0, 0, 0.0321931, 0, -0.286434, -4.76837e-07)
+mesh = SubResource("CylinderMesh_h0rdy")
+
+[node name="SignHospital8" type="MeshInstance3D" parent="AnimationPlayer_Protesters/Signs"]
+transform = Transform3D(-0.075353, 0.468628, 1.80751, 0.0311922, 1.13209, -0.748216, -0.999649, 0, -0.159596, 4.34626, 3.61602, 10.2732)
+mesh = ExtResource("49_lc2g4")
+skeleton = NodePath("../../..")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="AnimationPlayer_Protesters/Signs/SignHospital8"]
+transform = Transform3D(0.063, 0, 0, 0, 0.342, 0, 0, 0, 0.0321931, 0, -0.286434, -4.76837e-07)
+mesh = SubResource("CylinderMesh_h0rdy")
 
 [node name="Buildings_Exterior" type="Node" parent="."]
 

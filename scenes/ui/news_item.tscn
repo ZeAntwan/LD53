@@ -1,9 +1,15 @@
-[gd_scene load_steps=6 format=3 uid="uid://b5ktcs0j2auak"]
+[gd_scene load_steps=8 format=3 uid="uid://b5ktcs0j2auak"]
 
 [ext_resource type="Script" path="res://scripts/items/NewsItem.gd" id="1_efnsu"]
 [ext_resource type="Texture2D" uid="uid://b4iduyd5dck3j" path="res://resources/ui/newscard_rate.png" id="2_0xfcn"]
 [ext_resource type="Texture2D" uid="uid://c5pqqanv3sb15" path="res://resources/ui/newscard_stock.png" id="2_lu50e"]
 [ext_resource type="Texture2D" uid="uid://2vc8mucfekyp" path="res://resources/ui/newscard_public.png" id="4_guvmh"]
+[ext_resource type="AudioStream" uid="uid://dxvt5f8l84502" path="res://audio/bnn_click.wav" id="5_t0brc"]
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_gasdu"]
+streams_count = 1
+stream_0/stream = ExtResource("5_t0brc")
+stream_0/weight = 1.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xkdb8"]
 size = Vector2(170, 100)
@@ -21,6 +27,10 @@ mouse_filter = 2
 mouse_force_pass_scroll_events = false
 script = ExtResource("1_efnsu")
 icons = Array[Texture]([ExtResource("2_0xfcn"), ExtResource("2_lu50e"), ExtResource("4_guvmh")])
+
+[node name="SFX" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(10, 41)
+stream = SubResource("AudioStreamRandomizer_gasdu")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1

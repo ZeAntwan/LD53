@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://cpogeahmvjydj"]
+[gd_scene load_steps=9 format=3 uid="uid://cpogeahmvjydj"]
 
 [ext_resource type="PackedScene" uid="uid://ilvnvx3a6bop" path="res://scenes/ui.tscn" id="1_ihu4b"]
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_kbyar"]
@@ -6,6 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://bfkuisbnwug2c" path="res://scenes/menu.tscn" id="2_eispj"]
 [ext_resource type="PackedScene" uid="uid://cpbkljjgg8dyt" path="res://scenes/game_over.tscn" id="3_3yo7q"]
 [ext_resource type="PackedScene" uid="uid://qtmpxangy4u" path="res://scenes/tutorial.tscn" id="3_cdsld"]
+[ext_resource type="AudioStream" uid="uid://dbrjlq14mqbq8" path="res://audio/bnn_loop.wav" id="7_f2c3x"]
+[ext_resource type="AudioStream" uid="uid://dgw31p5edx1uv" path="res://audio/bnn_newsroom.wav" id="8_itqog"]
 
 [node name="Game" type="Node"]
 script = ExtResource("1_kbyar")
@@ -35,3 +37,10 @@ fov = 90.0
 [node name="MenuCamera" type="Camera3D" parent="."]
 transform = Transform3D(0.755854, -0.322688, 0.5697, 0, 0.870115, 0.492849, -0.654741, -0.372522, 0.657679, 2.87243, 5.28153, 4.90535)
 fov = 90.0
+
+[node name="MusicLoop" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_f2c3x")
+
+[node name="AmbianceLoop" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_itqog")
+autoplay = true

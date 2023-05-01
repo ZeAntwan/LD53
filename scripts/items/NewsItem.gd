@@ -12,6 +12,7 @@ var canPick = true
 @onready var label: RichTextLabel = %Label
 @onready var hiding = $Hiding
 @onready var background: TextureRect = $TextureRect
+@onready var audioSfx: AudioStreamPlayer2D = $SFX
 
 @export var icons: Array[Texture] 
 @export var headline: Headline = Headline.new()
@@ -61,11 +62,13 @@ func _on_area_2d_mouse_entered():
 
 func _on_area_2d_input_event(viewport, event, shape_idx):
 	if Input.is_action_just_pressed("select") && canPick:
+		audioSfx.play()
 		selected = true
 		mouseOffset = global_position - get_global_mouse_position()
 		z_index = 6
 	
 	if Input.is_action_just_released("select") && selected:
+		audioSfx.play()
 		selected = false
 		var overlap = area.get_overlapping_areas()
 		if (!overlap.is_empty()):

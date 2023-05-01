@@ -11,6 +11,7 @@ func _process(delta):
 	$HBoxContainer/Ratings/Score.text = str(Manager.score_rating)
 	$HBoxContainer/Stock/Score.text = str(Manager.score_stock)
 	$HBoxContainer/Public/Score.text = str(Manager.score_public)
+	$HBoxContainer/Time/Score.text = str(Manager.progression)
 	
 	if Manager.score_rating <= 0 \
 		or Manager.score_stock <= 0 \

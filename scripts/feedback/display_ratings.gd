@@ -20,7 +20,7 @@ func _process(delta):
 	pass
 
 func update_viewcount():
-	var baseViewcount = ceil(Manager.score_rating*200 + Manager.score_rating*randf_range(2,200))
+	var baseViewcount = ceil(Manager.score_rating*200 + Manager.score_rating*randf_range(0,50))
 	countText.text = str(baseViewcount)
 	pass
 

@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://cpbkljjgg8dyt"]
+[gd_scene load_steps=6 format=3 uid="uid://cpbkljjgg8dyt"]
 
 [ext_resource type="Script" path="res://scripts/game_over.gd" id="1_mfb0a"]
 [ext_resource type="Texture2D" uid="uid://fexvrhlf05si" path="res://icon.svg" id="1_t1in2"]
+[ext_resource type="AudioStream" uid="uid://dpp2njvio3dgr" path="res://audio/bnn_gameover.wav" id="3_o5a4c"]
 
 [sub_resource type="Animation" id="Animation_00g2m"]
 resource_name = "gameover_anim"
@@ -95,16 +96,21 @@ text = "BREAKING NEWS"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Label2" type="Label" parent="Control/ColorRect/VBoxContainer"]
+[node name="GameoverLabel" type="RichTextLabel" parent="Control/ColorRect/VBoxContainer"]
+custom_minimum_size = Vector2(0, 90)
 layout_mode = 2
-size_flags_vertical = 6
-theme_override_font_sizes/font_size = 30
+theme_override_font_sizes/normal_font_size = 25
+theme_override_font_sizes/bold_font_size = 25
+theme_override_font_sizes/italics_font_size = 25
+theme_override_font_sizes/bold_italics_font_size = 25
+theme_override_font_sizes/mono_font_size = 25
+bbcode_enabled = true
 text = "Placholder text"
-horizontal_alignment = 1
-vertical_alignment = 1
+fit_content = true
 autowrap_mode = 2
 
 [node name="ColorRect2" type="ColorRect" parent="Control"]
+clip_contents = true
 custom_minimum_size = Vector2(500, 660)
 layout_mode = 1
 anchors_preset = 6
@@ -127,21 +133,29 @@ grow_vertical = 2
 layout_mode = 2
 
 [node name="Label" type="Label" parent="Control/ColorRect2/CenterContainer/VBoxContainer"]
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 70
-text = "Score"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Label2" type="Label" parent="Control/ColorRect2/CenterContainer/VBoxContainer"]
+custom_minimum_size = Vector2(500, 0)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 60
-text = "00000
-"
+text = "You were
+on air for"
 horizontal_alignment = 1
 vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Score" type="RichTextLabel" parent="Control/ColorRect2/CenterContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 90
+theme_override_font_sizes/bold_font_size = 0
+theme_override_font_sizes/italics_font_size = 0
+theme_override_font_sizes/bold_italics_font_size = 0
+theme_override_font_sizes/mono_font_size = 0
+bbcode_enabled = true
+text = "00:00
+"
+fit_content = true
 
 [node name="MarginContainer" type="MarginContainer" parent="Control/ColorRect2/CenterContainer/VBoxContainer"]
 layout_mode = 2
@@ -162,6 +176,9 @@ texture = ExtResource("1_t1in2")
 libraries = {
 "": SubResource("AnimationLibrary_ydx0r")
 }
+
+[node name="GameOverTune" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_o5a4c")
 
 [connection signal="visibility_changed" from="." to="." method="_on_visibility_changed"]
 [connection signal="pressed" from="Control/ColorRect2/CenterContainer/VBoxContainer/MarginContainer/Button" to="." method="_on_button_pressed"]

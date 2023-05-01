@@ -15,8 +15,14 @@ var progression: float = 0
 
 var state = GameState.MENU
 
+var progressTimer = Timer
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	progressTimer = Timer.new()
+	add_child(progressTimer)
+	progressTimer.wait_time = 1
+	progressTimer.timeout.connect(add_progress)
 	pass # Replace with function body.
 
 func reset_score():
@@ -25,6 +31,9 @@ func reset_score():
 	score_public = 50
 	progression = 0
 
+func add_progress():
+	progression += 1
+	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):		
 	score_rating = clampf(score_rating,0,100)
@@ -36,4 +45,11 @@ func _process(delta):
 		or score_public < 1:
 			Events.gameover.emit()
 	
+	if state == GameState.PLAY:
+		if progressTimer.is_stopped():
+			progressTimer.start()
+	else:
+		if !progressTimer.is_stopped():
+			progressTimer.stop()
+		pass
 	pass

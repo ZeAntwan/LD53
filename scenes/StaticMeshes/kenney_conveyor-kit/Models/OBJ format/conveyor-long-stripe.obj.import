@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cqtvf0gpvuu6x"
+path="res://.godot/imported/conveyor-long-stripe.obj-74e415660fc1f2d7684000f139e6299e.mesh"
+
+[deps]
+
+files=["res://.godot/imported/conveyor-long-stripe.obj-74e415660fc1f2d7684000f139e6299e.mesh"]
+
+source_file="res://scenes/StaticMeshes/kenney_conveyor-kit/Models/OBJ format/conveyor-long-stripe.obj"
+dest_files=["res://.godot/imported/conveyor-long-stripe.obj-74e415660fc1f2d7684000f139e6299e.mesh", "res://.godot/imported/conveyor-long-stripe.obj-74e415660fc1f2d7684000f139e6299e.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

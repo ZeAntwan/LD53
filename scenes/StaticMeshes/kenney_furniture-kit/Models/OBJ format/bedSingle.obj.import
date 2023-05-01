@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cj2c88mvn4ldk"
+path="res://.godot/imported/bedSingle.obj-80b427d8a76c41b6d19c9efde3b3cb59.mesh"
+
+[deps]
+
+files=["res://.godot/imported/bedSingle.obj-80b427d8a76c41b6d19c9efde3b3cb59.mesh"]
+
+source_file="res://scenes/StaticMeshes/kenney_furniture-kit/Models/OBJ format/bedSingle.obj"
+dest_files=["res://.godot/imported/bedSingle.obj-80b427d8a76c41b6d19c9efde3b3cb59.mesh", "res://.godot/imported/bedSingle.obj-80b427d8a76c41b6d19c9efde3b3cb59.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

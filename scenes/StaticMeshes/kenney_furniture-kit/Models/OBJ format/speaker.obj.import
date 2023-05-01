@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bnmdgfod4lmq1"
+path="res://.godot/imported/speaker.obj-9c6e853997014be741a7ee459b57ba54.mesh"
+
+[deps]
+
+files=["res://.godot/imported/speaker.obj-9c6e853997014be741a7ee459b57ba54.mesh"]
+
+source_file="res://scenes/StaticMeshes/kenney_furniture-kit/Models/OBJ format/speaker.obj"
+dest_files=["res://.godot/imported/speaker.obj-9c6e853997014be741a7ee459b57ba54.mesh", "res://.godot/imported/speaker.obj-9c6e853997014be741a7ee459b57ba54.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

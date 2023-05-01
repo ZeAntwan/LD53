@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://misc2qfuy2ld"
+path="res://.godot/imported/floor-large.obj-55812685e6576b211b55b4cf2442a133.mesh"
+
+[deps]
+
+files=["res://.godot/imported/floor-large.obj-55812685e6576b211b55b4cf2442a133.mesh"]
+
+source_file="res://scenes/StaticMeshes/kenney_conveyor-kit/Models/OBJ format/floor-large.obj"
+dest_files=["res://.godot/imported/floor-large.obj-55812685e6576b211b55b4cf2442a133.mesh", "res://.godot/imported/floor-large.obj-55812685e6576b211b55b4cf2442a133.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

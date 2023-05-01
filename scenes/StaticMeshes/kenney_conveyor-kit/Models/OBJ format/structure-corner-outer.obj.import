@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://c6y2j4vn7ds6d"
+path="res://.godot/imported/structure-corner-outer.obj-c1f16c5eabe5f58c87c005ef56c924c3.mesh"
+
+[deps]
+
+files=["res://.godot/imported/structure-corner-outer.obj-c1f16c5eabe5f58c87c005ef56c924c3.mesh"]
+
+source_file="res://scenes/StaticMeshes/kenney_conveyor-kit/Models/OBJ format/structure-corner-outer.obj"
+dest_files=["res://.godot/imported/structure-corner-outer.obj-c1f16c5eabe5f58c87c005ef56c924c3.mesh", "res://.godot/imported/structure-corner-outer.obj-c1f16c5eabe5f58c87c005ef56c924c3.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

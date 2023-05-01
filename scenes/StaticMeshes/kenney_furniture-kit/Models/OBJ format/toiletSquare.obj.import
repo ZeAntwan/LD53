@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://b1eb3xtwx0w6g"
+path="res://.godot/imported/toiletSquare.obj-e87470cf69055b188cc87b6d82d760eb.mesh"
+
+[deps]
+
+files=["res://.godot/imported/toiletSquare.obj-e87470cf69055b188cc87b6d82d760eb.mesh"]
+
+source_file="res://scenes/StaticMeshes/kenney_furniture-kit/Models/OBJ format/toiletSquare.obj"
+dest_files=["res://.godot/imported/toiletSquare.obj-e87470cf69055b188cc87b6d82d760eb.mesh", "res://.godot/imported/toiletSquare.obj-e87470cf69055b188cc87b6d82d760eb.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

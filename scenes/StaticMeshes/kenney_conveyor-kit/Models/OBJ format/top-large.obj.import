@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bvd4qagm36cbh"
+path="res://.godot/imported/top-large.obj-7c60ec54bdafea3e171fe4be31a25454.mesh"
+
+[deps]
+
+files=["res://.godot/imported/top-large.obj-7c60ec54bdafea3e171fe4be31a25454.mesh"]
+
+source_file="res://scenes/StaticMeshes/kenney_conveyor-kit/Models/OBJ format/top-large.obj"
+dest_files=["res://.godot/imported/top-large.obj-7c60ec54bdafea3e171fe4be31a25454.mesh", "res://.godot/imported/top-large.obj-7c60ec54bdafea3e171fe4be31a25454.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

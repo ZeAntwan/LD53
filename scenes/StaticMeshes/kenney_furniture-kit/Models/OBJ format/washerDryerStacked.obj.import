@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bw8askl4r3uil"
+path="res://.godot/imported/washerDryerStacked.obj-61b1ec7d5bf11dc1e25340727b441524.mesh"
+
+[deps]
+
+files=["res://.godot/imported/washerDryerStacked.obj-61b1ec7d5bf11dc1e25340727b441524.mesh"]
+
+source_file="res://scenes/StaticMeshes/kenney_furniture-kit/Models/OBJ format/washerDryerStacked.obj"
+dest_files=["res://.godot/imported/washerDryerStacked.obj-61b1ec7d5bf11dc1e25340727b441524.mesh", "res://.godot/imported/washerDryerStacked.obj-61b1ec7d5bf11dc1e25340727b441524.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

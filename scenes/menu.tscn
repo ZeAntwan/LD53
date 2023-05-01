@@ -60,5 +60,16 @@ layout_mode = 2
 text = "Credits
 "
 
+[node name="Exit" type="MarginContainer" parent="MarginContainer/CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_right = 50
+
+[node name="Exit" type="Button" parent="MarginContainer/CenterContainer/VBoxContainer/Exit"]
+layout_mode = 2
+text = "Quit
+"
+
 [connection signal="pressed" from="MarginContainer/CenterContainer/VBoxContainer/PlayContainer/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="MarginContainer/CenterContainer/VBoxContainer/CreditsContainer/Credits" to="." method="_on_credits_pressed"]
+[connection signal="pressed" from="MarginContainer/CenterContainer/VBoxContainer/Exit/Exit" to="." method="_on_exit_pressed"]

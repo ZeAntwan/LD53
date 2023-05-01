@@ -49,3 +49,7 @@ func _on_visibility_changed():
 func _on_button_pressed():
 	Events.emit_signal("pressed_restart")
 	pass # Replace with function body.
+
+
+func _on_quit_pressed():
+	get_tree().quit()

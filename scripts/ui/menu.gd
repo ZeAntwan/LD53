@@ -22,3 +22,7 @@ func _on_play_pressed():
 func _on_credits_pressed():
 	Events.emit_signal("pressed_credits")
 	pass # Replace with function body.
+
+
+func _on_exit_pressed():
+	get_tree().quit()

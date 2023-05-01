@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://bfkuisbnwug2c"]
 
 [ext_resource type="Script" path="res://scripts/ui/menu.gd" id="1_oi3du"]
-[ext_resource type="Texture2D" uid="uid://bj58hnqp218nd" path="res://resources/logo/bad-news-network-low-resolution-logo-white-on-transparent-background.png" id="2_gnmdh"]
+[ext_resource type="Texture2D" uid="uid://cibkglak2sbel" path="res://resources/ui/menu_logo.png" id="2_4b6nc"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -37,7 +37,7 @@ theme_override_constants/margin_bottom = 20
 
 [node name="TextureRect" type="TextureRect" parent="MarginContainer/CenterContainer/VBoxContainer/LogoContainer"]
 layout_mode = 2
-texture = ExtResource("2_gnmdh")
+texture = ExtResource("2_4b6nc")
 expand_mode = 4
 
 [node name="PlayContainer" type="MarginContainer" parent="MarginContainer/CenterContainer/VBoxContainer"]
@@ -50,6 +50,7 @@ layout_mode = 2
 text = "Play"
 
 [node name="CreditsContainer" type="MarginContainer" parent="MarginContainer/CenterContainer/VBoxContainer"]
+visible = false
 layout_mode = 2
 theme_override_constants/margin_left = 50
 theme_override_constants/margin_right = 50

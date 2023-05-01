@@ -1,41 +1,41 @@
 DIFFICULTY or ID,TITLE,Boss Happy,Gov Happy,Public Happy,TIME
-0,The Loch Ness Monster found? Experts claim photo is genuine.,-2,-5,10,4
-0,Mayor confirms: flying cars to hit the streets soon.,-5,10,-2,4
-0,Stonehenge mystery solved? New discovery stuns scientists.,-5,-2,10,4
-0,Royal family secrets revealed: shocking details emerge.,-2,10,-5,4
-0,"British scientists develop time machine, ethics debate ensues.",-2,-5,10,4
-0,"Government confirms existence of ghosts, paranormal activity on the rise.",10,-2,-5,4
-0,"New gadget allows users to see into the future, privacy concerns arise.",10,-5,-2,4
-0,"Famous British landmarks found to be alien landing sites, government cover-up suspected.",-2,-5,10,4
-0,"Legendary creature sighted in Sherwood Forest, locals in shock.",10,-2,-5,4
-0,Breakthrough technology: teleportation becomes a reality in the UK.,10,-5,-2,4
-0,Buckingham Palace to open its doors for ghost tours.,-5,-2,10,4
-0,"Crop circle mystery finally solved, British scientists say.",-5,10,-2,4
-0,"New app claims to predict the end of the world, global panic ensues.",-2,10,-5,4
-0,"British spy agency develops mind-reading technology, privacy concerns raised.",10,-5,-2,4
-0,"Time-traveling Doctor Who spotted in London, fans ecstatic.",-2,-5,10,4
-0,"Ancient curse strikes British museum, artifacts come to life.",10,-2,-5,4
-0,"Big Ben goes haywire, timekeeping technology blamed.",10,-5,-2,4
-0,"British engineers create first-ever underwater city, environmentalists outraged.",-5,-2,10,4
-0,"Government denies existence of fairies, new evidence suggests otherwise.",-5,-2,10,4
-0,"British scientists discover portal to alternate dimension, new era of exploration begins.",10,-5,-2,4
-0,"Hollywood A-lister in secret cult, followers reveal disturbing rituals.",-5,10,-2,4
-0,Controversy erupts as leaked tapes reveal Prime Minister's shocking comments.,-2,10,-5,4
-0,"Celebrity chef found to be serving human flesh, fans outraged.",10,-5,-2,4
-0,"Mysterious billionaire funding anti-gravity research, new invention on the horizon.",-5,-2,10,4
-0,"Internet influencer's fake illness scheme exposed, fans demand refunds.",-2,-5,10,4
-0,Secret government program exposed: injecting population with alien DNA.,10,-2,-5,4
-0,"Pop star caught in love triangle scandal, fans shocked by affair.",-2,10,-5,4
-0,"Prominent politician caught in underage sex scandal, calls for resignation.",-2,10,-5,4
-0,"Rumours of celebrity body doubles abound, fans scrutinize social media posts.",10,-5,-2,4
-0,Conspiracy theory alert: famous actor revealed to be part of Illuminati.,-5,-2,10,4
-0,"World leaders caught in secret society, bizarre rituals uncovered.",-5,-2,10,4
-0,"Talk show host's political ties revealed, fans demand more transparency.",-2,10,-5,4
-0,"Rumours of time-traveling politician circulate, followers suspect conspiracy.",10,-5,-2,4
-0,Celebrity plastic surgery gone wrong: fans stunned by unrecognizable face.,10,-5,-2,4
-0,Government cover-up exposed: extraterrestrial visitation confirmed.,-5,-2,10,4
-0,"Social media star's woke conspiracy theories gain traction, followers rally.",-2,-5,10,4
-0,"Infamous criminal mastermind's whereabouts unknown, police baffled.",10,-2,-5,4
-0,"Celebrity couple's divorce rocks Hollywood, rumors of infidelity emerge.",10,-5,-2,4
-0,"Pop culture icon embroiled in drug scandal, career in jeopardy.",-5,10,-2,4
-0,Whistleblower reveals Hollywood's dark secret: human cloning is real.,-2,-5,10,4
+0,The Loch Ness Monster found? Experts claim [b]photo is genuine[/b].,-3,-5,10,4
+0,Mayor confirms: [b]flying cars[/b] to hit the streets soon.,-5,10,-3,4
+0,Stonehenge mystery solved? New [b]discovery stuns scientists.[/b],-5,-3,10,4
+0,Royal family [b]secrets revealed[/b]: shocking details emerge.,-3,10,-5,4
+0,"British scientists develop time machine, [b]ethics debate ensues.[/b]",-3,-5,10,4
+0,"Government [b]confirms existence of ghosts[/b], paranormal activity on the rise.",10,-3,-5,4
+0,"New gadget allows users to see into the future, [b]privacy concerns arise.[/b]",10,-5,-3,4
+0,"Famous British landmarks found to be alien landing sites, [b]government cover-up suspected.[/b]",-3,-5,10,4
+0,"Legendary creature sighted in Sherwood Forest, [b]locals in shock.[/b]",10,-3,-5,4
+0,[b]Breakthrough technology[/b]: teleportation becomes a reality in the UK.,10,-5,-3,4
+0,Buckingham Palace to open its doors for [b]ghost tours.[/b],-5,-3,10,4
+0,"[b]Crop circle[/b] mystery finally solved, British scientists say.",-5,10,-3,4
+0,"New app claims to predict the end of the world, [b]global panic ensues.[/b]",-3,10,-5,4
+0,"British spy agency develops [/b]mind-reading technology,[/b] privacy concerns raised.",10,-5,-3,4
+0,"Time-traveling Doctor Who spotted in London, [b]fans ecstatic.[/b]",-3,-5,10,4
+0,"Ancient curse strikes British museum, [b]artifacts come to life.[/b]",10,-3,-5,4
+0,"Big Ben goes haywire, [b]timekeeping technology blamed.[/b]",10,-5,-3,4
+0,"British engineers create first-ever underwater city, [b]environmentalists outraged.[/b]",-5,-3,10,4
+0,"[b]Government denies[/b] existence of fairies, new evidence suggests otherwise.",-5,-3,10,4
+0,"British scientists discover portal to alternate dimension, [b]new era of exploration begins.[/b]",10,-5,-3,4
+0,"[b]Hollywood A-lister in secret cult,[/b] followers reveal disturbing rituals.",-5,10,-3,4
+0,Controversy erupts as leaked tapes reveal [b]Prime Minister's shocking comments.[/b],-3,10,-5,4
+0,"Celebrity chef found to be serving [b]human flesh, fans outraged.[/b]",10,-5,-3,4
+0,"Mysterious billionaire funding anti-gravity research, [b]new invention on the horizon.[/b]",-5,-3,10,4
+0,"Internet influencer's [b]fake illness scheme exposed,[/b] fans demand refunds.",-3,-5,10,4
+0,[b]Secret government program exposed:[/b] injecting population with alien DNA.,10,-3,-5,4
+0,"Pop star caught in [b]love triangle scandal,[/b] fans shocked by affair.",-3,10,-5,4
+0,"Prominent [b]politician caught in sex scandal,[/b] calls for resignation.",-3,10,-5,4
+0,"Rumours of [b]celebrity body doubles abound,[/b] fans scrutinize social media posts.",10,-5,-3,4
+0,Conspiracy theory alert: famous [b]actor revealed to be part of Illuminati.[/b],-5,-3,10,4
+0,"[b]World leaders caught in secret society,[/b] bizarre rituals uncovered.",-5,-3,10,4
+0,"Talk show host's [b]political ties revealed,[/b] fans demand more transparency.",-3,10,-5,4
+0,"Rumours of time-traveling politician circulate, [b]followers suspect conspiracy.[/b]",10,-5,-3,4
+0,Celebrity plastic surgery gone wrong: [b]fans stunned[/b] by unrecognizable face.,10,-5,-3,4
+0,Government cover-up exposed: [b]extraterrestrial visitation confirmed.[/b],-5,-3,10,4
+0,"Social media star's [b]woke conspiracy theories[/b] gain traction, followers rally.",-3,-5,10,4
+0,"Infamous criminal mastermind's whereabouts unknown, [b]police baffled.[/b]",10,-3,-5,4
+0,"[b]Celebrity couple's divorce rocks Hollywood,[/b] rumors of infidelity emerge.",10,-5,-3,4
+0,"Pop culture icon embroiled in [b]drug scandal,[/b] career in jeopardy.",-5,10,-3,4
+0,Whistleblower reveals Hollywood's dark secret: [b]human cloning is real.[/b],-3,-5,10,4

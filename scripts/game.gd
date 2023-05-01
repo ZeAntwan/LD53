@@ -9,6 +9,9 @@ extends Node
 @onready var menuCamera: Node3D = $MenuCamera
 @onready var gameCamera: Camera3D = $ActiveCamera
 
+@onready var audioMusic: AudioStreamPlayer2D = $MusicLoop
+@onready var audioAmb: AudioStreamPlayer2D = $AmbianceLoop
+
 var targetCamera: Node3D = null
 
 # Called when the node enters the scene tree for the first time.
@@ -17,6 +20,7 @@ func _ready():
 	Events.pressed_play.connect(start_game)
 	Events.pressed_restart.connect(restart_game)
 	Events.gameready.connect(ready_game)
+	Events.gamestarted.connect(game_started)
 	Events.gameover.connect(game_over)
 	pass # Replace with function body.
 
@@ -28,6 +32,8 @@ func _process(delta):
 	pass
 
 func start_game(restart: bool = false):
+	if !audioAmb.playing:
+		audioAmb.play()
 	mainMenu.visible = false
 	Manager.reset_score()
 	if restart:
@@ -51,4 +57,9 @@ func game_over():
 		gameUI.visible = false
 		Manager.state = Manager.GameState.GAMEOVER
 		gameOverUI.visible = true
+		audioMusic.stop()
 
+func game_started():
+	audioAmb.stop()
+	audioMusic.play()
+	pass

@@ -3,6 +3,8 @@ extends Node2D
 @onready var animPlayer: AnimationPlayer = $AnimationPlayer
 @onready var scoreLabel: RichTextLabel = %Score
 @onready var gameoverLabel: RichTextLabel = $Control/ColorRect/VBoxContainer/GameoverLabel
+
+@onready var audioGameover: AudioStreamPlayer2D = $GameOverTune
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
@@ -15,7 +17,7 @@ func _process(delta):
 func _on_visibility_changed():
 	if visible:
 		animPlayer.play("gameover_anim")
-		
+		audioGameover.play()
 		# Update Score
 		var minutes = "%0*d" % [2,floor(Manager.progression/60)]
 		var seconds = "%0*d" % [2,abs(ceil((Manager.progression/60)-Manager.progression))]
@@ -36,6 +38,8 @@ func _on_visibility_changed():
 			
 		gameoverLabel.text = "[center]" + gameoverText + "[/center]"
 	else:
+		if audioGameover:
+			audioGameover.stop()
 		pass
 	pass # Replace with function body.
 

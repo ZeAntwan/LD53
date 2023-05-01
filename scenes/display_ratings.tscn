@@ -87,6 +87,7 @@ text = "OFF"
 clip_text = true
 
 [node name="Timer" type="Timer" parent="Control"]
+wait_time = 0.2
 autostart = true
 
 [connection signal="timeout" from="Control/Timer" to="." method="_on_timer_timeout"]

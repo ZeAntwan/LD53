@@ -1,20 +1,25 @@
-[gd_scene load_steps=5 format=3 uid="uid://cj6qhtyh283tu"]
+[gd_scene load_steps=6 format=3 uid="uid://cj6qhtyh283tu"]
 
 [ext_resource type="PackedScene" uid="uid://h1um88c2nc4y" path="res://scenes/ui/drop_zone.tscn" id="1_i5qri"]
 [ext_resource type="Script" path="res://scripts/ui/LiveZone.gd" id="2_nq4fu"]
+[ext_resource type="AudioStream" uid="uid://qouv4l4f1ds1" path="res://audio/bnn_newslive.wav" id="3_7lhcs"]
 [ext_resource type="Texture2D" uid="uid://d4een00d8qx0y" path="res://resources/ui/livezone_top.png" id="3_gwyhy"]
 [ext_resource type="Texture2D" uid="uid://dor4dwyb8qwx7" path="res://resources/ui/livezone.png" id="3_rtrmq"]
 
 [node name="LiveZone" instance=ExtResource("1_i5qri")]
 script = ExtResource("2_nq4fu")
 
-[node name="TextureRect" parent="." index="1"]
+[node name="Bumper" type="AudioStreamPlayer2D" parent="." index="0"]
+position = Vector2(-17, -13)
+stream = ExtResource("3_7lhcs")
+
+[node name="TextureRect" parent="." index="2"]
 texture = ExtResource("3_rtrmq")
 
-[node name="Timer" type="Timer" parent="." index="2"]
+[node name="Timer" type="Timer" parent="." index="3"]
 one_shot = true
 
-[node name="TextureRect2" type="TextureRect" parent="." index="4"]
+[node name="TextureRect2" type="TextureRect" parent="." index="5"]
 z_index = 3
 layout_mode = 1
 anchors_preset = 15

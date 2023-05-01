@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://cpbkljjgg8dyt"]
+[gd_scene load_steps=6 format=3 uid="uid://cpbkljjgg8dyt"]
 
 [ext_resource type="Script" path="res://scripts/game_over.gd" id="1_mfb0a"]
 [ext_resource type="Texture2D" uid="uid://fexvrhlf05si" path="res://icon.svg" id="1_t1in2"]
+[ext_resource type="AudioStream" uid="uid://dpp2njvio3dgr" path="res://audio/bnn_gameover.wav" id="3_o5a4c"]
 
 [sub_resource type="Animation" id="Animation_00g2m"]
 resource_name = "gameover_anim"
@@ -175,6 +176,9 @@ texture = ExtResource("1_t1in2")
 libraries = {
 "": SubResource("AnimationLibrary_ydx0r")
 }
+
+[node name="GameOverTune" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_o5a4c")
 
 [connection signal="visibility_changed" from="." to="." method="_on_visibility_changed"]
 [connection signal="pressed" from="Control/ColorRect2/CenterContainer/VBoxContainer/MarginContainer/Button" to="." method="_on_button_pressed"]

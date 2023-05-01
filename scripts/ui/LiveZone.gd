@@ -1,6 +1,8 @@
 extends DropZone
 
 @onready var timer = $Timer
+
+@onready var audioBumper: AudioStreamPlayer2D = $Bumper
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	canDrop = true
@@ -15,6 +17,8 @@ func _process(delta):
 			Manager.score_rating += (newsItem.headline.stat_rating/timer.wait_time)*delta
 			Manager.score_stock += (newsItem.headline.stat_stock/timer.wait_time)*delta
 			Manager.score_public += (newsItem.headline.stat_public/timer.wait_time)*delta
+		else:
+			Manager.score_rating -= 5*delta
 	pass
 
 func update_newsitem(n: NewsItem = null):
@@ -36,4 +40,5 @@ func _on_timer_timeout():
 	newsItem.queue_free()
 	update_newsitem()
 	Events.emit_signal("news_ended")
+	audioBumper.play()
 	pass # Replace with function body.

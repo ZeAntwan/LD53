@@ -141,15 +141,15 @@ layout_mode = 2
 layout_mode = 2
 
 [node name="DebugUI" type="Control" parent="."]
-visible = false
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 1
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -40.0
-offset_bottom = 40.0
-grow_horizontal = 0
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -100.0
+offset_right = 100.0
+offset_bottom = 131.0
+grow_horizontal = 2
 script = ExtResource("6_kqe5e")
 
 [node name="HBoxContainer" type="VBoxContainer" parent="DebugUI"]
@@ -200,6 +200,22 @@ text = "Public
 "
 
 [node name="Score" type="Label" parent="DebugUI/HBoxContainer/Public"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "0
+"
+
+[node name="Time" type="HBoxContainer" parent="DebugUI/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="DebugUI/HBoxContainer/Time"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Progression
+"
+
+[node name="Score" type="Label" parent="DebugUI/HBoxContainer/Time"]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "0

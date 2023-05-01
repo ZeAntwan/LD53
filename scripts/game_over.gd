@@ -19,9 +19,11 @@ func _on_visibility_changed():
 		animPlayer.play("gameover_anim")
 		audioGameover.play()
 		# Update Score
-		var minutes = "%0*d" % [2,floor(Manager.progression/60)]
-		var seconds = "%0*d" % [2,abs(ceil((Manager.progression/60)-Manager.progression))]
-		var scoreText = "%s:%s" % [minutes, seconds]
+		var minutes = floor(Manager.progression/60)
+		var seconds = int(ceil(Manager.progression)) % 60
+		var txt_minutes = "%0*d" % [2,minutes]
+		var txt_seconds = "%0*d" % [2,seconds]
+		var scoreText = "%s:%s" % [txt_minutes, txt_seconds]
 		scoreLabel.text = "[center][wave]" + scoreText + "[/wave][/center]"
 		
 		# Updage Gameover text

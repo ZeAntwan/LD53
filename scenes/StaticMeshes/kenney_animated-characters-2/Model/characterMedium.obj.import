@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bmwnjmuwibc0k"
+path="res://.godot/imported/characterMedium.obj-46906964ea9cd9cb2982f8c337f8582c.mesh"
+
+[deps]
+
+files=["res://.godot/imported/characterMedium.obj-46906964ea9cd9cb2982f8c337f8582c.mesh"]
+
+source_file="res://scenes/StaticMeshes/kenney_animated-characters-2/Model/characterMedium.obj"
+dest_files=["res://.godot/imported/characterMedium.obj-46906964ea9cd9cb2982f8c337f8582c.mesh", "res://.godot/imported/characterMedium.obj-46906964ea9cd9cb2982f8c337f8582c.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

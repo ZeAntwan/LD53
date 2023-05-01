@@ -1,12 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://hfj0fkciux6a"]
+[gd_scene load_steps=3 format=3 uid="uid://b4emw7y2vblop"]
 
-[ext_resource type="PackedScene" uid="uid://chc2eoovsev18" path="res://resources/Duke/Duke De Liver Mod N Anims.fbx" id="1_iw34v"]
+[ext_resource type="PackedScene" uid="uid://ceexcgllu6p4f" path="res://resources/Duke/Duke De Liver Model.gltf" id="1_j7con"]
 [ext_resource type="Script" path="res://scripts/duke.gd" id="2_vko4c"]
 
-[node name="Duke" instance=ExtResource("1_iw34v")]
+[node name="Duke De Liver Model" instance=ExtResource("1_j7con")]
 script = ExtResource("2_vko4c")
-
-[node name="Skeleton3D" parent="RootNode/metarig" index="0"]
-bones/3/rotation = Quaternion(0.0139071, 1.04629e-17, 1.15729e-17, 0.999903)
-bones/9/rotation = Quaternion(0.270492, 0.657335, -0.590814, 0.381685)
-bones/14/rotation = Quaternion(-0.270492, 0.657335, -0.590814, -0.381685)

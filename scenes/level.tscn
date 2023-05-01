@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://dbl8lpo4eapxr" path="res://scenes/display_ratings.tscn" id="1_baesr"]
 [ext_resource type="PackedScene" uid="uid://b26hcx2tttep7" path="res://scenes/display_stock.tscn" id="2_shk20"]
-[ext_resource type="PackedScene" uid="uid://hfj0fkciux6a" path="res://scenes/duke.tscn" id="3_8weh5"]
+[ext_resource type="PackedScene" uid="uid://b4emw7y2vblop" path="res://scenes/duke.tscn" id="3_8weh5"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_o5soa"]
 
@@ -253,6 +253,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.708, 2.802)
 visible = false
 fov = 90.0
 
+[node name="Duke De Liver Model" parent="." instance=ExtResource("3_8weh5")]
+transform = Transform3D(-0.99898, 0, 0.0451537, 0, 1, 0, -0.0451537, 0, -0.99898, -0.0111408, 0.0448669, 3.93862)
+
 [node name="Temp_CharacterMesh" type="MeshInstance3D" parent="."]
 transform = Transform3D(-0.959736, 2.12347e-07, 0, -8.39028e-08, -2.42897, 0, 0, 0, 0.627725, 1.18432e-08, 1.6082, 3.69214)
 visible = false
@@ -261,9 +264,6 @@ mesh = SubResource("PrismMesh_5gar1")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Temp_CharacterMesh"]
 transform = Transform3D(0.849191, 3.55271e-14, 0, 4.44089e-14, 0.364895, 0, 0, 0, 1, -9.9476e-14, -0.666641, -0.104017)
 mesh = SubResource("SphereMesh_yij73")
-
-[node name="Duke" parent="." instance=ExtResource("3_8weh5")]
-transform = Transform3D(-1.29945, 0, 0.037795, 0, 1.3, 0, -0.037795, 0, -1.29945, -0.036, -0.744, 4.415)
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
 tree_root = SubResource("AnimationNodeBlendSpace1D_ltptv")

@@ -6,7 +6,7 @@ extends Node3D
 func _ready():
 	Events.gamestarted.connect(toggle_animation)
 	Events.gameover.connect(toggle_animation)
-	animPlayer.play("metarig|Idle")
+	animPlayer.play("Idle")
 	pass # Replace with function body.
 
 
@@ -16,7 +16,7 @@ func _process(delta):
 
 func toggle_animation():
 	if Manager.state == Manager.GameState.GAMEOVER:
-		animPlayer.play("metarig|Idle")
+		animPlayer.play("Idle")
 	elif Manager.state == Manager.GameState.PLAY:
-		animPlayer.play("metarig|Talking")
+		animPlayer.play("Talking")
 	pass

@@ -9,10 +9,12 @@ var canPick = true
 
 @onready var area = $Area2D
 @onready var parent = get_parent()
-@onready var label = $Label
+@onready var label = %Label
 @onready var hiding = $Hiding
+@onready var background: TextureRect = $TextureRect
 
-@export var headline = Headline.new()
+@export var icons: Array[Texture] 
+@export var headline: Headline = Headline.new()
 @export var ownZone: DropZone
 
 # Called when the node enters the scene tree for the first time.
@@ -24,9 +26,23 @@ func _ready():
 
 func set_headline(h: Headline):
 	if !label:
-		label = $Label
+		label = %Label
 	headline = h
 	label.text = headline.text
+	
+	var maxstat = max(headline.stat_rating,headline.stat_stock,headline.stat_public)
+	
+	if !background:
+		background = $TextureRect
+	if maxstat == headline.stat_rating:
+		background.texture = icons[0]
+		pass
+	elif maxstat == headline.stat_stock:
+		background.texture = icons[1]
+		pass
+	elif maxstat == headline.stat_public:
+		background.texture = icons[2]
+		pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):

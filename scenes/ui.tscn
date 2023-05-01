@@ -103,6 +103,7 @@ mouse_filter = 2
 theme_override_constants/separation = 20
 
 [node name="LiveZone" parent="LiveBar/MarginContainer/HBoxContainer" groups=["drop_zone"] instance=ExtResource("3_ghk45")]
+custom_minimum_size = Vector2(160, 100)
 layout_mode = 2
 
 [node name="DropZone_2" parent="LiveBar/MarginContainer/HBoxContainer" groups=["drop_zone"] instance=ExtResource("1_mi2bh")]

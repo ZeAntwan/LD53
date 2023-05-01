@@ -1,4 +1,4 @@
-[gd_scene load_steps=72 format=3 uid="uid://ci36nuskade4y"]
+[gd_scene load_steps=87 format=3 uid="uid://ci36nuskade4y"]
 
 [ext_resource type="PackedScene" uid="uid://dbl8lpo4eapxr" path="res://scenes/display_ratings.tscn" id="1_baesr"]
 [ext_resource type="Script" path="res://scripts/mobfeedback.gd" id="1_dlm8f"]
@@ -32,7 +32,22 @@
 [ext_resource type="ArrayMesh" uid="uid://c6g1sxkon2heb" path="res://scenes/StaticMeshes/kenney_food-kit/Models/OBJ format/cup.obj" id="28_by7lu"]
 [ext_resource type="ArrayMesh" uid="uid://dxfed5hve5npu" path="res://scenes/StaticMeshes/kenney_furniture-kit/Models/OBJ format/kitchenCabinet.obj" id="30_m56b6"]
 [ext_resource type="ArrayMesh" uid="uid://denoj740c1xj7" path="res://scenes/StaticMeshes/kenney_furniture-kit/Models/OBJ format/rugRectangle.obj" id="31_hj2sp"]
+[ext_resource type="ArrayMesh" uid="uid://dytslbisvx7ts" path="res://scenes/StaticMeshes/kenney_conveyor-kit/Models/OBJ format/box-small.obj" id="33_djmmi"]
 [ext_resource type="ArrayMesh" uid="uid://c4tp2iloe06nj" path="res://scenes/StaticMeshes/kenney_furniture-kit/Models/OBJ format/kitchenCabinetUpperDouble.obj" id="33_se23n"]
+[ext_resource type="ArrayMesh" uid="uid://c7uqxr82wj60f" path="res://scenes/StaticMeshes/kenney_furniture-kit/Models/OBJ format/cardboardBoxClosed.obj" id="34_ppuui"]
+[ext_resource type="ArrayMesh" uid="uid://d25rm3j1e08" path="res://scenes/StaticMeshes/kenney_furniture-kit/Models/OBJ format/cardboardBoxOpen.obj" id="35_rqhlo"]
+[ext_resource type="ArrayMesh" uid="uid://bt175pqdluqoh" path="res://scenes/StaticMeshes/kenney_conveyor-kit/Models/OBJ format/box-wide.obj" id="36_sqav2"]
+[ext_resource type="ArrayMesh" uid="uid://dad4v5cgwvhi3" path="res://scenes/StaticMeshes/kenney_furniture-kit/Models/OBJ format/kitchenCabinetCornerInner.obj" id="38_qqhlv"]
+[ext_resource type="ArrayMesh" uid="uid://1ctp33w3sdff" path="res://scenes/StaticMeshes/kenney_furniture-kit/Models/OBJ format/kitchenCabinetCornerRound.obj" id="39_hkmry"]
+[ext_resource type="ArrayMesh" uid="uid://dxkrsq36r2yh2" path="res://scenes/StaticMeshes/kenney_furniture-kit/Models/OBJ format/kitchenCabinetDrawer.obj" id="40_k8jso"]
+[ext_resource type="ArrayMesh" uid="uid://qrqghiy6a1ss" path="res://scenes/StaticMeshes/kenney_furniture-kit/Models/OBJ format/kitchenCabinetUpper.obj" id="41_0hfi4"]
+[ext_resource type="ArrayMesh" uid="uid://ch585k5g5e7bm" path="res://scenes/StaticMeshes/kenney_furniture-kit/Models/OBJ format/kitchenCabinetUpperLow.obj" id="42_qi02v"]
+[ext_resource type="ArrayMesh" uid="uid://oinbkj7flsp5" path="res://scenes/StaticMeshes/kenney_furniture-kit/Models/OBJ format/kitchenFridgeLarge.obj" id="43_u58li"]
+[ext_resource type="ArrayMesh" uid="uid://brw064jx2xkh4" path="res://scenes/StaticMeshes/kenney_furniture-kit/Models/OBJ format/kitchenSink.obj" id="44_sucql"]
+[ext_resource type="ArrayMesh" uid="uid://baubfjj0lk4cm" path="res://scenes/StaticMeshes/kenney_furniture-kit/Models/OBJ format/kitchenStove.obj" id="45_bbi3h"]
+[ext_resource type="ArrayMesh" uid="uid://dpus8y53ggosr" path="res://scenes/StaticMeshes/kenney_food-kit/Models/OBJ format/cartonSmall.obj" id="46_sxhe8"]
+[ext_resource type="ArrayMesh" uid="uid://cj857pb7k31nh" path="res://scenes/StaticMeshes/kenney_furniture-kit/Models/OBJ format/kitchenMicrowave.obj" id="47_anrfb"]
+[ext_resource type="PackedScene" uid="uid://ceexcgllu6p4f" path="res://resources/Duke/Duke De Liver Model.gltf" id="48_2705m"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lr2e5"]
 
@@ -740,7 +755,7 @@ mesh = SubResource("BoxMesh_so24c")
 shape = SubResource("BoxShape3D_rym4o")
 
 [node name="Camera3D2" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.708, 2.802)
+transform = Transform3D(0.997039, 0, 0, 0, 0.997039, 0, 0, 0, 0.997039, 0, 2.708, 2.802)
 visible = false
 fov = 90.0
 
@@ -1303,11 +1318,6 @@ font_size = 150
 
 [node name="Furniture" type="Node" parent="Interior"]
 
-[node name="KitchenCabinet" type="MeshInstance3D" parent="Interior/Furniture"]
-transform = Transform3D(1.00297, 0, 0, 0, 1.00297, 0, 0, 0, 1.00297, -11.7821, -9.03796, -7.53997)
-mesh = ExtResource("30_m56b6")
-skeleton = NodePath("../../..")
-
 [node name="RugRectangle" type="MeshInstance3D" parent="Interior/Furniture"]
 transform = Transform3D(-1.2608e-07, 0, -3.23728, 0, 1.00297, 0, 2.88438, 0, -1.41506e-07, 3.91316, -0.0396785, -1.49443)
 mesh = ExtResource("31_hj2sp")
@@ -1493,3 +1503,236 @@ skeleton = NodePath("../../../..")
 transform = Transform3D(0.150445, 0, 0, 0, -4.38411e-08, -0.150445, 0, 1.00297, -6.57616e-09, -0.0119517, 0.714756, 0.997011)
 mesh = SubResource("CylinderMesh_eolfc")
 skeleton = NodePath("../../../..")
+
+[node name="EndingScene_Fired" type="Node" parent="."]
+
+[node name="Interior_wall_1" parent="EndingScene_Fired" instance=ExtResource("13_mly6a")]
+transform = Transform3D(-5.93193e-07, 0, 1.00595, 0, 1.50489, 0, -13.5707, 0, -4.39714e-08, -5.34939, -0.035521, -21.6171)
+
+[node name="structure-wall3" parent="EndingScene_Fired/Interior_wall_1" instance=ExtResource("13_mly6a")]
+transform = Transform3D(-1, 9.69458e-09, 2.22045e-16, -7.88352e-07, -0.999999, 0, 5.68434e-13, -6.35275e-21, 1, 0, 5.98594, 0)
+
+[node name="Interior_wall_2" parent="EndingScene_Fired" instance=ExtResource("13_mly6a")]
+transform = Transform3D(-5.93193e-07, 0, -1.00595, 0, 1.50489, 0, 13.5707, 0, -4.39714e-08, 5.39446, -0.035521, -21.6171)
+
+[node name="structure-wall3" parent="EndingScene_Fired/Interior_wall_2" instance=ExtResource("13_mly6a")]
+transform = Transform3D(-1, 9.69458e-09, 2.22045e-16, -7.88352e-07, -0.999999, 0, 5.68434e-13, -6.35275e-21, 1, 0, 5.98594, 0)
+
+[node name="Interior_wall_3" parent="EndingScene_Fired" instance=ExtResource("13_mly6a")]
+transform = Transform3D(13.5707, 0, 0, 0, 1.50489, 0, 0, 0, 1.00595, -0.0471286, -0.035521, -26.7353)
+
+[node name="structure-wall3" parent="EndingScene_Fired/Interior_wall_3" instance=ExtResource("13_mly6a")]
+transform = Transform3D(-1, 9.69458e-09, 2.22045e-16, -7.88352e-07, -0.999999, 0, 5.68434e-13, -6.35275e-21, 1, 0, 5.98594, 0)
+
+[node name="StudioWall_3_Roof" type="MeshInstance3D" parent="EndingScene_Fired"]
+transform = Transform3D(-3.29786e-08, -26.633, 0, 0.754463, -1.16416e-06, 0, 0, 0, 17.5625, 0.161532, 6.94187, -20.5085)
+mesh = SubResource("BoxMesh_cdrb5")
+skeleton = NodePath("../WindowFrame_1")
+
+[node name="WindowFrame_1" type="MeshInstance3D" parent="EndingScene_Fired"]
+transform = Transform3D(0.754462, 0, 0, 0, 5.02974, 0, 0, 0, 0.754462, 3.01785, 4.81108, -11.8217)
+mesh = SubResource("CylinderMesh_og3df")
+skeleton = NodePath("../../..")
+
+[node name="WindowFrame_2" type="MeshInstance3D" parent="EndingScene_Fired/WindowFrame_1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, 0)
+mesh = SubResource("CylinderMesh_og3df")
+skeleton = NodePath("../../../..")
+
+[node name="WindowFrame_3" type="MeshInstance3D" parent="EndingScene_Fired/WindowFrame_1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -3.63611)
+mesh = SubResource("CylinderMesh_og3df")
+skeleton = NodePath("../../../..")
+
+[node name="WindowFrame_4" type="MeshInstance3D" parent="EndingScene_Fired/WindowFrame_1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0, -3.63611)
+mesh = SubResource("CylinderMesh_og3df")
+skeleton = NodePath("../../../..")
+
+[node name="StudioWindow_1" type="MeshInstance3D" parent="EndingScene_Fired"]
+transform = Transform3D(-8.57443e-09, 0, 6.03569, 0, 9.68469, 0, -0.19616, 0, -2.63828e-07, -0.0213925, 4.76173, -11.6226)
+mesh = SubResource("BoxMesh_cdrb5")
+skeleton = NodePath("../WindowFrame_1")
+surface_material_override/0 = SubResource("StandardMaterial3D_vlkmj")
+
+[node name="StudioWindow_2" type="MeshInstance3D" parent="EndingScene_Fired/StudioWindow_1"]
+transform = Transform3D(0.737277, 0, -20.7874, 0, 1, 0, 0.0219567, 0, 0.737277, 10.6075, 0, -0.862049)
+mesh = SubResource("BoxMesh_cdrb5")
+skeleton = NodePath("../../WindowFrame_1")
+surface_material_override/0 = SubResource("StandardMaterial3D_vlkmj")
+
+[node name="StudioWindow_3" type="MeshInstance3D" parent="EndingScene_Fired/StudioWindow_1"]
+transform = Transform3D(-0.737277, 0, -20.7874, 0, 1, 0, 0.0219567, 0, -0.737277, 10.7503, 0, 0.851489)
+mesh = SubResource("BoxMesh_cdrb5")
+skeleton = NodePath("../../WindowFrame_1")
+surface_material_override/0 = SubResource("StandardMaterial3D_vlkmj")
+
+[node name="FloorFull" type="MeshInstance3D" parent="EndingScene_Fired"]
+transform = Transform3D(12.4597, 0, 0, 0, 1.00595, 0, 0, 0, 13.3903, 6.13288, -0.0806801, -27.7542)
+mesh = ExtResource("12_6s18e")
+skeleton = NodePath("../../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_rujbb")
+surface_material_override/1 = SubResource("StandardMaterial3D_rujbb")
+
+[node name="FloorFull2" type="MeshInstance3D" parent="EndingScene_Fired/FloorFull"]
+transform = Transform3D(0.21927, 0, 0.207326, 0, 0.033, 0, -0.22266, 0, 0.176775, -0.748452, 0.0448657, 0.79051)
+mesh = ExtResource("12_6s18e")
+surface_material_override/0 = SubResource("StandardMaterial3D_6q6k0")
+
+[node name="FloorFull3" type="MeshInstance3D" parent="EndingScene_Fired/FloorFull"]
+transform = Transform3D(0.21927, 0, -0.207326, 0, 0.033, 0, 0.22266, 0, 0.176775, -0.0357814, 0.0448662, 0.995497)
+mesh = ExtResource("12_6s18e")
+surface_material_override/0 = SubResource("StandardMaterial3D_efn7o")
+
+[node name="FloorFull4" type="MeshInstance3D" parent="EndingScene_Fired/FloorFull"]
+transform = Transform3D(0.471717, 0, 0, 0, 11.6794, 0, 0, 0, -0.219975, -0.265675, 0, 1.22002)
+mesh = ExtResource("12_6s18e")
+skeleton = NodePath("../../../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_x8v2o")
+
+[node name="RugRectangle" type="MeshInstance3D" parent="EndingScene_Fired"]
+transform = Transform3D(-1.26455e-07, 0, -3.24689, 0, 1.00595, 0, 2.89295, 0, -1.41926e-07, 3.92478, -0.0397963, -22.173)
+mesh = ExtResource("31_hj2sp")
+skeleton = NodePath("../../../..")
+
+[node name="DoorwayFront" type="MeshInstance3D" parent="EndingScene_Fired"]
+transform = Transform3D(5.40237, 0, 0, 0, 4.21711, 0, 0, 0, 1.00595, -2.14347, -0.0410622, -27.2643)
+mesh = ExtResource("27_lxaki")
+skeleton = NodePath("../../../..")
+
+[node name="Sofa" type="MeshInstance3D" parent="EndingScene_Fired"]
+transform = Transform3D(-2.30477e-07, 0, 4.28435, 0, 4.0238, 0, -5.27269, 0, -1.87274e-07, 4.0558, -0.0642146, -27.1168)
+mesh = ExtResource("15_4trld")
+skeleton = NodePath("../../../..")
+
+[node name="TableCoffee" type="MeshInstance3D" parent="EndingScene_Fired"]
+transform = Transform3D(-1.97871e-07, 0, 4.52675, 0, 4.52677, 0, -4.52677, 0, -1.9787e-07, 1.97239, -0.0177043, -23.7805)
+mesh = ExtResource("16_tqhj8")
+skeleton = NodePath("../../../..")
+
+[node name="Box-small" type="MeshInstance3D" parent="EndingScene_Fired"]
+transform = Transform3D(0.857342, 0, -0.520494, 0, 1.00297, 0, 0.520494, 0, 0.857342, 1.83381, 1.05317, -25.2873)
+mesh = ExtResource("33_djmmi")
+skeleton = NodePath("../..")
+
+[node name="CardboardBoxClosed" type="MeshInstance3D" parent="EndingScene_Fired"]
+transform = Transform3D(3.75913, 0, 0, 0, 3.75913, 0, 0, 0, 3.75913, 3.15005, 1.00499, -25.6715)
+mesh = ExtResource("34_ppuui")
+skeleton = NodePath("../..")
+
+[node name="CardboardBoxOpen" type="MeshInstance3D" parent="EndingScene_Fired"]
+transform = Transform3D(3.40792, 0, -2.47609, 0, 4.21248, 0, 2.47609, 0, 3.40792, 1.29331, 0, -26.1977)
+mesh = ExtResource("35_rqhlo")
+skeleton = NodePath("../..")
+
+[node name="Box-wide" type="MeshInstance3D" parent="EndingScene_Fired"]
+transform = Transform3D(1.00297, 0, 0, 0, 1.00297, 0, 0, 0, 1.00297, 0.819784, 0, -24.7321)
+mesh = ExtResource("36_sqav2")
+skeleton = NodePath("../..")
+
+[node name="Box-wide2" type="MeshInstance3D" parent="EndingScene_Fired"]
+transform = Transform3D(1.48306, 0, 0.381943, 0, 1.00297, 0, -0.871289, 0, 0.650122, 2.17734, 1.50153, -23.4845)
+mesh = ExtResource("36_sqav2")
+skeleton = NodePath("../..")
+
+[node name="Box-wide3" type="MeshInstance3D" parent="EndingScene_Fired"]
+transform = Transform3D(2.08448, 0, 0.00185554, 0, 1.00297, 0, -0.0038564, 0, 1.00297, 2.09089, 0.987553, -23.4981)
+mesh = ExtResource("36_sqav2")
+skeleton = NodePath("../..")
+
+[node name="Cup" type="MeshInstance3D" parent="EndingScene_Fired"]
+transform = Transform3D(1.00297, 0, 0, 0, 1.00297, 0, 0, 0, 1.00297, 1.88099, 1.03745, -24.6537)
+mesh = ExtResource("28_by7lu")
+skeleton = NodePath("../..")
+
+[node name="Fired_Scene_Cam" type="Camera3D" parent="EndingScene_Fired"]
+transform = Transform3D(0.621536, 0.240625, -0.745515, -0.00519292, 0.952902, 0.303233, 0.783368, -0.184599, 0.593513, -0.755662, 2.56174, -21.3697)
+
+[node name="EndingScene_Riot" type="Node" parent="."]
+
+[node name="Riot_Scene_Cam" type="Camera3D" parent="EndingScene_Riot"]
+transform = Transform3D(-0.999444, 0, 0.033347, 0, 1, 0, -0.033347, 0, -0.999444, 0.22, 3.46192, 3.77815)
+
+[node name="Missing_Scene" type="Node" parent="."]
+
+[node name="KitchenCabinet" type="MeshInstance3D" parent="Missing_Scene"]
+transform = Transform3D(1.00297, 0, 0, 0, 1.00297, 0, 0, 0, 1.00297, 1.56923, -2.38419e-07, -21.7157)
+mesh = ExtResource("30_m56b6")
+skeleton = NodePath("../..")
+
+[node name="KitchenCabinetCornerInner" type="MeshInstance3D" parent="Missing_Scene"]
+transform = Transform3D(3.5104, 0, 0, 0, 3.5104, 0, 0, 0, 3.5104, -4.32534, 0, -21.0569)
+mesh = ExtResource("38_qqhlv")
+skeleton = NodePath("../..")
+
+[node name="KitchenCabinetCornerRound" type="MeshInstance3D" parent="Missing_Scene"]
+transform = Transform3D(1.00297, 0, 0, 0, 1.00297, 0, 0, 0, 1.00297, 2.85354, 0, -19.9076)
+mesh = ExtResource("39_hkmry")
+skeleton = NodePath("../..")
+
+[node name="KitchenCabinetDrawer" type="MeshInstance3D" parent="Missing_Scene"]
+transform = Transform3D(1.00297, 0, 0, 0, 1.00297, 0, 0, 0, 1.00297, 3.68874, 0, -20.285)
+mesh = ExtResource("40_k8jso")
+skeleton = NodePath("../..")
+
+[node name="KitchenCabinetUpper" type="MeshInstance3D" parent="Missing_Scene"]
+transform = Transform3D(1.00297, 0, 0, 0, 1.00297, 0, 0, 0, 1.00297, 2.20832, 0, -19.5881)
+mesh = ExtResource("41_0hfi4")
+skeleton = NodePath("../..")
+
+[node name="KitchenCabinetUpperLow" type="MeshInstance3D" parent="Missing_Scene"]
+transform = Transform3D(-1.53444e-07, 0, -3.5104, 0, 3.5104, 0, 3.5104, 0, -1.53444e-07, -4.43228, 2.50866, -20.0901)
+mesh = ExtResource("42_qi02v")
+skeleton = NodePath("../..")
+
+[node name="KitchenFridgeLarge" type="MeshInstance3D" parent="Missing_Scene"]
+transform = Transform3D(-0.0530562, 0, -3.51, 0, 3.5104, 0, 3.51, 0, -0.0530562, -4.72793, 0, -17.5195)
+mesh = ExtResource("43_u58li")
+skeleton = NodePath("../..")
+
+[node name="KitchenSink" type="MeshInstance3D" parent="Missing_Scene"]
+transform = Transform3D(-1.53444e-07, 0, -3.5104, 0, 3.5104, 0, 3.5104, 0, -1.53444e-07, -4.36121, 0, -21.0457)
+mesh = ExtResource("44_sucql")
+skeleton = NodePath("../..")
+
+[node name="KitchenStove" type="MeshInstance3D" parent="Missing_Scene"]
+transform = Transform3D(-1.53444e-07, 0, -3.5104, 0, 3.5104, 0, 3.5104, 0, -1.53444e-07, -4.36174, 2.38419e-07, -22.5529)
+mesh = ExtResource("45_bbi3h")
+skeleton = NodePath("../..")
+
+[node name="CartonSmall" type="MeshInstance3D" parent="Missing_Scene"]
+transform = Transform3D(0.496185, 0, 0.630562, 0, 0.802376, 0, -0.630562, 0, 0.496185, -5.0189, 1.47197, -20.8668)
+mesh = ExtResource("46_sxhe8")
+skeleton = NodePath("../..")
+
+[node name="KitchenCabinetUpperLow2" type="MeshInstance3D" parent="Missing_Scene"]
+transform = Transform3D(-1.53444e-07, 0, -3.5104, 0, 3.5104, 0, 3.5104, 0, -1.53444e-07, -4.43228, 2.50866, -21.5761)
+mesh = ExtResource("42_qi02v")
+skeleton = NodePath("../..")
+
+[node name="Missing_Scene_Cam" type="Camera3D" parent="Missing_Scene"]
+transform = Transform3D(0.63096, 0, 0.775816, 0, 1, 0, -0.775816, 0, 0.63096, -4.6755, 1.59375, -20.6426)
+
+[node name="KitchenMicrowave" type="MeshInstance3D" parent="Missing_Scene"]
+transform = Transform3D(1.22029, 0, -2.19045, 0, 2.50742, 0, 2.19045, 0, 1.22029, -5.10473, 1.476, -19.7814)
+mesh = ExtResource("47_anrfb")
+skeleton = NodePath("../..")
+
+[node name="KitchenCoffeeMachine" type="MeshInstance3D" parent="Missing_Scene"]
+transform = Transform3D(-0.0381235, 0, -2.00558, 0, 2.57993, 0, 2.00558, 0, -0.0381235, -5.23388, 1.46802, -20.5749)
+mesh = ExtResource("17_ouu4r")
+skeleton = NodePath("../..")
+
+[node name="Label3D" type="Label3D" parent="Missing_Scene"]
+transform = Transform3D(0.535945, 0, 0.844253, 0, 1, 0, -0.844253, 0, 0.535945, -4.93313, 1.62826, -20.8092)
+pixel_size = 0.0008
+text = "MISSING"
+font_size = 49
+outline_size = 5
+
+[node name="Duke De Liver Model2" parent="Missing_Scene" instance=ExtResource("48_2705m")]
+transform = Transform3D(0.0792769, 0.00105115, 0.102245, 0.00126806, 0.129356, -0.00231308, -0.102243, 0.00241937, 0.07925, -4.9917, 1.15477, -20.8438)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Missing_Scene"]
+transform = Transform3D(0.611503, -0.14888, 0.77711, -0.0363776, 0.97581, 0.215572, -0.790406, -0.160092, 0.591295, -4.51401, 1.74317, -20.3763)
+light_energy = 0.256

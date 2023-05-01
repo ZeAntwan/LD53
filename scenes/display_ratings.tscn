@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://dbl8lpo4eapxr"]
 
 [ext_resource type="Script" path="res://scripts/feedback/display_ratings.gd" id="1_one30"]
-[ext_resource type="Texture2D" uid="uid://d2ix7dvrshnly" path="res://resources/ui/public icon.png" id="2_25giu"]
+[ext_resource type="Texture2D" uid="uid://brhrprnnr0l72" path="res://scenes/StaticMeshes/Textures/eye.svg" id="2_wvmsw"]
 
 [sub_resource type="Gradient" id="Gradient_j8mij"]
 offsets = PackedFloat32Array(0, 0.211268, 0.492958, 0.652582, 0.859155, 1)
@@ -55,7 +55,7 @@ theme_override_constants/margin_bottom = 200
 [node name="TextureRect" type="TextureRect" parent="Control/HBoxContainer/PanelContainer/MarginContainer"]
 modulate = Color(1, 0, 0, 1)
 layout_mode = 2
-texture = ExtResource("2_25giu")
+texture = ExtResource("2_wvmsw")
 expand_mode = 4
 stretch_mode = 5
 

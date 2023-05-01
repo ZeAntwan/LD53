@@ -122,7 +122,7 @@ skeleton = NodePath("../..")
 
 [node name="RatingSprite" type="Sprite3D" parent="RatingsViewport/Ratings_Stat_TV"]
 transform = Transform3D(0.079, 0, 0, 0, 0.133, 0, 0, 0, 0.524, 0.000811881, 0.00374937, 0.697357)
-no_depth_test = true
+double_sided = false
 texture_filter = 1
 texture = SubResource("ViewportTexture_7m76l")
 
@@ -149,7 +149,7 @@ skeleton = NodePath("../..")
 
 [node name="StockSprite" type="Sprite3D" parent="StockViewport/Stock_Stat_TV"]
 transform = Transform3D(0.081, 0, 0, 0, 0.137, 0, 0, 0, 0.538, 0.000811881, 0.00374937, 0.697357)
-no_depth_test = true
+double_sided = false
 texture_filter = 1
 texture = SubResource("ViewportTexture_whu6y")
 
@@ -201,7 +201,7 @@ skeleton = NodePath("../../..")
 
 [node name="LiveSprite" type="Sprite3D" parent="."]
 transform = Transform3D(0.376243, 0, 0, 0, 0.281711, 0, 0, 0, 0.129, 0.00203133, 3.18114, 0.379959)
-no_depth_test = true
+double_sided = false
 texture_filter = 1
 texture = SubResource("ViewportTexture_yh4aj")
 

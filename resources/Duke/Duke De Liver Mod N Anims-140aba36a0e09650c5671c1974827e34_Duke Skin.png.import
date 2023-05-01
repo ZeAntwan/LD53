@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dvx27o2t3d33q"
 path.s3tc="res://.godot/imported/Duke De Liver Mod N Anims-140aba36a0e09650c5671c1974827e34_Duke Skin.png-1ca5311ad9c525adf78c9d6137f75256.s3tc.ctex"
+path.etc2="res://.godot/imported/Duke De Liver Mod N Anims-140aba36a0e09650c5671c1974827e34_Duke Skin.png-1ca5311ad9c525adf78c9d6137f75256.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={}
@@ -13,7 +14,7 @@ generator_parameters={}
 [deps]
 
 source_file="res://resources/Duke/Duke De Liver Mod N Anims-140aba36a0e09650c5671c1974827e34_Duke Skin.png"
-dest_files=["res://.godot/imported/Duke De Liver Mod N Anims-140aba36a0e09650c5671c1974827e34_Duke Skin.png-1ca5311ad9c525adf78c9d6137f75256.s3tc.ctex"]
+dest_files=["res://.godot/imported/Duke De Liver Mod N Anims-140aba36a0e09650c5671c1974827e34_Duke Skin.png-1ca5311ad9c525adf78c9d6137f75256.s3tc.ctex", "res://.godot/imported/Duke De Liver Mod N Anims-140aba36a0e09650c5671c1974827e34_Duke Skin.png-1ca5311ad9c525adf78c9d6137f75256.etc2.ctex"]
 
 [params]
 

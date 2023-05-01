@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://croqw5uuw2osg"
 path.s3tc="res://.godot/imported/Duke De Liver Model-af3070a950250ce816e53bf70997d1dc_Duke Skin.png-8b8b483d8bacc147f292298516ccec3a.s3tc.ctex"
+path.etc2="res://.godot/imported/Duke De Liver Model-af3070a950250ce816e53bf70997d1dc_Duke Skin.png-8b8b483d8bacc147f292298516ccec3a.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={}
@@ -13,7 +14,7 @@ generator_parameters={}
 [deps]
 
 source_file="res://resources/Duke/Duke De Liver Model-af3070a950250ce816e53bf70997d1dc_Duke Skin.png"
-dest_files=["res://.godot/imported/Duke De Liver Model-af3070a950250ce816e53bf70997d1dc_Duke Skin.png-8b8b483d8bacc147f292298516ccec3a.s3tc.ctex"]
+dest_files=["res://.godot/imported/Duke De Liver Model-af3070a950250ce816e53bf70997d1dc_Duke Skin.png-8b8b483d8bacc147f292298516ccec3a.s3tc.ctex", "res://.godot/imported/Duke De Liver Model-af3070a950250ce816e53bf70997d1dc_Duke Skin.png-8b8b483d8bacc147f292298516ccec3a.etc2.ctex"]
 
 [params]
 

@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://b5j2gjmynal5j" path="res://resources/ui/DeskArrow.png" id="6_8ik5n"]
 [ext_resource type="Script" path="res://scripts/debug/DebugUI.gd" id="6_kqe5e"]
 
-[sub_resource type="Resource" id="Resource_ibshu"]
+[sub_resource type="Resource" id="Resource_ewynb"]
 script = ExtResource("4_tthir")
 text = "Test"
 stat_rating = 0.0
@@ -53,7 +53,7 @@ theme_override_constants/separation = 25
 layout_mode = 2
 
 [node name="NewsItem" parent="NewsBar/MarginContainer/VBoxContainer/DropZone_1" instance=ExtResource("3_sx5u6")]
-headline = SubResource("Resource_ibshu")
+headline = SubResource("Resource_ewynb")
 
 [node name="DropZone_2" parent="NewsBar/MarginContainer/VBoxContainer" groups=["drop_zone"] instance=ExtResource("1_mi2bh")]
 layout_mode = 2

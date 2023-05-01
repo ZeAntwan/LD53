@@ -4,7 +4,7 @@ var mobList: Array[Node]
 @export var mobMaterial: Material
 @export var mobGradient: Gradient
 
-@onready var animPlayer: AnimationPlayer = $AnimationPlayer
+@onready var animPlayer: AnimationPlayer = $AnimationPlayer_Protesters
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

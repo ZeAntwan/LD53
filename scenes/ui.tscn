@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://ilvnvx3a6bop"]
+[gd_scene load_steps=10 format=3 uid="uid://ilvnvx3a6bop"]
 
 [ext_resource type="PackedScene" uid="uid://h1um88c2nc4y" path="res://scenes/ui/drop_zone.tscn" id="1_mi2bh"]
 [ext_resource type="Script" path="res://scripts/ui/NewsBar.gd" id="1_uop3o"]
@@ -6,11 +6,12 @@
 [ext_resource type="PackedScene" uid="uid://cj6qhtyh283tu" path="res://scenes/ui/live_zone.tscn" id="3_ghk45"]
 [ext_resource type="Script" path="res://scripts/ressources/Headline.gd" id="3_kb88l"]
 [ext_resource type="Script" path="res://scripts/ui/LiveBar.gd" id="5_3qfj8"]
+[ext_resource type="Texture2D" uid="uid://b5j2gjmynal5j" path="res://resources/ui/DeskArrow.png" id="6_8ik5n"]
 [ext_resource type="Script" path="res://scripts/debug/DebugUI.gd" id="6_kqe5e"]
 
 [sub_resource type="Resource" id="Resource_ay8bk"]
 script = ExtResource("3_kb88l")
-text = "Killer"
+text = "[center]You can [b]bold[/b] or [wave]wave[/wave] [/center]"
 stat_rating = -50.0
 stat_stock = 0.0
 stat_public = 0.0
@@ -75,14 +76,49 @@ anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -822.0
-offset_top = -184.0
+offset_left = -910.0
+offset_top = -218.0
 offset_right = -22.0
-offset_bottom = -34.0
+offset_bottom = -67.9999
 grow_horizontal = 0
 grow_vertical = 0
 mouse_filter = 2
 script = ExtResource("5_3qfj8")
+
+[node name="Control" type="Control" parent="LiveBar"]
+layout_mode = 2
+anchors_preset = 0
+offset_left = 35.0
+offset_top = 30.0001
+offset_right = 868.0
+offset_bottom = 130.0
+
+[node name="TextureRect" type="TextureRect" parent="LiveBar/Control"]
+layout_mode = 0
+offset_left = 105.0
+offset_top = -31.0001
+offset_right = 265.0
+offset_bottom = 129.0
+texture = ExtResource("6_8ik5n")
+expand_mode = 4
+
+[node name="TextureRect2" type="TextureRect" parent="LiveBar/Control"]
+layout_mode = 0
+offset_left = 324.0
+offset_top = -31.0001
+offset_right = 484.0
+offset_bottom = 129.0
+texture = ExtResource("6_8ik5n")
+expand_mode = 4
+
+[node name="TextureRect3" type="TextureRect" parent="LiveBar/Control"]
+layout_mode = 0
+offset_left = 544.0
+offset_top = -31.0001
+offset_right = 704.0
+offset_bottom = 129.0
+texture = ExtResource("6_8ik5n")
+expand_mode = 4
 
 [node name="MarginContainer" type="MarginContainer" parent="LiveBar"]
 layout_mode = 1
@@ -119,6 +155,7 @@ layout_mode = 2
 layout_mode = 2
 
 [node name="DebugUI" type="Control" parent="."]
+visible = false
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 1
 anchors_preset = 1

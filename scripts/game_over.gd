@@ -53,3 +53,7 @@ func _on_button_pressed():
 
 func _on_quit_pressed():
 	get_tree().quit()
+	
+func update_gameover_camera():
+	Events.gameover_camera.emit()
+	pass

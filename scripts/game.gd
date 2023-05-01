@@ -22,6 +22,9 @@ func _ready():
 	Events.gameready.connect(ready_game)
 	Events.gamestarted.connect(game_started)
 	Events.gameover.connect(game_over)
+	
+	Events.gameover_camera.connect(gameover_camera)
+	
 	pass # Replace with function body.
 
 
@@ -63,3 +66,14 @@ func game_started():
 	audioAmb.stop()
 	audioMusic.play()
 	pass
+
+func gameover_camera():
+	if Manager.score_rating < 1:
+		targetCamera = targetCamera
+		pass
+	elif Manager.score_stock < 1:
+		targetCamera = targetCamera
+		pass
+	elif Manager.score_public < 1:
+		targetCamera = targetCamera
+		pass

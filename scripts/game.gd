@@ -9,6 +9,10 @@ extends Node
 @onready var menuCamera: Node3D = $MenuCamera
 @onready var gameCamera: Camera3D = $ActiveCamera
 
+@onready var endCamFired: Camera3D = $Fired_Scene_Cam
+@onready var endCamRiot: Camera3D = $Riot_Scene_Cam
+@onready var endCamMissing: Camera3D = $Missing_Scene_Cam
+
 @onready var audioMusic: AudioStreamPlayer2D = $MusicLoop
 @onready var audioAmb: AudioStreamPlayer2D = $AmbianceLoop
 
@@ -52,6 +56,8 @@ func restart_game():
 	gameUI.get_node("NewsBar").fill_news(true)
 	
 func ready_game():
+		targetCamera = mainCamera
+		gameCamera.global_transform = targetCamera.global_transform
 		gameOverUI.visible = false
 		Manager.state = Manager.GameState.READY
 		gameUI.visible = true
@@ -69,11 +75,12 @@ func game_started():
 
 func gameover_camera():
 	if Manager.score_rating < 1:
-		targetCamera = targetCamera
+		targetCamera = endCamFired
 		pass
 	elif Manager.score_stock < 1:
-		targetCamera = targetCamera
+		targetCamera = endCamMissing
 		pass
 	elif Manager.score_public < 1:
-		targetCamera = targetCamera
+		targetCamera = endCamRiot
 		pass
+	gameCamera.global_transform = targetCamera.global_transform

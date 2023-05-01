@@ -1,6 +1,7 @@
-[gd_scene load_steps=75 format=3 uid="uid://ci36nuskade4y"]
+[gd_scene load_steps=78 format=3 uid="uid://ci36nuskade4y"]
 
 [ext_resource type="PackedScene" uid="uid://dbl8lpo4eapxr" path="res://scenes/display_ratings.tscn" id="1_baesr"]
+[ext_resource type="Script" path="res://scripts/mobfeedback.gd" id="1_dlm8f"]
 [ext_resource type="PackedScene" uid="uid://b26hcx2tttep7" path="res://scenes/display_stock.tscn" id="2_shk20"]
 [ext_resource type="PackedScene" uid="uid://b4emw7y2vblop" path="res://scenes/duke.tscn" id="3_8weh5"]
 [ext_resource type="ArrayMesh" uid="uid://c7hmfixuo3kvf" path="res://scenes/StaticMeshes/kenney_conveyor-kit/Models/OBJ format/structure-tall.obj" id="3_68l81"]
@@ -33,6 +34,12 @@
 [ext_resource type="ArrayMesh" uid="uid://denoj740c1xj7" path="res://scenes/StaticMeshes/kenney_furniture-kit/Models/OBJ format/rugRectangle.obj" id="31_hj2sp"]
 [ext_resource type="ArrayMesh" uid="uid://cdnb1t7ct63rg" path="res://scenes/StaticMeshes/kenney_furniture-kit/Models/OBJ format/rugRounded.obj" id="32_qkc5m"]
 [ext_resource type="ArrayMesh" uid="uid://c4tp2iloe06nj" path="res://scenes/StaticMeshes/kenney_furniture-kit/Models/OBJ format/kitchenCabinetUpperDouble.obj" id="33_se23n"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lr2e5"]
+
+[sub_resource type="Gradient" id="Gradient_xfi0h"]
+offsets = PackedFloat32Array(0, 0.366197, 0.544601, 1)
+colors = PackedColorArray(0.398642, 0.587427, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1)
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_7m76l"]
 viewport_path = NodePath("RatingsViewport")
@@ -632,6 +639,9 @@ _data = {
 
 [node name="Level" type="Node3D"]
 transform = Transform3D(1.00297, 0, 0, 0, 1.00297, 0, 0, 0, 1.00297, 0, 0, 0)
+script = ExtResource("1_dlm8f")
+mobMaterial = SubResource("StandardMaterial3D_lr2e5")
+mobGradient = SubResource("Gradient_xfi0h")
 
 [node name="large_buildingF" parent="." instance=ExtResource("25_4bhf7")]
 transform = Transform3D(-10, 0, -8.74228e-07, 0, 10, 0, 8.74228e-07, 0, -10, -5.25244, 1.1196, 41.5782)
@@ -1329,97 +1339,97 @@ libraries = {
 "": SubResource("AnimationLibrary_78l2h")
 }
 
-[node name="Protester_1" type="MeshInstance3D" parent="AnimationPlayer"]
+[node name="Protester_1" type="MeshInstance3D" parent="AnimationPlayer" groups=["protesters"]]
 transform = Transform3D(-0.00601778, 0, 2.42626e-05, 0, 0.00601782, 0, -2.42626e-05, 0, -0.00601778, 2.24386, 1.04242, 9.6971)
 mesh = ExtResource("24_joaxs")
 skeleton = NodePath("../..")
 
-[node name="Protester_2" type="MeshInstance3D" parent="AnimationPlayer"]
+[node name="Protester_2" type="MeshInstance3D" parent="AnimationPlayer" groups=["protesters"]]
 transform = Transform3D(-0.00601778, 0, 2.42626e-05, 0, 0.00601782, 0, -2.42626e-05, 0, -0.00601778, 0.992313, 1.04242, 10.1917)
 mesh = ExtResource("24_joaxs")
 skeleton = NodePath("../..")
 
-[node name="Protester_3" type="MeshInstance3D" parent="AnimationPlayer"]
+[node name="Protester_3" type="MeshInstance3D" parent="AnimationPlayer" groups=["protesters"]]
 transform = Transform3D(-0.00599542, 0, -0.000518838, 0, 0.00601782, 0, 0.000518838, 0, -0.00599542, 0.144819, 1.04242, 9.72989)
 mesh = ExtResource("24_joaxs")
 skeleton = NodePath("../..")
 
-[node name="Protester_4" type="MeshInstance3D" parent="AnimationPlayer"]
+[node name="Protester_4" type="MeshInstance3D" parent="AnimationPlayer" groups=["protesters"]]
 transform = Transform3D(-0.00591313, 0, -0.00111762, 0, 0.00601782, 0, 0.00111762, 0, -0.00591313, 2.77251, 1.04242, 10.2732)
 mesh = ExtResource("24_joaxs")
 skeleton = NodePath("../..")
 
-[node name="Protester_5" type="MeshInstance3D" parent="AnimationPlayer"]
+[node name="Protester_5" type="MeshInstance3D" parent="AnimationPlayer" groups=["protesters"]]
 transform = Transform3D(-0.00596129, 0, 0.000822956, 0, 0.00601782, 0, -0.000822956, 0, -0.00596129, -1.17274, 1.04242, 10.2612)
 mesh = ExtResource("24_joaxs")
 skeleton = NodePath("../..")
 
-[node name="Protester_6" type="MeshInstance3D" parent="AnimationPlayer"]
+[node name="Protester_6" type="MeshInstance3D" parent="AnimationPlayer" groups=["protesters"]]
 transform = Transform3D(-0.00596323, 0, 0.000808804, 0, 0.00601782, 0, -0.000808804, 0, -0.00596323, -1.9338, 1.04242, 9.67743)
 mesh = ExtResource("24_joaxs")
 skeleton = NodePath("../..")
 
-[node name="Protester_7" type="MeshInstance3D" parent="AnimationPlayer"]
+[node name="Protester_7" type="MeshInstance3D" parent="AnimationPlayer" groups=["protesters"]]
 transform = Transform3D(-0.0041395, 0, 0.00436792, 0, 0.00601782, 0, -0.00436792, 0, -0.0041395, -4.17444, 1.04242, 8.76455)
 mesh = ExtResource("24_joaxs")
 skeleton = NodePath("../..")
 
-[node name="Protester_8" type="MeshInstance3D" parent="AnimationPlayer"]
+[node name="Protester_8" type="MeshInstance3D" parent="AnimationPlayer" groups=["protesters"]]
 transform = Transform3D(-0.00501516, 0, 0.00332602, 0, 0.00601782, 0, -0.00332602, 0, -0.00501516, -5.13941, 1.04242, 8.72269)
 mesh = ExtResource("24_joaxs")
 skeleton = NodePath("../..")
 
-[node name="Protester_9" type="MeshInstance3D" parent="AnimationPlayer"]
+[node name="Protester_9" type="MeshInstance3D" parent="AnimationPlayer" groups=["protesters"]]
 transform = Transform3D(-0.0041395, 0, 0.00436792, 0, 0.00601782, 0, -0.00436792, 0, -0.0041395, -5.20366, 1.04242, 7.71192)
 mesh = ExtResource("24_joaxs")
 skeleton = NodePath("../..")
 
-[node name="Protester_10" type="MeshInstance3D" parent="AnimationPlayer"]
+[node name="Protester_10" type="MeshInstance3D" parent="AnimationPlayer" groups=["protesters"]]
 transform = Transform3D(-0.00326361, 0, 0.005056, 0, 0.00601782, 0, -0.005056, 0, -0.00326361, -6.16515, 1.04242, 7.37322)
 mesh = ExtResource("24_joaxs")
 skeleton = NodePath("../..")
 
-[node name="Protester_11" type="MeshInstance3D" parent="AnimationPlayer"]
+[node name="Protester_11" type="MeshInstance3D" parent="AnimationPlayer" groups=["protesters"]]
 transform = Transform3D(-0.00432214, 0, -0.00418728, 0, 0.00601782, 0, 0.00418728, 0, -0.00432214, 4.3519, 1.04242, 8.79722)
 mesh = ExtResource("24_joaxs")
 skeleton = NodePath("../..")
 
-[node name="Protester_12" type="MeshInstance3D" parent="AnimationPlayer"]
+[node name="Protester_12" type="MeshInstance3D" parent="AnimationPlayer" groups=["protesters"]]
 transform = Transform3D(-0.00432214, 0, -0.00418728, 0, 0.00601782, 0, 0.00418728, 0, -0.00432214, 5.21443, 1.04242, 8.88948)
 mesh = ExtResource("24_joaxs")
 skeleton = NodePath("../..")
 
-[node name="Protester_13" type="MeshInstance3D" parent="AnimationPlayer"]
+[node name="Protester_13" type="MeshInstance3D" parent="AnimationPlayer" groups=["protesters"]]
 transform = Transform3D(-0.00432214, 0, -0.00418728, 0, 0.00601782, 0, 0.00418728, 0, -0.00432214, 5.37865, 1.04242, 8.0057)
 mesh = ExtResource("24_joaxs")
 skeleton = NodePath("../..")
 
-[node name="Protester_14" type="MeshInstance3D" parent="AnimationPlayer"]
+[node name="Protester_14" type="MeshInstance3D" parent="AnimationPlayer" groups=["protesters"]]
 transform = Transform3D(-0.00432214, 0, -0.00418728, 0, 0.00601782, 0, 0.00418728, 0, -0.00432214, 6.36735, 1.04242, 8.05524)
 mesh = ExtResource("24_joaxs")
 skeleton = NodePath("../..")
 
-[node name="Protester_15" type="MeshInstance3D" parent="AnimationPlayer"]
+[node name="Protester_15" type="MeshInstance3D" parent="AnimationPlayer" groups=["protesters"]]
 transform = Transform3D(-0.00601778, 0, 2.42626e-05, 0, 0.00601782, 0, -2.42626e-05, 0, -0.00601778, 1.6438, 1.04242, 11.0739)
 mesh = ExtResource("24_joaxs")
 skeleton = NodePath("../..")
 
-[node name="Protester_16" type="MeshInstance3D" parent="AnimationPlayer"]
+[node name="Protester_16" type="MeshInstance3D" parent="AnimationPlayer" groups=["protesters"]]
 transform = Transform3D(-0.00601778, 0, 2.42626e-05, 0, 0.00601782, 0, -2.42626e-05, 0, -0.00601778, -0.43905, 1.04242, 11.0092)
 mesh = ExtResource("24_joaxs")
 skeleton = NodePath("../..")
 
-[node name="Protester_17" type="MeshInstance3D" parent="AnimationPlayer"]
+[node name="Protester_17" type="MeshInstance3D" parent="AnimationPlayer" groups=["protesters"]]
 transform = Transform3D(-0.00583846, 0, 0.00145829, 0, 0.00601782, 0, -0.00145829, 0, -0.00583846, -2.5557, 1.04242, 10.3977)
 mesh = ExtResource("24_joaxs")
 skeleton = NodePath("../..")
 
-[node name="Protester_18" type="MeshInstance3D" parent="AnimationPlayer"]
+[node name="Protester_18" type="MeshInstance3D" parent="AnimationPlayer" groups=["protesters"]]
 transform = Transform3D(-0.00501516, 0, 0.00332602, 0, 0.00601782, 0, -0.00332602, 0, -0.00501516, -4.15841, 1.04242, 9.98927)
 mesh = ExtResource("24_joaxs")
 skeleton = NodePath("../..")
 
-[node name="Protester_19" type="MeshInstance3D" parent="AnimationPlayer"]
+[node name="Protester_19" type="MeshInstance3D" parent="AnimationPlayer" groups=["protesters"]]
 transform = Transform3D(-0.00579747, 0, -0.00161356, 0, 0.00601782, 0, 0.00161356, 0, -0.00579747, 4.23124, 1.04242, 10.1146)
 mesh = ExtResource("24_joaxs")
 skeleton = NodePath("../..")

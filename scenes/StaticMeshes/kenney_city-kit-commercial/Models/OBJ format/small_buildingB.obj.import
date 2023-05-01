@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://db45adawdkgkl"
+path="res://.godot/imported/small_buildingB.obj-19c424490e92b88e42969c79de02e83d.mesh"
+
+[deps]
+
+files=["res://.godot/imported/small_buildingB.obj-19c424490e92b88e42969c79de02e83d.mesh"]
+
+source_file="res://scenes/StaticMeshes/kenney_city-kit-commercial/Models/OBJ format/small_buildingB.obj"
+dest_files=["res://.godot/imported/small_buildingB.obj-19c424490e92b88e42969c79de02e83d.mesh", "res://.godot/imported/small_buildingB.obj-19c424490e92b88e42969c79de02e83d.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

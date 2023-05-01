@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://m4s5ox8jwm02"
+path="res://.godot/imported/gingerBreadCutter.obj-165d38530b5e228fa0b4741fafa0580d.mesh"
+
+[deps]
+
+files=["res://.godot/imported/gingerBreadCutter.obj-165d38530b5e228fa0b4741fafa0580d.mesh"]
+
+source_file="res://scenes/StaticMeshes/kenney_food-kit/Models/OBJ format/gingerBreadCutter.obj"
+dest_files=["res://.godot/imported/gingerBreadCutter.obj-165d38530b5e228fa0b4741fafa0580d.mesh", "res://.godot/imported/gingerBreadCutter.obj-165d38530b5e228fa0b4741fafa0580d.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

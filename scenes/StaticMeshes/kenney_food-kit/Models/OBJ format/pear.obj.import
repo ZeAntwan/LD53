@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bqiale4r2me6i"
+path="res://.godot/imported/pear.obj-ea0f9c07ed28a8912635fc020a1b999e.mesh"
+
+[deps]
+
+files=["res://.godot/imported/pear.obj-ea0f9c07ed28a8912635fc020a1b999e.mesh"]
+
+source_file="res://scenes/StaticMeshes/kenney_food-kit/Models/OBJ format/pear.obj"
+dest_files=["res://.godot/imported/pear.obj-ea0f9c07ed28a8912635fc020a1b999e.mesh", "res://.godot/imported/pear.obj-ea0f9c07ed28a8912635fc020a1b999e.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

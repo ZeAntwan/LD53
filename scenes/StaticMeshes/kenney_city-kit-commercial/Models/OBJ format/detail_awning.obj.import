@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dkim171v6srly"
+path="res://.godot/imported/detail_awning.obj-c2e6921a9e927432e8d57b9c60b26f07.mesh"
+
+[deps]
+
+files=["res://.godot/imported/detail_awning.obj-c2e6921a9e927432e8d57b9c60b26f07.mesh"]
+
+source_file="res://scenes/StaticMeshes/kenney_city-kit-commercial/Models/OBJ format/detail_awning.obj"
+dest_files=["res://.godot/imported/detail_awning.obj-c2e6921a9e927432e8d57b9c60b26f07.mesh", "res://.godot/imported/detail_awning.obj-c2e6921a9e927432e8d57b9c60b26f07.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

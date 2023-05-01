@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://7bmnah4n6vmx"
+path="res://.godot/imported/turkey.obj-486d81bc77f8ace00958fff0f050b9bc.mesh"
+
+[deps]
+
+files=["res://.godot/imported/turkey.obj-486d81bc77f8ace00958fff0f050b9bc.mesh"]
+
+source_file="res://scenes/StaticMeshes/kenney_food-kit/Models/OBJ format/turkey.obj"
+dest_files=["res://.godot/imported/turkey.obj-486d81bc77f8ace00958fff0f050b9bc.mesh", "res://.godot/imported/turkey.obj-486d81bc77f8ace00958fff0f050b9bc.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

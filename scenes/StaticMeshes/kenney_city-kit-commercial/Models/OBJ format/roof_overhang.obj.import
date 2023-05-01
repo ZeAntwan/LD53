@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dlkmxkili5u0s"
+path="res://.godot/imported/roof_overhang.obj-8137dbca3e667e3a4afb45fa551c6e9f.mesh"
+
+[deps]
+
+files=["res://.godot/imported/roof_overhang.obj-8137dbca3e667e3a4afb45fa551c6e9f.mesh"]
+
+source_file="res://scenes/StaticMeshes/kenney_city-kit-commercial/Models/OBJ format/roof_overhang.obj"
+dest_files=["res://.godot/imported/roof_overhang.obj-8137dbca3e667e3a4afb45fa551c6e9f.mesh", "res://.godot/imported/roof_overhang.obj-8137dbca3e667e3a4afb45fa551c6e9f.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://50a2hqakjl5v"
+path="res://.godot/imported/whisk.obj-49bd32ca7a22d4cbe0335878518574bc.mesh"
+
+[deps]
+
+files=["res://.godot/imported/whisk.obj-49bd32ca7a22d4cbe0335878518574bc.mesh"]
+
+source_file="res://scenes/StaticMeshes/kenney_food-kit/Models/OBJ format/whisk.obj"
+dest_files=["res://.godot/imported/whisk.obj-49bd32ca7a22d4cbe0335878518574bc.mesh", "res://.godot/imported/whisk.obj-49bd32ca7a22d4cbe0335878518574bc.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dhs864rmelfcc"
+path="res://.godot/imported/detail_overhang.obj-49dd2c4dc802b3d62b78351a82ed1249.mesh"
+
+[deps]
+
+files=["res://.godot/imported/detail_overhang.obj-49dd2c4dc802b3d62b78351a82ed1249.mesh"]
+
+source_file="res://scenes/StaticMeshes/kenney_city-kit-commercial/Models/OBJ format/detail_overhang.obj"
+dest_files=["res://.godot/imported/detail_overhang.obj-49dd2c4dc802b3d62b78351a82ed1249.mesh", "res://.godot/imported/detail_overhang.obj-49dd2c4dc802b3d62b78351a82ed1249.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

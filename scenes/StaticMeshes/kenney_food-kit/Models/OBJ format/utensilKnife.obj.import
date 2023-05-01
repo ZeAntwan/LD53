@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bdipxgvduc7yt"
+path="res://.godot/imported/utensilKnife.obj-6e1c9a88d31c9957ec6411b7dd0f65ab.mesh"
+
+[deps]
+
+files=["res://.godot/imported/utensilKnife.obj-6e1c9a88d31c9957ec6411b7dd0f65ab.mesh"]
+
+source_file="res://scenes/StaticMeshes/kenney_food-kit/Models/OBJ format/utensilKnife.obj"
+dest_files=["res://.godot/imported/utensilKnife.obj-6e1c9a88d31c9957ec6411b7dd0f65ab.mesh", "res://.godot/imported/utensilKnife.obj-6e1c9a88d31c9957ec6411b7dd0f65ab.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

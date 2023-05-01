@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://ioku60gdmf40"
+path="res://.godot/imported/burgerDouble.obj-059a090fab944f8c7d05dcbe34468e76.mesh"
+
+[deps]
+
+files=["res://.godot/imported/burgerDouble.obj-059a090fab944f8c7d05dcbe34468e76.mesh"]
+
+source_file="res://scenes/StaticMeshes/kenney_food-kit/Models/OBJ format/burgerDouble.obj"
+dest_files=["res://.godot/imported/burgerDouble.obj-059a090fab944f8c7d05dcbe34468e76.mesh", "res://.godot/imported/burgerDouble.obj-059a090fab944f8c7d05dcbe34468e76.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

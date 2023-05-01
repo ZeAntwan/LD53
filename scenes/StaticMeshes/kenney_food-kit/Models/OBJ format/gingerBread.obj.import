@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bm0bb5rtdc2mw"
+path="res://.godot/imported/gingerBread.obj-cccc3fe5d5cef445136e83eba9c1078f.mesh"
+
+[deps]
+
+files=["res://.godot/imported/gingerBread.obj-cccc3fe5d5cef445136e83eba9c1078f.mesh"]
+
+source_file="res://scenes/StaticMeshes/kenney_food-kit/Models/OBJ format/gingerBread.obj"
+dest_files=["res://.godot/imported/gingerBread.obj-cccc3fe5d5cef445136e83eba9c1078f.mesh", "res://.godot/imported/gingerBread.obj-cccc3fe5d5cef445136e83eba9c1078f.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

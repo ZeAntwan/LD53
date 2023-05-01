@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cls524n0ijaax"
+path="res://.godot/imported/lemon.obj-958d26ab374a14191e90f2ce0eaa13c2.mesh"
+
+[deps]
+
+files=["res://.godot/imported/lemon.obj-958d26ab374a14191e90f2ce0eaa13c2.mesh"]
+
+source_file="res://scenes/StaticMeshes/kenney_food-kit/Models/OBJ format/lemon.obj"
+dest_files=["res://.godot/imported/lemon.obj-958d26ab374a14191e90f2ce0eaa13c2.mesh", "res://.godot/imported/lemon.obj-958d26ab374a14191e90f2ce0eaa13c2.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

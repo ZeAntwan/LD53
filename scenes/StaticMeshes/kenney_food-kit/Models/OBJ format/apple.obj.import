@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bf5van3bo1ji7"
+path="res://.godot/imported/apple.obj-ceef2c9a3dbb8952f2b79e83c0a11b98.mesh"
+
+[deps]
+
+files=["res://.godot/imported/apple.obj-ceef2c9a3dbb8952f2b79e83c0a11b98.mesh"]
+
+source_file="res://scenes/StaticMeshes/kenney_food-kit/Models/OBJ format/apple.obj"
+dest_files=["res://.godot/imported/apple.obj-ceef2c9a3dbb8952f2b79e83c0a11b98.mesh", "res://.godot/imported/apple.obj-ceef2c9a3dbb8952f2b79e83c0a11b98.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

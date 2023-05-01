@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://diie0urqj5dga"
+path="res://.godot/imported/candyBarWrapper.obj-83a6cf520b5e440825864f1b2cf7eb1c.mesh"
+
+[deps]
+
+files=["res://.godot/imported/candyBarWrapper.obj-83a6cf520b5e440825864f1b2cf7eb1c.mesh"]
+
+source_file="res://scenes/StaticMeshes/kenney_food-kit/Models/OBJ format/candyBarWrapper.obj"
+dest_files=["res://.godot/imported/candyBarWrapper.obj-83a6cf520b5e440825864f1b2cf7eb1c.mesh", "res://.godot/imported/candyBarWrapper.obj-83a6cf520b5e440825864f1b2cf7eb1c.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

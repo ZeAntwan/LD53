@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dkuune2ef2qxt"
+path="res://.godot/imported/cornDog.obj-15bbf67f83ad6ead8eaf80f0e0599501.mesh"
+
+[deps]
+
+files=["res://.godot/imported/cornDog.obj-15bbf67f83ad6ead8eaf80f0e0599501.mesh"]
+
+source_file="res://scenes/StaticMeshes/kenney_food-kit/Models/OBJ format/cornDog.obj"
+dest_files=["res://.godot/imported/cornDog.obj-15bbf67f83ad6ead8eaf80f0e0599501.mesh", "res://.godot/imported/cornDog.obj-15bbf67f83ad6ead8eaf80f0e0599501.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

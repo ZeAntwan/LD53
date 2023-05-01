@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bgqhaperh56qv"
+path="res://.godot/imported/cuttingBoardJapanese.obj-b1739be8344d391c2eb2c2ba0d14beba.mesh"
+
+[deps]
+
+files=["res://.godot/imported/cuttingBoardJapanese.obj-b1739be8344d391c2eb2c2ba0d14beba.mesh"]
+
+source_file="res://scenes/StaticMeshes/kenney_food-kit/Models/OBJ format/cuttingBoardJapanese.obj"
+dest_files=["res://.godot/imported/cuttingBoardJapanese.obj-b1739be8344d391c2eb2c2ba0d14beba.mesh", "res://.godot/imported/cuttingBoardJapanese.obj-b1739be8344d391c2eb2c2ba0d14beba.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

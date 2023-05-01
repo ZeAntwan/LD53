@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dpv0naco2ytee"
+path="res://.godot/imported/sushiEgg.obj-a4c2a4b0b8ea5009f3a2ce234c0f224f.mesh"
+
+[deps]
+
+files=["res://.godot/imported/sushiEgg.obj-a4c2a4b0b8ea5009f3a2ce234c0f224f.mesh"]
+
+source_file="res://scenes/StaticMeshes/kenney_food-kit/Models/OBJ format/sushiEgg.obj"
+dest_files=["res://.godot/imported/sushiEgg.obj-a4c2a4b0b8ea5009f3a2ce234c0f224f.mesh", "res://.godot/imported/sushiEgg.obj-a4c2a4b0b8ea5009f3a2ce234c0f224f.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

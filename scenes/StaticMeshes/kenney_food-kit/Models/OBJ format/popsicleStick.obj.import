@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://8htxkoothl3k"
+path="res://.godot/imported/popsicleStick.obj-e39714fb6934d213a92e868555d5996b.mesh"
+
+[deps]
+
+files=["res://.godot/imported/popsicleStick.obj-e39714fb6934d213a92e868555d5996b.mesh"]
+
+source_file="res://scenes/StaticMeshes/kenney_food-kit/Models/OBJ format/popsicleStick.obj"
+dest_files=["res://.godot/imported/popsicleStick.obj-e39714fb6934d213a92e868555d5996b.mesh", "res://.godot/imported/popsicleStick.obj-e39714fb6934d213a92e868555d5996b.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

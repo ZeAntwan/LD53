@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://5b13bkctu4mq"
+path="res://.godot/imported/broccoli.obj-68244428571946650922aa2ca50c6c05.mesh"
+
+[deps]
+
+files=["res://.godot/imported/broccoli.obj-68244428571946650922aa2ca50c6c05.mesh"]
+
+source_file="res://scenes/StaticMeshes/kenney_food-kit/Models/OBJ format/broccoli.obj"
+dest_files=["res://.godot/imported/broccoli.obj-68244428571946650922aa2ca50c6c05.mesh", "res://.godot/imported/broccoli.obj-68244428571946650922aa2ca50c6c05.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

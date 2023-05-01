@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://boc3aqi6u21nx"
+path="res://.godot/imported/mortar.obj-356b9d4f2d2a88b1deccdd806db52968.mesh"
+
+[deps]
+
+files=["res://.godot/imported/mortar.obj-356b9d4f2d2a88b1deccdd806db52968.mesh"]
+
+source_file="res://scenes/StaticMeshes/kenney_food-kit/Models/OBJ format/mortar.obj"
+dest_files=["res://.godot/imported/mortar.obj-356b9d4f2d2a88b1deccdd806db52968.mesh", "res://.godot/imported/mortar.obj-356b9d4f2d2a88b1deccdd806db52968.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dvr4lpvk4pmjv"
+path="res://.godot/imported/cheeseCut.obj-375e920d1ce216aed61d4da31c7c7eb1.mesh"
+
+[deps]
+
+files=["res://.godot/imported/cheeseCut.obj-375e920d1ce216aed61d4da31c7c7eb1.mesh"]
+
+source_file="res://scenes/StaticMeshes/kenney_food-kit/Models/OBJ format/cheeseCut.obj"
+dest_files=["res://.godot/imported/cheeseCut.obj-375e920d1ce216aed61d4da31c7c7eb1.mesh", "res://.godot/imported/cheeseCut.obj-375e920d1ce216aed61d4da31c7c7eb1.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://c4pexg3wbt1uv"
+path="res://.godot/imported/sausageHalf.obj-81a9692f9b895f3976c81e3917a6f251.mesh"
+
+[deps]
+
+files=["res://.godot/imported/sausageHalf.obj-81a9692f9b895f3976c81e3917a6f251.mesh"]
+
+source_file="res://scenes/StaticMeshes/kenney_food-kit/Models/OBJ format/sausageHalf.obj"
+dest_files=["res://.godot/imported/sausageHalf.obj-81a9692f9b895f3976c81e3917a6f251.mesh", "res://.godot/imported/sausageHalf.obj-81a9692f9b895f3976c81e3917a6f251.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

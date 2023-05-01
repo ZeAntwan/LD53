@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://2o350atecpfo"
+path="res://.godot/imported/loafRound.obj-1f820f9f17dc893975bdc12452950a3d.mesh"
+
+[deps]
+
+files=["res://.godot/imported/loafRound.obj-1f820f9f17dc893975bdc12452950a3d.mesh"]
+
+source_file="res://scenes/StaticMeshes/kenney_food-kit/Models/OBJ format/loafRound.obj"
+dest_files=["res://.godot/imported/loafRound.obj-1f820f9f17dc893975bdc12452950a3d.mesh", "res://.godot/imported/loafRound.obj-1f820f9f17dc893975bdc12452950a3d.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

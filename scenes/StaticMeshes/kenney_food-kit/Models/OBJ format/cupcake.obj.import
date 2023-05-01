@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://da8ni7oeb5ett"
+path="res://.godot/imported/cupcake.obj-1da8e384b4be25cbe090560409667c81.mesh"
+
+[deps]
+
+files=["res://.godot/imported/cupcake.obj-1da8e384b4be25cbe090560409667c81.mesh"]
+
+source_file="res://scenes/StaticMeshes/kenney_food-kit/Models/OBJ format/cupcake.obj"
+dest_files=["res://.godot/imported/cupcake.obj-1da8e384b4be25cbe090560409667c81.mesh", "res://.godot/imported/cupcake.obj-1da8e384b4be25cbe090560409667c81.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bteq2jnkhdk3x"
+path="res://.godot/imported/pan.obj-e86d1f78df9fbb3624f14636d77c2fdf.mesh"
+
+[deps]
+
+files=["res://.godot/imported/pan.obj-e86d1f78df9fbb3624f14636d77c2fdf.mesh"]
+
+source_file="res://scenes/StaticMeshes/kenney_food-kit/Models/OBJ format/pan.obj"
+dest_files=["res://.godot/imported/pan.obj-e86d1f78df9fbb3624f14636d77c2fdf.mesh", "res://.godot/imported/pan.obj-e86d1f78df9fbb3624f14636d77c2fdf.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

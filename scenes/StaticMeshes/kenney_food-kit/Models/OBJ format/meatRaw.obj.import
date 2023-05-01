@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://23hummog715x"
+path="res://.godot/imported/meatRaw.obj-afdfb030e30224dd8a587275b1da12eb.mesh"
+
+[deps]
+
+files=["res://.godot/imported/meatRaw.obj-afdfb030e30224dd8a587275b1da12eb.mesh"]
+
+source_file="res://scenes/StaticMeshes/kenney_food-kit/Models/OBJ format/meatRaw.obj"
+dest_files=["res://.godot/imported/meatRaw.obj-afdfb030e30224dd8a587275b1da12eb.mesh", "res://.godot/imported/meatRaw.obj-afdfb030e30224dd8a587275b1da12eb.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

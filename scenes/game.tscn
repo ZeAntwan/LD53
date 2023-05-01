@@ -44,3 +44,12 @@ stream = ExtResource("7_f2c3x")
 [node name="AmbianceLoop" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("8_itqog")
 autoplay = true
+
+[node name="Fired_Scene_Cam" type="Camera3D" parent="."]
+transform = Transform3D(0.621536, 0.309126, -0.719815, -0.00519292, 0.920457, 0.390808, 0.783368, -0.239164, 0.573703, 0.961086, 1.79084, -20.0448)
+
+[node name="Riot_Scene_Cam" type="Camera3D" parent="."]
+transform = Transform3D(-0.999444, -0.00952629, 0.0319573, 9.31322e-10, 0.958328, 0.285672, -0.033347, 0.285513, -0.957795, -2.08744, 2.9459, 6.07989)
+
+[node name="Missing_Scene_Cam" type="Camera3D" parent="."]
+transform = Transform3D(0.63096, -0.195153, 0.75087, -7.45058e-09, 0.967845, 0.251546, -0.775816, -0.158715, 0.610671, -4.52778, 1.61333, -20.8242)

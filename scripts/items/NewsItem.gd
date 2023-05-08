@@ -61,13 +61,15 @@ func _on_area_2d_mouse_entered():
 
 
 func _on_area_2d_input_event(viewport, event, shape_idx):
-	if Input.is_action_just_pressed("select") && canPick:
+	if event is InputEventMouseButton:
+		print(event)
+	if event is InputEventMouseButton and event.pressed && canPick:
 		audioSfx.play()
 		selected = true
 		mouseOffset = global_position - get_global_mouse_position()
 		z_index = 6
 	
-	if Input.is_action_just_released("select") && selected:
+	if event is InputEventMouseButton and !event.pressed && selected:
 		audioSfx.play()
 		selected = false
 		var overlap = area.get_overlapping_areas()

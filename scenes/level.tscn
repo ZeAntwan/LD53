@@ -1265,6 +1265,7 @@ skeleton = NodePath("../../..")
 
 [node name="StudioWindow_1" type="MeshInstance3D" parent="Interior"]
 transform = Transform3D(-8.54904e-09, 0, 6.01782, 0, 9.65601, 0, -0.195579, 0, -2.63047e-07, -0.0213292, 4.74763, 9.02471)
+visible = false
 mesh = SubResource("BoxMesh_cdrb5")
 skeleton = NodePath("../WindowFrame_1")
 surface_material_override/0 = SubResource("StandardMaterial3D_vlkmj")

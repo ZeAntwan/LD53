@@ -61,6 +61,7 @@ text = "Credits
 "
 
 [node name="Exit" type="MarginContainer" parent="MarginContainer/CenterContainer/VBoxContainer"]
+visible = false
 layout_mode = 2
 theme_override_constants/margin_left = 50
 theme_override_constants/margin_right = 50
